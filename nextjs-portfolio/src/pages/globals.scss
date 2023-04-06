@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.cdnfonts.com/css/proxima-nova-2");
+
+html,
+body {
+  background-color: #18181b;
+  min-width: 100vw;
+  overflow-x: hidden;
+  min-height: 100%;
+  font-family: "Proxima Nova", sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(114, 137, 218) white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  // @apply bg-zinc-900;
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white dark:bg-zinc-900;
+}
+
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
