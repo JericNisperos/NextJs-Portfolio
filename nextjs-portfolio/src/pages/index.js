@@ -3,7 +3,7 @@ import { useTheme } from "next-themes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolder, faHome, faHouseCircleCheck, faMoon, faPaperPlane, faPerson, faSun, faUser, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
