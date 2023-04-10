@@ -121,7 +121,7 @@ const Navbar = () => {
             <div>Darkmode</div>
           </div>
           <span className="flex ">
-            <motion.span whileHover={{ scale: 1.6, duration: 1 }} transition={{ duration: 0.5 }} whileTap={{ rotate: -1200 }} initial={{ scale: 1.0 }} className="origin-[50%_45%]">
+            <motion.span whileHover={{ scale: 1.6, duration: 0.2 }} transition={{ duration: 0.5 }} whileTap={{ rotate: -1200 }} initial={{ scale: 1.0 }} className="origin-[50%_45%]">
               <FontAwesomeIcon icon={currentTheme === "dark" ? faSun : faMoon} id="DarkMode" onClick={(e) => setTheme(currentTheme === "dark" ? "light" : "dark")} className=" hover:text-cyan-500 hover:dark:text-cyan-500 cursor-pointer" />
             </motion.span>
           </span>
