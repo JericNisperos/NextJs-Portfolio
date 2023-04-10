@@ -6,7 +6,7 @@ function projects() {
   return (
     <>
       <div className="min-h-screen  dark:bg-zinc-900 bg-zinc-100 transition-colors duration-1000 ease-in-out">
-        <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="font-bold mb-4 text-center mt-12 text-6xl">
+        <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="font-bold mb-4 text-center mt-12 text-2xl md:text-6xl">
           My Projects
         </motion.h1>
         <div className="flex justify-center items-center mx-8">
