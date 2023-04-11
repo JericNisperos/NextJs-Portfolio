@@ -2,9 +2,30 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { SiExpress, SiFirebase, SiMongodb, SiNextdotjs } from "react-icons/si";
-import { FaAngular, FaCss3Alt, FaHtml5, FaJs, FaNodeJs, FaReact, faAngular } from "react-icons/fa";
+import {
+  SiAdobedreamweaver,
+  SiAdobeillustrator,
+  SiAdobephotoshop,
+  SiAzuredevops,
+  SiBootstrap,
+  SiCsharp,
+  SiExpress,
+  SiFirebase,
+  SiJira,
+  SiMicrosoftoffice,
+  SiMicrosoftsqlserver,
+  SiMongodb,
+  SiMysql,
+  SiNextdotjs,
+  SiPostman,
+  SiSwagger,
+  SiTailwindcss,
+  SiUnity,
+} from "react-icons/si";
+import { FaAngular, FaCss3Alt, FaFigma, FaGithub, FaHtml5, FaJs, FaNodeJs, FaReact, faAngular } from "react-icons/fa";
 import { faFacebookF, faGithubAlt, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+
+import { DiMysql } from "react-icons/di";
 function about() {
   function LinkItems({ href, icon }) {
     return (
@@ -28,9 +49,9 @@ function about() {
   return (
     <>
       <div className="dark:bg-zinc-900 bg-zinc-100 min-h-screen transition-colors duration-1000 ease-in-out pb-24">
-        <h1 className="flex text-center mx-auto justify-center text-8xl">About Me</h1>
+        <h1 className="flex text-center mx-auto justify-center text-4xl md:text-8xl">About Me</h1>
         <div className={`lg:mx-48 md:mx-16 flex justify-center `}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-8 grid-flow-row-dense">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 mx-8 grid-flow-row-dense">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -38,8 +59,8 @@ function about() {
               exit={{ opacity: 0, y: 10 }}
               className="col-span-2 duration-500 p-6 rounded-lg min-w-[300px] min-h-[200px] text-center items-center justify-center sm:mt-24"
             >
-              <h3 className="text-6xl font-semibold mb-2 dark:text-cyan-300 text-cyan-600">JERIC NISPEROS</h3>
-              <p className=" dark:text-white text-zinc-800 text-2xl">Software Engineer / Web Developer / Game Developer / Game Enthusiast</p>
+              <h3 className="text-6xl font-semibold mb-2 dark:text-cyan-300 text-cyan-600 text-center justify-center mx-auto flex">JERIC NISPEROS</h3>
+              <p className=" dark:text-white text-zinc-800 text-2xl">Full Stack Developer</p>
               <p className="text-2xl dark:text-white text-zinc-800 mt-8 flex mx-auto items-center justify-center"></p>
             </motion.div>
 
@@ -48,7 +69,7 @@ function about() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.2 }}
               exit={{ opacity: 0, y: 10 }}
-              className="md:col-span-1 col-span-2  md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-500 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
+              className="md:col-span-1 col-span-2  md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-0 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
             >
               <h3 className="text-xl font-semibold mb-2 dark:text-cyan-300 text-cyan-600"></h3>
               <div className="text-xl dark:text-white text-zinc-800 ">
@@ -56,7 +77,7 @@ function about() {
                   <div className="grid grid-cols-1 sm:grid-cols-3">
                     <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold"></span>
                   </div>
-                  <p className=" dark:text-white text-zinc-800 md:text-xl text-base">
+                  <p className=" dark:text-white text-zinc-800 md:text-xl text-base text-center">
                     Self-motivated individual with the ability to work independently or as a member of a team, seeking a stable and challenging role that utilizes my existing skills and experience while providing opportunities for personal
                     and professional growth.
                   </p>
@@ -83,22 +104,59 @@ function about() {
                     <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold">Tech Skills</span>
                   </div>
                   <div className="mt-4 list-none md:text-base text-4xl text-center justify-center items-center">
-                    <div className=" grid grid-cols-5 gap-y-4 gap-x-2">
+                    <div className=" grid grid-cols-4 md:grid-cols-5 gap-y-4 gap-x-2">
                       <BrandItems icon={<FaHtml5 className="icon-brands" />} title="Html5" />
                       <BrandItems icon={<FaCss3Alt className="icon-brands" />} title="CSS" />
                       <BrandItems icon={<FaJs className="icon-brands" />} title="Javascript" />
+                      <BrandItems icon={<SiBootstrap className="icon-brands" />} title="Bootstrap" />
+                      <BrandItems icon={<SiTailwindcss className="icon-brands" />} title="Tailwind" />
                       <BrandItems icon={<FaReact className="icon-brands" />} title="ReactJs" />
                       <BrandItems icon={<SiNextdotjs className="icon-brands" />} title="NextJs" />
                       <BrandItems icon={<FaAngular className="icon-brands" />} title="AngularJs" />
                       <BrandItems icon={<FaNodeJs className="icon-brands" />} title="NodeJs" />
                       <BrandItems icon={<SiExpress className="icon-brands" />} title="ExpressJs" />
                       <BrandItems icon={<SiFirebase className="icon-brands" />} title="Firebase" />
+                      <BrandItems icon={<DiMysql className="icon-brands" />} title="MySQL" />
                       <BrandItems icon={<SiMongodb className="icon-brands" />} title="MongoDb" />
+                      <BrandItems icon={<SiCsharp className="icon-brands" />} title="CSharp" />
                     </div>
                   </div>
                 </span>
               </div>
             </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.2 }}
+              exit={{ opacity: 0, y: 10 }}
+              className="md:row-start-3 md:col-span-1 col-span-2 row-span-1 md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-500 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
+            >
+              <h3 className="text-xl font-semibold mb-2 dark:text-cyan-300 text-cyan-600"></h3>
+              <div className="text-xl dark:text-white text-zinc-800 ">
+                <span className="flex-none">
+                  <div className="grid grid-cols-1 sm:grid-cols-3">
+                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold">Tech Tools</span>
+                  </div>
+                  <div className="mt-4 list-none md:text-base text-4xl text-center justify-center items-center">
+                    <div className=" grid grid-cols-3 md:grid-cols-4 gap-y-4 gap-x-2">
+                      <BrandItems icon={<FaGithub className="icon-brands" />} title="Github" />
+                      <BrandItems icon={<SiAzuredevops className="icon-brands" />} title="Azure" />
+                      <BrandItems icon={<SiMicrosoftsqlserver className="icon-brands" />} title="MsSQL" />
+                      <BrandItems icon={<SiSwagger className="icon-brands" />} title="Swagger" />
+                      <BrandItems icon={<SiPostman className="icon-brands" />} title="Postman" />
+                      <BrandItems icon={<SiJira className="icon-brands" />} title="Jira" />
+                      <BrandItems icon={<SiMicrosoftoffice className="icon-brands" />} title="MsTools" />
+                      <BrandItems icon={<FaFigma className="icon-brands" />} title="Figma" />
+                      <BrandItems icon={<SiAdobephotoshop className="icon-brands" />} title="Photoshop" />
+                      <BrandItems icon={<SiAdobeillustrator className="icon-brands" />} title="Illustrator" />
+                      <BrandItems icon={<SiUnity className="icon-brands" />} title="Unity" />
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </motion.div>
+
 
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -115,7 +173,7 @@ function about() {
                     <span className="sm:text-right dark:text-white text-cyan-900 text-sm">Jan 2022 - Feb 2023</span>
                   </div>
                   <div className="italic md:text-lg text-sm">Software Engineer / Consultant</div>
-                  <ul className="mt-4 list-disc ml-4 sm:ml-0 md:ml-8 space-y-4 text-sm md:text-base">
+                  <ul className="mt-4 list-disc ml-4 md:ml-8 space-y-4 text-sm md:text-base">
                     <li>
                       Proficient in a variety of tools and programming languages including: <span className="dark:text-cyan-300 text-cyan-900 font-bold">.Net | C# | Jira | Angular | Swagger | MSSQL | Azure</span>
                     </li>
@@ -143,7 +201,7 @@ function about() {
                     <span className="sm:text-right dark:text-white text-cyan-900 text-sm">Oct 2019 - Nov 2022</span>
                   </div>
                   <div className="italic md:text-lg text-sm">Chat Support Professional</div>
-                  <ul className="mt-4 list-disc ml-0 sm:ml-0 md:ml-8 space-y-4 text-sm md:text-base">
+                  <ul className="mt-4 list-disc  ml-4 md:ml-8 space-y-4 text-sm md:text-base">
                     <li>
                       Handling customer inquiries and providing prompt and <span className="dark:text-cyan-300 text-cyan-900 font-bold">professional support via chat</span> for a{" "}
                       <span className="dark:text-cyan-300 text-cyan-900 font-bold">leading telecommunications company in the United States</span>.
@@ -162,8 +220,12 @@ function about() {
                     <li>
                       <span className="dark:text-cyan-300 text-cyan-900 font-bold"> Identifying customer needs</span> and recommending appropriate service options, as well as up selling subscription{" "}
                     </li>
-                    <li>Maintaining accurate and up-to-date customer records and providing regular reports on customer interactions and support metric</li>
-                    <li>Continuously striving to improve customer satisfaction by providing the best customer service experience.</li>
+                    <li>
+                      Maintaining accurate and up-to-date customer records and <span className="dark:text-cyan-300 text-cyan-900 font-bold">providing regular reports</span> on customer interactions and support metric
+                    </li>
+                    <li>
+                      Continuously striving to <span className="dark:text-cyan-300 text-cyan-900 font-bold">improve customer satisfaction</span> by providing the best customer service experience.
+                    </li>
                   </ul>
                 </span>
 
@@ -173,13 +235,27 @@ function about() {
                     <span className="sm:text-right dark:text-white text-cyan-900 text-sm">Sept 2017 - Oct 2019</span>
                   </div>
                   <div className="italic md:text-lg text-sm">Customer Multi-support Specialist</div>
-                  <ul className="mt-4 list-disc ml-0 md:ml-8 space-y-4 text-sm md:text-base">
-                    <li>Trained in providing phone, email, and chat support for customers in the United States and United Kingdom for a leading retail company</li>
-                    <li>Proficient in verifying and processing customer orders, ensuring timely fulfillment and following up on any issues</li>
-                    <li>Skilled in providing basic technical troubleshooting and guidance on product usage and features to customers</li>
-                    <li>Experienced in managing credit/debit card payments, invoicing, and other financial transactions for customer account</li>
-                    <li>Adept at identifying customer needs and recommending appropriate service options, as well as up selling subscription</li>
-                    <li>Strong communication skills and ability to promote company's services and special offers to customers</li>
+                  <ul className="mt-4 list-disc ml-4 md:ml-8 space-y-4 text-sm md:text-base">
+                    <li>
+                      Trained in providing <span className="dark:text-cyan-300 text-cyan-900 font-bold">phone, email,</span> and <span className="dark:text-cyan-300 text-cyan-900 font-bold">chat support</span> for customers in the{" "}
+                      <span className="dark:text-cyan-300 text-cyan-900 font-bold">United States and United Kingdom </span>for a leading retail company
+                    </li>
+                    <li>
+                      Proficient in verifying and <span className="dark:text-cyan-300 text-cyan-900 font-bold">processing customer orders</span>, ensuring timely fulfillment and following up on any issues
+                    </li>
+                    <li>
+                      Skilled in providing <span className="dark:text-cyan-300 text-cyan-900 font-bold">basic technical troubleshooting</span> and guidance on product usage and features to customers
+                    </li>
+                    <li>
+                      Experienced in managing <span className="dark:text-cyan-300 text-cyan-900 font-bold">credit/debit card payments, invoicing,</span> and{" "}
+                      <span className="dark:text-cyan-300 text-cyan-900 font-bold">other financial transactions</span> for customer account
+                    </li>
+                    <li>
+                      Adept at identifying customer needs and <span className="dark:text-cyan-300 text-cyan-900 font-bold">recommending appropriate service options</span>, as well as up selling subscription
+                    </li>
+                    <li>
+                      <span className="dark:text-cyan-300 text-cyan-900 font-bold">Strong communication skills</span> and ability to promote company's services and special offers to customers
+                    </li>
                   </ul>
                 </span>
               </div>
@@ -190,13 +266,48 @@ function about() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.2 }}
               exit={{ opacity: 0, y: 10 }}
-              className="md:col-span-1 col-span-2 row-span-2 md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-500 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
+              className="md:col-span-1 col-span-2 row-span-1 md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-500 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
             >
-             
+              <h3 className="text-xl font-semibold mb-2 dark:text-cyan-300 text-cyan-600"></h3>
+              <div className="text-xl dark:text-white text-zinc-800 ">
+                <span className="flex-none">
+                  <div className="grid grid-cols-1 sm:grid-cols-3">
+                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 flex-none font-semibold">Education</span>
+                  </div>
+                  <div className="italic md:text-lg text-sm">Don Mariano Marcos Memorial State University</div>
+                  <ul className="mt-4  ml-4 space-y-4 text-sm md:text-base">
+                    <li>Bachelor of Science in Information Systems - Major in Marketing</li>
+                    <li>
+                      <span className="dark:text-cyan-300 text-cyan-900 font-bold">Thesis Title:</span> Collection and Disbursement Record Management System for the Sericulture and Research Department Institute
+                    </li>
+                  </ul>
+                </span>
+              </div>
             </motion.div>
 
-            
-            
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.2 }}
+              exit={{ opacity: 0, y: 10 }}
+              className="md:col-span-1 col-span-2 row-span-1 md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-500 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
+            >
+              <h3 className="text-xl font-semibold mb-2 dark:text-cyan-300 text-cyan-600"></h3>
+              <div className="text-xl dark:text-white text-zinc-800 ">
+                <span className="flex-none">
+                  <div className="grid grid-cols-1 sm:grid-cols-3">
+                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 flex-none font-semibold">Stats</span>
+                  </div>
+                  <div className="italic md:text-lg text-sm">Don Mariano Marcos Memorial State University</div>
+                  <ul className="mt-4  ml-4 space-y-4 text-sm md:text-base">
+                    <li>Bachelor of Science in Information Systems - Major in Marketing</li>
+                    <li>
+                      <span className="dark:text-cyan-300 text-cyan-900 font-bold">Thesis Title:</span> Collection and Disbursement Record Management System for the Sericulture and Research Department Institute
+                    </li>
+                  </ul>
+                </span>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
