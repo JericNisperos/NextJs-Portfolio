@@ -15,6 +15,26 @@ body {
   scrollbar-color: rgb(114, 137, 218) white;
 }
 
+.icon-brands {
+  font-size: 50px;
+  @apply text-center justify-center mx-auto dark:text-white text-zinc-900;
+}
+
+.icon-brands-express {
+  font-size: 25px;
+
+  &.small {
+    font-size: 20px;
+  }
+  &.smaller {
+    font-size: 15px;
+  }
+}
+
+.icon-brands-svg {
+  width: 50px;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
