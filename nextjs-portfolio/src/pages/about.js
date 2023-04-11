@@ -26,7 +26,7 @@ import { FaAngular, FaCss3Alt, FaFigma, FaGithub, FaHtml5, FaJs, FaNodeJs, FaRea
 import { faFacebookF, faGithubAlt, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 import { DiMysql } from "react-icons/di";
-function about() {
+function About() {
   function LinkItems({ href, icon }) {
     return (
       <motion.span whileHover={{ scale: 1.5 }} whileTap={{ scale: 1.2 }}>
@@ -169,6 +169,7 @@ function about() {
               <div className="text-xl dark:text-white text-zinc-800 ">
                 <span className="flex-none">
                   <div className="grid grid-cols-1 sm:grid-cols-3">
+                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold underline">Work Experiences</span>
                     <span className="dark:text-cyan-300 text-cyan-900 md:text-4xl text-xl sm:col-span-2 font-semibold">Norima Technologies Inc.</span>
                     <span className="sm:text-right dark:text-white text-cyan-900 text-sm">Jan 2022 - Feb 2023</span>
                   </div>
@@ -315,4 +316,4 @@ function about() {
   );
 }
 
-export default about;
+export default About;

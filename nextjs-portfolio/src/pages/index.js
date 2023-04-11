@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolder, faHome, faHouseCircleCheck, faMoon, faPaperPlane, faPerson, faSun, faUser, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
-
+import About from "./about";
 export default function Home() {
   return (
     <>
@@ -37,7 +37,9 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-
+        {/* <div id="about">
+        <About />
+        </div> */}
       </main>
     </>
   );
