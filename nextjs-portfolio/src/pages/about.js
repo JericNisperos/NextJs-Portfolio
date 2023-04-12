@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { TbBrandReactNative } from "react-icons/tb";
 import {
   SiAdobedreamweaver,
   SiAdobeillustrator,
@@ -16,6 +17,7 @@ import {
   SiMicrosoftsqlserver,
   SiMongodb,
   SiMysql,
+  SiNativescript,
   SiNextdotjs,
   SiPostman,
   SiSwagger,
@@ -48,7 +50,7 @@ function About() {
 
   return (
     <>
-      <div className="dark:bg-zinc-900 bg-zinc-100 min-h-screen transition-colors duration-1000 ease-in-out pb-24">
+      <div className="dark:bg-zinc-900 bg-zinc-100 min-h-screen transition-colors duration-1000 ease-in-out pb-24 cursor-default">
         <h1 className="flex text-center mx-auto justify-center text-4xl md:text-8xl">About Me</h1>
         <div className={`lg:mx-48 md:mx-16 flex justify-center `}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 mx-8 grid-flow-row-dense">
@@ -111,6 +113,7 @@ function About() {
                       <BrandItems icon={<SiBootstrap className="icon-brands" />} title="Bootstrap" />
                       <BrandItems icon={<SiTailwindcss className="icon-brands" />} title="Tailwind" />
                       <BrandItems icon={<FaReact className="icon-brands" />} title="ReactJs" />
+                      <BrandItems icon={<TbBrandReactNative className="icon-brands" />} title="React-Native" />
                       <BrandItems icon={<SiNextdotjs className="icon-brands" />} title="NextJs" />
                       <BrandItems icon={<FaAngular className="icon-brands" />} title="AngularJs" />
                       <BrandItems icon={<FaNodeJs className="icon-brands" />} title="NodeJs" />
@@ -147,7 +150,7 @@ function About() {
                       <BrandItems icon={<SiPostman className="icon-brands" />} title="Postman" />
                       <BrandItems icon={<SiJira className="icon-brands" />} title="Jira" />
                       <BrandItems icon={<SiMicrosoftoffice className="icon-brands" />} title="MsTools" />
-                      <BrandItems icon={<FaFigma className="icon-brands" />} title="Figma" />
+                      {/* <BrandItems icon={<FaFigma className="icon-brands" />} title="Figma" /> */}
                       <BrandItems icon={<SiAdobephotoshop className="icon-brands" />} title="Photoshop" />
                       <BrandItems icon={<SiAdobeillustrator className="icon-brands" />} title="Illustrator" />
                       <BrandItems icon={<SiUnity className="icon-brands" />} title="Unity" />

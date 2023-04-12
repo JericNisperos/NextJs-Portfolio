@@ -6,6 +6,9 @@ import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import About from "./about";
 export default function Home() {
+
+
+
   return (
     <>
       <Head>
@@ -14,7 +17,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-
+      
       <main className={` dark:bg-zinc-900 bg-zinc-100 min-h-screen transition-colors duration-1000 ease-in-out`}>
         <div className="flex justify-center md:pt-48">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl px-8 mt-12">
@@ -41,6 +44,7 @@ export default function Home() {
         <About />
         </div> */}
       </main>
+      
     </>
   );
 }
