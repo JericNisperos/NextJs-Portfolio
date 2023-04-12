@@ -16,7 +16,12 @@ body {
 }
 
 .icon-brands {
-  font-size: 50px;
+  // font-size: 50px;
+  @apply text-center justify-center mx-auto dark:text-white text-zinc-900 text-5xl md:text-6xl ;
+}
+
+.icon-brands-smaller {
+  font-size: 30px;
   @apply text-center justify-center mx-auto dark:text-white text-zinc-900;
 }
 

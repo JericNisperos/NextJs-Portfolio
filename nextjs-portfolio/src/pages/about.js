@@ -23,7 +23,7 @@ import {
   SiUnity,
 } from "react-icons/si";
 import { FaAngular, FaCss3Alt, FaFigma, FaGithub, FaHtml5, FaJs, FaNodeJs, FaReact, faAngular } from "react-icons/fa";
-import { faFacebookF, faGithubAlt, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF, faGithub, faGithubAlt, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 import { DiMysql } from "react-icons/di";
 function About() {
@@ -84,7 +84,7 @@ function About() {
                   <p className="text-2xl dark:text-white text-zinc-800 mt-8 flex mx-auto items-center justify-center">
                     <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faFacebookF} />
                     <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faLinkedinIn} />
-                    <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faGithubAlt} />
+                    <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faGithub} />
                   </p>
                 </span>
               </div>
@@ -101,7 +101,7 @@ function About() {
               <div className="text-xl dark:text-white text-zinc-800 ">
                 <span className="flex-none">
                   <div className="grid grid-cols-1 sm:grid-cols-3">
-                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold">Tech Skills</span>
+                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold underline">Tech Skills</span>
                   </div>
                   <div className="mt-4 list-none md:text-base text-4xl text-center justify-center items-center">
                     <div className=" grid grid-cols-4 md:grid-cols-5 gap-y-4 gap-x-2">
@@ -136,10 +136,10 @@ function About() {
               <div className="text-xl dark:text-white text-zinc-800 ">
                 <span className="flex-none">
                   <div className="grid grid-cols-1 sm:grid-cols-3">
-                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold">Tech Tools</span>
+                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold underline">Tech Tools</span>
                   </div>
                   <div className="mt-4 list-none md:text-base text-4xl text-center justify-center items-center">
-                    <div className=" grid grid-cols-3 md:grid-cols-4 gap-y-4 gap-x-2">
+                    <div className=" grid grid-cols-4 md:grid-cols-5 gap-y-4 gap-x-2">
                       <BrandItems icon={<FaGithub className="icon-brands" />} title="Github" />
                       <BrandItems icon={<SiAzuredevops className="icon-brands" />} title="Azure" />
                       <BrandItems icon={<SiMicrosoftsqlserver className="icon-brands" />} title="MsSQL" />
@@ -171,7 +171,7 @@ function About() {
                   <div className="grid grid-cols-1 sm:grid-cols-3">
                     <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold underline">Work Experiences</span>
                     <span className="dark:text-cyan-300 text-cyan-900 md:text-4xl text-xl sm:col-span-2 font-semibold">Norima Technologies Inc.</span>
-                    <span className="sm:text-right dark:text-white text-cyan-900 text-sm">Jan 2022 - Feb 2023</span>
+                    <span className="sm:text-right dark:text-white text-cyan-900 text-sm">Jan 2022 - March 2023</span>
                   </div>
                   <div className="italic md:text-lg text-sm">Software Engineer / Consultant</div>
                   <ul className="mt-4 list-disc ml-4 md:ml-8 space-y-4 text-sm md:text-base">
@@ -273,13 +273,13 @@ function About() {
               <div className="text-xl dark:text-white text-zinc-800 ">
                 <span className="flex-none">
                   <div className="grid grid-cols-1 sm:grid-cols-3">
-                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 flex-none font-semibold">Education</span>
+                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 flex-none font-semibold underline">Education</span>
                   </div>
                   <div className="italic md:text-lg text-sm">Don Mariano Marcos Memorial State University</div>
                   <ul className="mt-4  ml-4 space-y-4 text-sm md:text-base">
                     <li>Bachelor of Science in Information Systems - Major in Marketing</li>
                     <li>
-                      <span className="dark:text-cyan-300 text-cyan-900 font-bold">Thesis Title:</span> Collection and Disbursement Record Management System for the Sericulture and Research Department Institute
+                      <span className="dark:text-cyan-300 text-cyan-900 font-bold">Thesis Title:</span> Collection and Disbursement Record Management System for the Sericulture and Research Development Institute
                     </li>
                   </ul>
                 </span>
@@ -297,15 +297,19 @@ function About() {
               <div className="text-xl dark:text-white text-zinc-800 ">
                 <span className="flex-none">
                   <div className="grid grid-cols-1 sm:grid-cols-3">
-                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 flex-none font-semibold">Stats</span>
+                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 flex-none font-semibold underline">Statistics</span>
                   </div>
-                  <div className="italic md:text-lg text-sm">Don Mariano Marcos Memorial State University</div>
-                  <ul className="mt-4  ml-4 space-y-4 text-sm md:text-base">
-                    <li>Bachelor of Science in Information Systems - Major in Marketing</li>
-                    <li>
-                      <span className="dark:text-cyan-300 text-cyan-900 font-bold">Thesis Title:</span> Collection and Disbursement Record Management System for the Sericulture and Research Department Institute
-                    </li>
-                  </ul>
+                  <div className="grid grid-cols-2 text-center">
+                  <div className="text-6xl dark:text-cyan-300 text-cyan-900 font-bold">5+
+                  <div className=" text-xl font-bold text-center dark:text-white text-zinc-900"> Years of Experience
+                    </div>
+                 </div>
+                 <div className="text-6xl dark:text-cyan-300 text-cyan-900 font-bold">25+
+                  <div className=" text-xl font-bold text-center dark:text-white text-zinc-900"> Projects Done
+                    </div>
+                 </div>
+                 
+                  </div>
                 </span>
               </div>
             </motion.div>
