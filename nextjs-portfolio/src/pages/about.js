@@ -55,11 +55,12 @@ function About() {
         <div className={`lg:mx-48 md:mx-16 flex justify-center `}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 mx-8 grid-flow-row-dense">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.2 }}
+              initial={{ opacity: 0, x: -50 }}
+              // animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
               exit={{ opacity: 0, y: 10 }}
-              className="col-span-2 duration-500 p-6 rounded-lg min-w-[300px] min-h-[200px] text-center items-center justify-center sm:mt-24"
+              whileInView={{ opacity: 1, x: 0}}
+              className="col-span-2 p-6 rounded-lg min-w-[300px] min-h-[200px] duration-0 text-center items-center justify-center sm:mt-24"
             >
               <h3 className="text-6xl font-semibold mb-2 dark:text-cyan-300 text-cyan-600 text-center justify-center mx-auto flex">JERIC NISPEROS</h3>
               <p className=" dark:text-white text-zinc-800 text-2xl">Full Stack Developer</p>
@@ -67,10 +68,11 @@ function About() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.2 }}
+              initial={{ opacity: 0, x: 50 }}
+              // animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               exit={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, x: 0}}
               className="md:col-span-1 col-span-2  md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-0 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
             >
               <h3 className="text-xl font-semibold mb-2 dark:text-cyan-300 text-cyan-600"></h3>
@@ -93,11 +95,12 @@ function About() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.2 }}
+              initial={{ opacity: 0, x: -50 }}
+              // animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               exit={{ opacity: 0, y: 10 }}
-              className="md:col-span-1 col-span-2 row-span-1 md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-500 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
+              whileInView={{ opacity: 1, x: 0}}
+              className="md:col-span-1 col-span-2 row-span-1 md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-0 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
             >
               <h3 className="text-xl font-semibold mb-2 dark:text-cyan-300 text-cyan-600"></h3>
               <div className="text-xl dark:text-white text-zinc-800 ">
@@ -129,11 +132,12 @@ function About() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.2 }}
+              initial={{ opacity: 0, x: -50 }}
+              // animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
               exit={{ opacity: 0, y: 10 }}
-              className="md:row-start-3 md:col-span-1 col-span-2 row-span-1 md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-500 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
+              whileInView={{ opacity: 1, x: 0}}
+              className="md:row-start-3 md:col-span-1 col-span-2 row-span-1 md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-0 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
             >
               <h3 className="text-xl font-semibold mb-2 dark:text-cyan-300 text-cyan-600"></h3>
               <div className="text-xl dark:text-white text-zinc-800 ">
@@ -162,11 +166,12 @@ function About() {
 
 
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.2 }}
+              initial={{ opacity: 0, x: 50 }}
+              // animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
               exit={{ opacity: 0, y: 10 }}
-              className=" col-span-2 row-span-4 md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-500 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
+              whileInView={{ opacity: 1, x: 0}}
+              className=" col-span-2 row-span-4 md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-0 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
             >
               <h3 className="text-xl font-semibold mb-2 dark:text-cyan-300 text-cyan-600"></h3>
               <div className="text-xl dark:text-white text-zinc-800 ">
@@ -266,11 +271,12 @@ function About() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.2 }}
+              initial={{ opacity: 0, x: -50 }}
+              // animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
               exit={{ opacity: 0, y: 10 }}
-              className="md:col-span-1 col-span-2 row-span-1 md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-500 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
+              whileInView={{ opacity: 1, x: 0}}
+              className="md:col-span-1 col-span-2 row-span-1 md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-0 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
             >
               <h3 className="text-xl font-semibold mb-2 dark:text-cyan-300 text-cyan-600"></h3>
               <div className="text-xl dark:text-white text-zinc-800 ">
@@ -290,11 +296,12 @@ function About() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.2 }}
+              initial={{ opacity: 0, x: -50 }}
+              // animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
               exit={{ opacity: 0, y: 10 }}
-              className="md:col-span-1 col-span-2 row-span-1 md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-500 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
+              whileInView={{ opacity: 1, x: 0}}
+              className="md:col-span-1 col-span-2 row-span-1 md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-0 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
             >
               <h3 className="text-xl font-semibold mb-2 dark:text-cyan-300 text-cyan-600"></h3>
               <div className="text-xl dark:text-white text-zinc-800 ">
