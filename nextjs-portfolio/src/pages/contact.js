@@ -64,11 +64,11 @@ function contact() {
             <div className="flex flex-col space-y-4 mb-8 px-4 text-center ">
               <p className=" dark:text-white text-zinc-800 md:text-xl text-base text-center">Reach out to any of my Accounts!</p>
               <div className="text-2xl dark:text-white text-zinc-800 flex mx-auto items-center justify-center mt-8">
-                <div className="grid grid-cols-4 gap-y-4 gap-x-2 mt-8 md:pb-24">
+                <div className="grid grid-cols-3 gap-y-4 gap-x-2 mt-8 md:pb-24">
                   <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faFacebookF} />
-                  <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faLinkedinIn} />
-                  <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faGithub} />
-                  <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faDiscord} />
+                  <LinkItems href="https://www.linkedin.com/in/jeric-nisperos-38055a11b/" icon={faLinkedinIn} />
+                  <LinkItems href="https://github.com/JericNisperos" icon={faGithub} />
+                  {/* <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faDiscord} /> */}
                 </div>
               </div>
 

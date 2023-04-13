@@ -110,7 +110,7 @@ const Navbar = () => {
       <div className="scale-[1.5] sm:scale-[1.2] dark:bg-white bg-zinc-900 shadow-md p-2 rounded-full ease-in-out duration-500 flex ">
         <p className="dark:text-black text-white flex">
           <NavItems href="/" title="Home" icon={faHome} />
-          <NavItems href="/about" title="About" icon={faUser} />
+          <NavItems href="#about" title="About" icon={faUser} />
           <NavItems href="/projects" title="Projects" icon={faFolder} />
           <NavItems href="/contact" title="Contact" icon={faPaperPlane} />
         </p>
