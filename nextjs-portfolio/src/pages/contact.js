@@ -14,6 +14,16 @@ function contact() {
   const [message, setMessage] = useState();
   const [messageLength, setMessageLength] = useState();
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  }
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -29,6 +39,7 @@ function contact() {
     setUsername("");
     setUserEmail("");
     setMessage("");
+    handleOpenModal();
     
   };
 
@@ -45,7 +56,7 @@ function contact() {
                 type="text"
                 name="user_name"
                 placeholder="Full Name"
-                value={username}
+                value={username} required
                 onChange={(e) => setUsername(e.target.value)}
                 className="grid-cols-1 dark:bg-zinc-800 bg-slate-200 placeholder:text-zinc-600 dark:placeholder:text-slate-200    shadow-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-300"
               />
@@ -53,7 +64,7 @@ function contact() {
                 type="email"
                 name="user_email"
                 placeholder="Email Address"
-                value={useremail}
+                value={useremail} required
                 onChange={(e) => setUserEmail(e.target.value)}
                 className=" dark:bg-zinc-800 bg-slate-200 placeholder:text-zinc-600 dark:placeholder:text-slate-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-300  "
               />
@@ -61,18 +72,24 @@ function contact() {
               <textarea
                 name="message"
                 placeholder="Message"
-                value={message}
+                value={message} required
                 onChange={(e) => {setMessage(e.target.value); setMessageLength(e.target.value.length)  }}
                 className={`dark:bg-zinc-800 bg-slate-200 placeholder:text-zinc-600 dark:placeholder:text-slate-200 rounded-lg px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-300 h-60`}
               ></textarea>
               <div className="text-center items-center">
                 <input type="submit" value="Send" className="w-3/12  rounded-lg px-4 py-2 bg-cyan-500 text-white font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-300 hover:bg-cyan-700 cursor-pointer" />
               </div>
-              <span>{messageLength}</span>
             </form>
           </div>
         </div>
       </div>
+      <button onClick={handleOpenModal}>open</button>
+      {isModalOpen && (
+        <Modal onClose={handleCloseModal}>
+                    <p className="dark:text-cyan-300 text-cyan-500 text-4xl font-bold ">Success!</p>
+          <p className="dark:text-white text-zinc-800 text-lg mt-4 text-justify"> Your message has been sent. Thank you for contacting me. I strive to provide timely responses and typically reply within 24 to 48 hours. I appreciate your patience in the meantime. If you have any urgent concerns, please feel free to reach out to me directly thru my active social media accounts. Thank you again for your message.</p>
+        </Modal>
+      )}
     </div>
   );
 }
