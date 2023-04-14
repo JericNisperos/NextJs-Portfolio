@@ -46,7 +46,7 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-        <div id="about" className="py-24">
+        <div id="about" className="pt-24">
           <AboutSection  />
         </div>
 
@@ -54,7 +54,7 @@ export default function Home() {
           <ProjectSection  />
         </div>
 
-        <div id="contact" className="">
+        <div id="contact" className="pt-24">
           <ContactSection  />
         </div>
       </main>
