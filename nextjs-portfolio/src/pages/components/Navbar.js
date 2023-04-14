@@ -111,8 +111,8 @@ const Navbar = () => {
         <p className="dark:text-black text-white flex">
           <NavItems href="/" title="Home" icon={faHome} />
           <NavItems href="#about" title="About" icon={faUser} />
-          <NavItems href="/projects" title="Projects" icon={faFolder} />
-          <NavItems href="/contact" title="Contact" icon={faPaperPlane} />
+          <NavItems href="#projects" title="Projects" icon={faFolder} />
+          <NavItems href="#contact" title="Contact" icon={faPaperPlane} />
         </p>
         <p className="text-white dark:text-black cursor-default">{/* │ */}</p>
 

@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import About from "./about";
 import AboutSection from "./sections/AboutSection";
+import ProjectSection from "./sections/ProjectSection";
+import ContactSection from "./sections/ContactSection";
 export default function Home() {
 
   
@@ -46,6 +48,14 @@ export default function Home() {
         </div>
         <div id="about" className="py-24">
           <AboutSection  />
+        </div>
+
+        <div id="projects" className="">
+          <ProjectSection  />
+        </div>
+
+        <div id="contact" className="">
+          <ContactSection  />
         </div>
       </main>
       
