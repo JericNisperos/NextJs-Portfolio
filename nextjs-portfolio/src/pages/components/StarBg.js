@@ -27,12 +27,12 @@ const StarBg = () => {
   };
   const width = getViewportWidth();
   const getNumberOfStars = () => {
-    if (width <= 640) {
-      return 20;
+    if (width <= 770) {
+      return 10;
     } else if (width <= 1024) {
-      return 50;
+      return 25;
     } else {
-      return 300;
+      return 50;
     }
   };
 
@@ -76,7 +76,7 @@ const StarBg = () => {
       </p> */}
 
       <div className="fixed top-0 left-0 w-full h-full z-1">
-        {width <= 640 ? (
+        {width <= 770 ? (
           <motion.img src="/images/nebula_1.png" className={`relative sm:-left-[100px] dark:invert-0 invert`} />
         ) : (
           <motion.img src="/images/nebula_1.png" className={`relative sm:-left-[525px] dark:invert-0 invert`} style={{ top: topPosition }} />
