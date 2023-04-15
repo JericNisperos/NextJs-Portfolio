@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Modal = ({ children, onClose }) => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center mx-auto w-[450px] text-center">
+    <div className="z-100 fixed inset-0 flex items-center justify-center mx-auto w-[450px] text-center">
       <motion.div
         className="dark:bg-slate-600 bg-slate-600 p-4 rounded-lg shadow-lg"
         initial={{ scale: 0 }}

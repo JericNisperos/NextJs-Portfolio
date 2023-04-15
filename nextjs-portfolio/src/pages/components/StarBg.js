@@ -1,61 +1,88 @@
-// components/StarryBackground.js
-import { motion } from 'framer-motion';
-import StarShoot from './StarShoot';
+import { motion, useTransform, useScroll } from "framer-motion";
+import { IoPlanet } from "react-icons/io5";
 
-
-const Star = ({ size, x, y, duration, color }) => (
-    
+const Star = ({ size, x, y, duration, top, color }) => (
   <motion.div
-    className={`absolute  rounded-full dark:invert`} 
+    className={`absolute  rounded-full dark:invert-0 invert`} //dark:bg-white bg-black
     style={{
       width: size,
       height: size,
       top: y,
       left: x,
-      backgroundColor: color,
+      y: top,
+      background: color,
     }}
     drag
     animate={{ opacity: [0, 1, 0] }}
-    transition={{ duration, repeat: Infinity, repeatType: 'loop' }}
+    transition={{ duration, repeat: Infinity, repeatType: "loop" }}
   />
 );
 
 const StarBg = () => {
   const stars = [];
+  const stars2 = [];
 
-  const shootingStarProbability = 0.8;
-
-  if (Math.random() < shootingStarProbability) {
-    const x = Math.random() * 100 + 'vw';
-    const y = Math.random() * 100 + 'vh';
-    const duration = Math.random() * 2 + 1;
-    stars.push(<StarShoot key="shooting-star" x={x} y={y} duration={duration} />);
-  }
-
-  const randomColor = () => {
-    const hue = Math.floor(Math.random() * 360);
-    const saturation = Math.floor(Math.random() * 100);
-    const lightness = Math.floor(Math.random() * 100);
-    return `hsl(${hue}, ${saturation}%, 80%)`;
+  const getViewportWidth = () => {
+    return typeof window !== "undefined" ? window.innerWidth : 0;
   };
 
-  for (let i = 0; i < 100; i++) {
+  const getNumberOfStars = () => {
+    const width = getViewportWidth();
+
+    if (width <= 640) {
+      return 100;
+    } else if (width <= 1024) {
+      return 200;
+    } else {
+      return 300;
+    }
+  };
+
+  const StarNumber = getNumberOfStars();
+
+  const { scrollYProgress } = useScroll();
+  const topPosition = useTransform(scrollYProgress, [0, 1], [-555, -755]);
+  const topPosition2 = useTransform(scrollYProgress, [0, 1], [-277.5, -377.5]);
+
+  const randomColor = () => {
+    const hue = Math.floor(Math.random() * 60) + 200; // Restrict hue to 200-260 for purple to blue colors
+    const saturation = Math.floor(Math.random() * 30) + 70; // Saturation between 70-100%
+    const lightness = Math.floor(Math.random() * 30) + 50; // Lightness between 50-80%
+    return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+  };
+
+  for (let i = 0; i < StarNumber; i++) {
     const size = Math.random() * 5 + 5;
-    const x = Math.random() * 100 + 'vw';
-    const y = Math.random() * 100 + 'vh';
+    const x = Math.random() * 100 + "vw";
+    const y = Math.random() * 100 + "vh";
     const duration = Math.random() * 2 + 1;
     const color = randomColor();
 
-    stars.push(<Star key={i} size={size} x={x} y={y} duration={duration} color={color} />);
+    stars.push(<Star key={i} size={size} x={x} y={y} duration={duration} color={color} top={topPosition} />);
   }
 
+  for (let i = 0; i < StarNumber; i++) {
+    const size = Math.random() * 5 + 5;
+    const x = Math.random() * 100 + "vw";
+    const y = Math.random() * 100 + "vh";
+    const duration = Math.random() * 2 + 1;
+    const color = randomColor();
 
-  
+    stars2.push(<Star key={i} size={size} x={x} y={y} duration={duration} color={color} top={topPosition2} />);
+  }
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full z-1">
-      {stars}
-    </div>
+    <>
+      {/* <p className="relative text-6xl left-[300px] top-[200px]" style={{ top: topPosition }}>
+        <IoPlanet />
+      </p> */}
+
+      <div className="fixed top-0 left-0 w-full h-full z-1">
+        <motion.img src="/images/nebula_1.png" className={`relative sm:-left-[525px]  dark:invert-0 invert`} style={{ top: topPosition }} />
+        {stars}
+        {stars2}
+      </div>
+    </>
   );
 };
 

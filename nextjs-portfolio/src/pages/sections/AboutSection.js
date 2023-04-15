@@ -50,13 +50,13 @@ function AboutSection() {
 
   return (
     <>
-      <div className=" z-20 dark:bg-zinc-900 bg-zinc-100 min-h-screen transition-colors duration-1000 ease-in-out pb-24 cursor-default">
+      <div className=" z-20 min-h-screen transition-colors duration-1000 ease-in-out pb-24 cursor-default">
         <div className={`lg:px-48 md:px-16 flex justify-center `}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 mx-8 grid-flow-row-dense">
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               // animate={{ opacity: 1, y: 0 }}
-              
+
               exit={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
               className="md:col-span-3 col-span-1  md:mr-6 mr-0 dark:bg-neutral-800 bg-zinc-200 duration-0 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
@@ -71,8 +71,7 @@ function AboutSection() {
                     Self-motivated individual with the ability to work independently or as a member of a team, seeking a stable and challenging role that utilizes my existing skills and experience while providing opportunities for personal
                     and professional growth.
                   </p>
-                  <p className="text-2xl dark:text-white text-zinc-800 mt-8 flex mx-auto items-center justify-center">
-                  </p>
+                  <p className="text-2xl dark:text-white text-zinc-800 mt-8 flex mx-auto items-center justify-center"></p>
                 </span>
               </div>
             </motion.div>
@@ -297,7 +296,7 @@ function AboutSection() {
                       <div className=" text-xl font-bold text-center dark:text-white text-zinc-900"> Years of Experience</div>
                     </div>
                     <div className="text-6xl dark:text-cyan-300 text-cyan-900 font-bold">
-                     10+
+                      10+
                       <div className=" text-xl font-bold text-center dark:text-white text-zinc-900"> Projects Done</div>
                     </div>
                   </div>

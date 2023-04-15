@@ -25,9 +25,9 @@ export default function Home() {
       </Head>
       
       <main id="background-layer" className={` dark:bg-zinc-900 bg-zinc-100 min-h-screen transition-colors duration-1000 ease-in-out`}>
-      
+      <StarBg />
         <div className="flex justify-center md:pt-48 relative">
-        <StarBg />
+        
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl px-8 mt-12 z-20">
             <motion.img
               src="https://media.licdn.com/dms/image/C4D03AQFSw5IUBtJMFQ/profile-displayphoto-shrink_800_800/0/1656220254047?e=1686182400&v=beta&t=J5XvkLlyzNwC7DBRnjh0ny925D_VO0prFlRVq0MufZA" // Replace with your actual image source
@@ -48,15 +48,15 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-        <div id="about" className="pt-24 z-20">
+        <div id="about" className="relative pt-24 z-20">
           <AboutSection  />
         </div>
 
-        <div id="projects" className="">
+        <div id="projects" className="z-20">
           <ProjectSection  />
         </div>
 
-        <div id="contact" className="pt-24">
+        <div id="contact" className="pt-24 z-20">
           <ContactSection  />
         </div>
       </main>
