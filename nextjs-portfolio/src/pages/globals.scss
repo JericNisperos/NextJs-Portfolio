@@ -6,7 +6,7 @@
 
 html,
 body {
-  background-color: #18181b;
+  // background-color: #18181b;
   min-width: 100vw;
   overflow-x: hidden;
   min-height: 100%;
@@ -14,6 +14,10 @@ body {
   scrollbar-width: thin;
   scrollbar-color: rgb(114, 137, 218) white;
 }
+
+// #background-layer {
+//   background-image: url(https://unblast.com/wp-content/uploads/2021/01/Space-Background-Image-3.jpg);
+// }
 
 .icon-brands {
   // font-size: 50px;
@@ -59,5 +63,5 @@ body {
 }
 
 .has-tooltip:hover .tooltip {
-  @apply visible z-50;
+  @apply visible;
 }

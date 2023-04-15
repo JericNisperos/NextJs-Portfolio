@@ -50,7 +50,7 @@ function AboutSection() {
 
   return (
     <>
-      <div className="dark:bg-zinc-900 bg-zinc-100 min-h-screen transition-colors duration-1000 ease-in-out pb-24 cursor-default">
+      <div className=" z-20 dark:bg-zinc-900 bg-zinc-100 min-h-screen transition-colors duration-1000 ease-in-out pb-24 cursor-default">
         <div className={`lg:px-48 md:px-16 flex justify-center `}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 mx-8 grid-flow-row-dense">
             <motion.div
