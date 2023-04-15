@@ -25,14 +25,12 @@ const StarBg = () => {
   const getViewportWidth = () => {
     return typeof window !== "undefined" ? window.innerWidth : 0;
   };
-
+  const width = getViewportWidth();
   const getNumberOfStars = () => {
-    const width = getViewportWidth();
-
     if (width <= 640) {
-      return 100;
+      return 20;
     } else if (width <= 1024) {
-      return 200;
+      return 50;
     } else {
       return 300;
     }
@@ -61,7 +59,7 @@ const StarBg = () => {
     stars.push(<Star key={i} size={size} x={x} y={y} duration={duration} color={color} top={topPosition} />);
   }
 
-  for (let i = 0; i < StarNumber; i++) {
+  for (let i = 0; i < StarNumber * 2; i++) {
     const size = Math.random() * 5 + 5;
     const x = Math.random() * 100 + "vw";
     const y = Math.random() * 100 + "vh";
@@ -78,7 +76,11 @@ const StarBg = () => {
       </p> */}
 
       <div className="fixed top-0 left-0 w-full h-full z-1">
-        <motion.img src="/images/nebula_1.png" className={`relative sm:-left-[525px]  dark:invert-0 invert`} style={{ top: topPosition }} />
+        {width <= 640 ? (
+          <motion.img src="/images/nebula_1.png" className={`relative sm:-left-[100px] dark:invert-0 invert`} />
+        ) : (
+          <motion.img src="/images/nebula_1.png" className={`relative sm:-left-[525px] dark:invert-0 invert`} style={{ top: topPosition }} />
+        )}
         {stars}
         {stars2}
       </div>
