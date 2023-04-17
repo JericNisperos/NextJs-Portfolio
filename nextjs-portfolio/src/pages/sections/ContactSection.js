@@ -59,7 +59,7 @@ function ContactSection() {
         Let's <span className="dark:text-cyan-300 text-cyan-500">&nbsp;Work Together</span>
       </h1>
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.2 }} exit={{ opacity: 0, y: 10 }} className="flex justify-center ">
-        <div className=" mx-8 mt-12 grid grid-cols-1 sm:grid-cols-3 w-9/12 md:w-9/12 dark:bg-neutral-800 bg-slate-200 rounded-lg">
+        <div className=" mx-8 mt-12 grid grid-cols-1 sm:grid-cols-3 w-9/12 md:w-9/12 bg-gradient-to-bl dark:from-neutral-800 dark:to-zinc-800 from-zinc-200 to-zinc-300 rounded-lg">
           <div className="grid grid-cols-1 pt-4 mt-4 mb-4 md:border-r-4 border-b-4 sm:border-b-0 dark:border-zinc-700 border-slate-600">
             <div className="flex flex-col space-y-4 mb-8 px-4 text-center ">
               <p className=" dark:text-white text-zinc-800 md:text-xl text-base text-center">Reach out to any of my Accounts!</p>

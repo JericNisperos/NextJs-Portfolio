@@ -2,11 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { SiNextdotjs } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
 
 function ProjectItems({ src, title, content, bg, href, num }) {
   return (
     <motion.div
-      className={`overflow-hidden ${bg} max-w-[500px] max-h-[300px] border-2 md:border-4 dark:border-white border-black hover:border-cyan-600 hover:dark:border-cyan-300 rounded-md relative md:mx-auto`}
+      className={`overflow-hidden ${bg} max-w-[500px] max-h-[300px] border-2 md:border-4 dark:border-transparent border-transparent hover:border-cyan-600 hover:dark:border-cyan-300 rounded-md relative md:mx-auto`}
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 * num, duration: 0.4 }}
