@@ -9,13 +9,36 @@ import AboutSection from "./sections/AboutSection";
 import ProjectSection from "./sections/ProjectSection";
 import ContactSection from "./sections/ContactSection";
 import StarBg from "./components/StarBg";
+import FrontSection from "./sections/FrontSection";
+import HomeSection from "./sections/HomeSection";
+import { useState } from "react";
+import AboutBlock from "./sections/AboutBlock";
 export default function Home() {
+  const [activeAbout, setActiveAbout] = useState("Introduction");
 
-  
-
+  const buttonVariants = {
+    rest: {
+      borderColor: "#fff",
+      color: "#fff",
+    },
+    hover: {
+      borderColor: "#06B6D4",
+      color: "#06B6D4",
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    },
+    active: {
+      borderColor: "#fff",
+      color: "#fff",
+      transition: {
+        duration: 0.2,
+        ease: "easeInOut",
+      },
+    },
+  };
   return (
-
-    
     <>
       <Head>
         <title>Jeric Nisperos</title>
@@ -23,32 +46,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      
-      <main id="background-layer" className={` dark:bg-zinc-900 bg-zinc-100 min-h-screen transition-colors duration-1000 ease-in-out`}>
-      <StarBg />
-        <div className="flex justify-center md:pt-48 relative">
-        
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl px-8 mt-12 z-20">
-            <motion.img
-              src="https://media.licdn.com/dms/image/C4D03AQFSw5IUBtJMFQ/profile-displayphoto-shrink_800_800/0/1656220254047?e=1686182400&v=beta&t=J5XvkLlyzNwC7DBRnjh0ny925D_VO0prFlRVq0MufZA" // Replace with your actual image source
-              alt="Profile"
-              className="col-span-1 w-1000 h-1000 md:w-full md:h-auto md:max-h-1000 rounded-full shadow-md"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1 }}
-            />
-            <motion.div className="col-span-3 md:flex md:flex-col justify-center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.2 }}>
-              <h1 className="text-4xl md:text-6xl font-semibold md:mb-4 md:leading-3 text-center sm:text-left">
-                Hi there! I'm <span className="dark:text-cyan-300 text-cyan-600 duration-500">Jeric</span>,
-              </h1>
-              <p className="text-2xl md:text-4xl text-center sm:text-left">
-                Aspiring <span className="dark:text-cyan-300 text-cyan-600 duration-500">Full Stack Developer</span>
-              </p>
-              <p className=" md:text-2xl md:mt-4 text-center sm:text-left">Loves to create dynamic and responsive web applications.</p>
-            </motion.div>
-          </div>
+      <main>
+        <div id="background-layer" className={` dark:bg-zinc-900 bg-zinc-100 min-h-screen transition-colors duration-1000 ease-in-out`}>
+          <HomeSection />
+          <AboutBlock />
         </div>
-        <div id="about" className="relative pt-24 z-20">
+        {/* <div id="about" className="relative pt-24 z-20">
           <AboutSection  />
         </div>
 
@@ -58,9 +61,8 @@ export default function Home() {
 
         <div id="contact" className="pt-24 z-20">
           <ContactSection  />
-        </div>
+        </div> */}
       </main>
-      
     </>
   );
 }

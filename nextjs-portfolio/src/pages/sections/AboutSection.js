@@ -82,13 +82,13 @@ function AboutSection() {
               transition={{ delay: 0.1, duration: 0.5 }}
               exit={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="md:col-span-1 col-span-2 row-span-1 md:mr-6 mr-0 bg-gradient-to-bl dark:from-neutral-800 dark:to-zinc-800 from-zinc-200 to-zinc-300 duration-0 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
+              className="md:col-span-1 col-span-2 row-span-1 md:mr-6 mr-0  duration-0 p-6 rounded-lg min-w-[300px] min-h-[200px] text-justify"
             >
               <h3 className="text-xl font-semibold mb-2 dark:text-cyan-300 text-cyan-600"></h3>
               <div className="text-xl dark:text-white text-zinc-800 ">
                 <span className="flex-none">
                   <div className="grid grid-cols-1 sm:grid-cols-3">
-                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold underline">Tech Skills</span>
+                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold underline ">Tech Skills</span>
                   </div>
                   <div className="mt-4 list-none md:text-base text-4xl text-center justify-center items-center">
                     <div className=" grid grid-cols-4 md:grid-cols-5 gap-y-4 gap-x-2">
@@ -119,7 +119,7 @@ function AboutSection() {
               transition={{ delay: 0.2, duration: 0.5 }}
               exit={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="md:row-start-3 md:col-span-1 col-span-2 row-span-1 md:mr-6 mr-0 bg-gradient-to-bl dark:from-neutral-800 dark:to-zinc-800 from-zinc-200 to-zinc-300 duration-0 p-6 rounded-lg shadow-md min-w-[300px] min-h-[200px] text-justify"
+              className="md:row-start-3 md:col-span-1 col-span-2 row-span-1 md:mr-6 mr-0 duration-0 p-6 rounded-lg min-w-[300px] min-h-[200px] text-justify"
             >
               <h3 className="text-xl font-semibold mb-2 dark:text-cyan-300 text-cyan-600"></h3>
               <div className="text-xl dark:text-white text-zinc-800 ">
