@@ -13,6 +13,8 @@ import FrontSection from "./sections/FrontSection";
 import HomeSection from "./sections/HomeSection";
 import { useState } from "react";
 import AboutBlock from "./sections/AboutBlock";
+import ProjectsBlock from "./sections/ProjectsBlock";
+import ContactBlock from "./sections/ContactBlock";
 export default function Home() {
   const [activeAbout, setActiveAbout] = useState("Introduction");
 
@@ -47,9 +49,17 @@ export default function Home() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <main>
-        <div id="background-layer" className={` dark:bg-zinc-900 bg-zinc-100 min-h-screen transition-colors duration-1000 ease-in-out`}>
+        <div id="background-layer" className={`transition-colors duration-1000 ease-in-out`}>
           <HomeSection />
-          <AboutBlock />
+          <div className=" bg-white z-10 bg-gradient-to-b dark:from-zinc-900 dark:to-slate-800 relative duration-1000 ease-in-out">
+            <AboutBlock />
+          </div>
+          <div className=" bg-cyan-500 z-10 bg-gradient-to-b dark:from-slate-800 dark:to-zinc-900 relative">
+            <ProjectsBlock />
+          </div>
+          <div className="dark:bg-zinc-900 bg-white relative">
+            <ContactBlock />
+          </div>
         </div>
         {/* <div id="about" className="relative pt-24 z-20">
           <AboutSection  />

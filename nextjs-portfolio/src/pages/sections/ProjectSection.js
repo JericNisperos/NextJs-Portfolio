@@ -30,7 +30,7 @@ function ProjectItems({ src, title, content, bg, href, num }) {
 function ProjectSection() {
   return (
     <>
-      <div className="  transition-colors duration-1000 ease-in-out">
+      <div id="projects" className="  transition-colors duration-1000 ease-in-out">
         <motion.h1 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="font-bold mb-4 text-center text-2xl md:text-6xl">
           My Projects
         </motion.h1>
