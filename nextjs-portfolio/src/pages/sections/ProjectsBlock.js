@@ -38,7 +38,7 @@ function ProjectsBlock() {
         <motion.h1 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="font-bold mb-4 text-center text-4xl md:text-6xl dark:text-white text-black">
           What I'm working with
         </motion.h1>
-        <div className="grid xl:grid-cols-4 grid-cols-1 dark:text-white text-black cursor-default">
+        <div className="grid xl:grid-cols-4 grid-cols-1 dark:text-white text-black ">
           <div className="col-span-2 flex justify-center items-center">
             <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ delay: 0.2 * 1, duration: 0.4 }} className="md:text-2xl text-lg grid md:grid-cols-1 gap-8 pb-8">
               <p className=" text-justify">
@@ -56,7 +56,8 @@ function ProjectsBlock() {
               </p>
 
               <motion.button whileHover={{ scale: 0.9 }} className="hidden md:flex mx-auto text-2xl rounded-lg dark:bg-cyan-500 bg-white p-4 hover:dark:bg-cyan-700 hover:bg-neutral-200">
-                Show more Projects &nbsp; <FontAwesomeIcon icon={faArrowAltCircleRight} />
+                Show more Projects 
+                {/* &nbsp; <FontAwesomeIcon icon={faArrowAltCircleRight} /> */}
               </motion.button>
             </motion.div>
           </div>

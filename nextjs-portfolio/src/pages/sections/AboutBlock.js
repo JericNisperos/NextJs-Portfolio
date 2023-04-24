@@ -34,7 +34,7 @@ function AboutBlock() {
     return (
       <motion.span whileHover={{ scale: 0.9 }} className="has-tooltip text-transparent hover:dark:text-cyan-300 hover:text-zinc-900">
         {icon}
-        <p className="text-lg text-center justify-center cursor-default">{title}</p>
+        <p className="text-lg text-center justify-center ">{title}</p>
       </motion.span>
     );
   }
@@ -42,15 +42,15 @@ function AboutBlock() {
   return (
     <div>
       <div className=" h-full w-full z-10 relative mt-24 pb-12">
-        <div id="about" className="dark:text-white text-zinc-800 gap-4 duration-0 lg:px-48 md:px-16 flex cursor-default text-base md:text-3xl py-4 justify-center grid-cols-4 ">
+        <div id="about" className="dark:text-white text-zinc-800 gap-4 duration-0 lg:px-48 md:px-16 flex  text-base md:text-3xl py-4 justify-center grid-cols-4 ">
           <motion.button
             href="#about"
             onClick={(e) => {
               setActiveAbout("Introduction");
             }}
-            className={` ${activeAbout === "Introduction" ? "dark:border-white ease-in-out border-black" : "dark:border-zinc-900 hover:border-cyan-500 hover:dark:border-cyan-500 border-white"} border-b-4`}
-          >
-            <motion.p whileHover={{ scale: 0.9 }} className=" px-4 py-0">
+            className={` ${activeAbout === "Introduction" ? "dark:border-white cursor-none ease-in-out border-black" : "dark:border-zinc-900 hover:border-cyan-500 hover:dark:border-cyan-500 border-white"} border-b-4`}
+          > 
+            <motion.p whileHover={{ scale: 0.9 }} className=" px-4 py-0 cursor-none">
               Introduction
             </motion.p>
           </motion.button>
@@ -58,9 +58,9 @@ function AboutBlock() {
             onClick={(e) => {
               setActiveAbout("TechSkills");
             }}
-            className={` ${activeAbout === "TechSkills" ? "dark:border-white ease-in-out border-black" : "dark:border-zinc-900 hover:border-cyan-500 hover:dark:border-cyan-500 border-white"} border-b-4`}
+            className={` ${activeAbout === "TechSkills" ? "dark:border-white cursor-none ease-in-out border-black" : "dark:border-zinc-900 hover:border-cyan-500 hover:dark:border-cyan-500 border-white"} border-b-4`}
           >
-            <motion.p whileHover={{ scale: 0.9 }} className=" px-4 py-2 ">
+            <motion.p whileHover={{ scale: 0.9 }} className=" px-4 py-2 cursor-none">
               Skills
             </motion.p>
           </button>
@@ -68,16 +68,16 @@ function AboutBlock() {
             onClick={(e) => {
               setActiveAbout("Experiences");
             }}
-            className={` ${activeAbout === "Experiences" ? "dark:border-white ease-in-out border-black" : "dark:border-zinc-900 hover:border-cyan-500 hover:dark:border-cyan-500 border-white"} border-b-4`}
+            className={` ${activeAbout === "Experiences" ? "dark:border-white cursor-none ease-in-out border-black" : "dark:border-zinc-900 hover:border-cyan-500 hover:dark:border-cyan-500 border-white"} border-b-4`}
           >
-            <motion.p whileHover={{ scale: 0.9 }} className=" px-4 py-2 ">
+            <motion.p whileHover={{ scale: 0.9 }} className=" px-4 py-2 cursor-none">
               Experiences
             </motion.p>
           </button>
         </div>
         <div>
           {activeAbout === "Introduction" ? (
-            <div className="md:text-xl text-lg dark:text-white text-zinc-800 lg:px-64 md:px-24 px-6 md:mt-12 cursor-default">
+            <div className="md:text-xl text-lg dark:text-white text-zinc-800 lg:px-64 md:px-24 px-6 md:mt-12 cursor-none ">
               <span className="flex-none">
                 <motion.ul initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }} className=" dark:text-white text-zinc-800 md:text-2xl text-justify">
                   <li className="">
@@ -178,7 +178,7 @@ function AboutBlock() {
                 // transition={{ duration: 0.5 }}
                 // exit={{ opacity: 0, y: 10 }}
                 // whileInView={{ opacity: 1, y: 0 }}
-                className=" col-span-2 row-span-4 md:mr-6 mr-0 duration-0 p-6 rounded-lg min-w-[300px] min-h-[200px] text-justify lg:px-72 md:px-16 cursor-default"
+                className=" col-span-2 row-span-4 md:mr-6 mr-0 duration-0 p-6 rounded-lg min-w-[300px] min-h-[200px] text-justify lg:px-72 md:px-16 "
               >
                 <div className="text-xl dark:text-white text-zinc-800 ">
                   <motion.div

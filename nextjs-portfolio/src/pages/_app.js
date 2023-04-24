@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navbar from "./components/Navbar";
 import "./globals.scss";
 import { ThemeProvider } from "next-themes";
+import CustomCursor from "./components/CustomCursor";
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider enableSystem={true} attribute="class">
@@ -12,6 +13,8 @@ export default function App({ Component, pageProps }) {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <Navbar />
+      <CustomCursor />
+      {/* < /> */}
       <Component {...pageProps} />
     </ThemeProvider>
   );
