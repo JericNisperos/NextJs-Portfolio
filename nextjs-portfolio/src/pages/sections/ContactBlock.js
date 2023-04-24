@@ -54,7 +54,7 @@ function ContactBlock() {
   }
 
   return (
-    <div className=" relative transition-colors duration-1000 ease-in-out pt-12 pb-24 cursor-default dark:bg-zinc-900 bg-white">
+    <div id="contact" className=" relative transition-colors duration-1000 ease-in-out pt-12 pb-24 cursor-default dark:bg-zinc-900 bg-white">
       {/* <motion.h1 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="font-bold mb-4 text-center text-4xl md:text-6xl dark:text-white text-black">
         Reach me Out!
       </motion.h1> */}
@@ -89,7 +89,7 @@ function ContactBlock() {
                     value={username}
                     required
                     onChange={(e) => setUsername(e.target.value)}
-                    className="grid-cols-1 dark:bg-zinc-700 bg-slate-100 placeholder:text-zinc-600 dark:placeholder:text-slate-200    shadow-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-300"
+                    className="grid-cols-1 dark:bg-zinc-800 bg-slate-100 placeholder:text-zinc-600 dark:placeholder:text-slate-200    shadow-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-300"
                   />
                   <input
                     type="email"
@@ -98,7 +98,7 @@ function ContactBlock() {
                     value={useremail}
                     required
                     onChange={(e) => setUserEmail(e.target.value)}
-                    className=" dark:bg-zinc-700 bg-slate-100 placeholder:text-zinc-600 dark:placeholder:text-slate-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-300  "
+                    className=" dark:bg-zinc-800 bg-slate-100 placeholder:text-zinc-600 dark:placeholder:text-slate-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-300  "
                   />
                 </div>
                 <textarea
@@ -110,12 +110,13 @@ function ContactBlock() {
                     setMessage(e.target.value);
                     setMessageLength(e.target.value.length);
                   }}
-                  className={`dark:bg-zinc-700 bg-slate-100 placeholder:text-zinc-600 dark:placeholder:text-slate-200 rounded-lg px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-300 h-60`}
+                  className={`dark:bg-zinc-800 bg-slate-100 placeholder:text-zinc-600 dark:placeholder:text-slate-200 rounded-lg px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-300 h-60`}
                 ></textarea>
                 <div className="text-center items-center">
                   <input type="submit" value="Send" className="w-3/12  rounded-lg px-4 py-2 bg-cyan-500 text-white font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-300 hover:bg-cyan-700 cursor-pointer" />
                 </div>
               </form>
+
             </div>
           </div>
         </div>
@@ -123,10 +124,10 @@ function ContactBlock() {
       {/* <button onClick={handleOpenModal}>open</button> */}
       {isModalOpen && (
         <Modal onClose={handleCloseModal}>
-          <p className="dark:text-cyan-300 text-cyan-500 text-4xl font-bold ">Success!</p>
-          <p className="text-white text-lg mt-4 text-justify">
+          {/* <p className="dark:text-cyan-300 text-cyan-500 text-4xl font-bold ">Success!</p> */}
+          <p className="text-white text-xl p-4 mt-4 text-justify">
             {" "}
-            Your message has been sent. Thank you for contacting me. I strive to provide timely responses and typically reply within 24 to 48 hours. I appreciate your patience in the meantime. If you have any urgent concerns, please feel
+            &nbsp;&nbsp;&nbsp;&nbsp;Your message has been sent. Thank you for contacting me. I strive to provide timely responses and typically reply within 24 to 48 hours. I appreciate your patience in the meantime. If you have any urgent concerns, please feel
             free to reach out to me directly thru my active social media accounts. Thank you again for your message.
           </p>
         </Modal>
