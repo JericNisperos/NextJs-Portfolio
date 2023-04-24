@@ -34,12 +34,12 @@ function ProjectItems({ src, title, content, bg, href, num }) {
 function ProjectsBlock() {
   return (
     <AnimatePresence>
-      <div id="projects" className=" overflow-hidden transition-colors duration-1000 ease-in-out relative  lg:px-48 md:px-16 py-12 px-12 ">
+      <div id="projects" className=" overflow-hidden transition-colors duration-1000 ease-in-out relative  lg:px-48 md:px-16 py-12 px-8 ">
         <motion.h1 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="font-bold mb-4 text-center text-4xl md:text-6xl dark:text-white text-black">
           What I'm working with
         </motion.h1>
         <div className="grid xl:grid-cols-4 grid-cols-1 dark:text-white text-black cursor-default">
-          <div className="col-span-2 flex justify-center items-center mx-8">
+          <div className="col-span-2 flex justify-center items-center">
             <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ delay: 0.2 * 1, duration: 0.4 }} className="md:text-2xl text-lg grid md:grid-cols-1 gap-8 pb-8">
               <p className=" text-justify">
                 &nbsp;&nbsp;&nbsp;&nbsp; I have been working on various projects as a web developer, and my focus has been on using frameworks like <span className="dark:text-cyan-500">ReactJS</span> along with{" "}
