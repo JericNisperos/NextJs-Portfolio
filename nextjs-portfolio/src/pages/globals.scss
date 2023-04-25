@@ -71,6 +71,7 @@ body {
   position: fixed;
   pointer-events: none;
   z-index: 9999;
+  transform: translate(-50%, -50%);
 }
 
 .circle {
@@ -82,6 +83,9 @@ body {
   // height: 100px;
   // position: absolute;
   // background: #fff;
+  // left: -6px;
+  //   top: -6px;
+  position: fixed;
   border-radius: 100%;
   transform: translate(-50%, -50%);
   // transition: 0.075s;

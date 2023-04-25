@@ -55,10 +55,10 @@ function ProjectsBlock() {
                 are easily maintainable and scalable. I am committed to delivering high-quality results that are both functional and visually appealing.
               </p>
 
-              {/* <motion.button whileHover={{ scale: 0.9 }} className="hidden md:flex mx-auto text-2xl rounded-lg dark:bg-cyan-500 bg-white p-4 hover:dark:bg-cyan-700 hover:bg-neutral-200">
-                Show more Projects 
+              <motion.button whileHover={{ scale: 0.9 }} className="hidden md:flex mx-auto text-2xl rounded-lg dark:bg-cyan-500 bg-white p-4 hover:dark:bg-cyan-700 hover:bg-neutral-200">
+                Access Sandbox 
                 
-              </motion.button> */}
+              </motion.button>
             </motion.div>
           </div>
 
