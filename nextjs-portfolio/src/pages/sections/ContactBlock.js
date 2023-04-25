@@ -62,7 +62,7 @@ function ContactBlock() {
         <div className=" mx-8 mt-12 grid grid-cols-1 lg:grid-cols-3 w-9/12 md:w-9/12 bg-gradient-to-bl  rounded-lg">
           <div className="grid grid-cols-1 pt-4 mt-4 mb-4 ">
             <div className="flex flex-col space-y-4 mb-8 px-4 text-center ">
-              <p className=" dark:text-cyan-500 text-zinc-800 md:text-6xl text-3xl text-center font-semibold">Reach out to any of my Accounts!</p>
+              <p className=" dark:text-cyan-500 text-cyan-400 md:text-6xl text-3xl text-center font-semibold">Reach out to any of my Accounts!</p>
 
 
               <p className=" dark:text-white text-zinc-800 md:text-xl text-center text-2xl mt-8">I strive to provide timely responses and typically reply within 24 to 48 hours. I appreciate your patience in the meantime.</p>

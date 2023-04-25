@@ -334,7 +334,7 @@ function AboutBlock() {
                         <span className="dark:text-cyan-300 text-cyan-900 font-bold">other financial transactions</span> for customer account
                       </li>
                       <li>
-                        Providing good choice of items as well as <span className="dark:text-cyan-300 text-cyan-900 font-bold">recommending brands</span>that suites with their needs
+                        Providing good choice of items as well as <span className="dark:text-cyan-300 text-cyan-900 font-bold">recommending brands </span>that suites with their needs
                       </li>
                       <li>
                         <span className="dark:text-cyan-300 text-cyan-900 font-bold">Strong communication skills</span> and ability to promote company's services and special offers to customers

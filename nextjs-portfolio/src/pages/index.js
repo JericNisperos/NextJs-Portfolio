@@ -48,30 +48,19 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <main className="cursor-none">
+      <main className="cursor-none scroll-smooth	">
         <div id="background-layer" className={`transition-colors duration-1000 ease-in-out`}>
           <HomeSection />
           <div className=" bg-white z-10 bg-gradient-to-b dark:from-zinc-900 dark:to-slate-800 relative duration-1000 ease-in-out">
             <AboutBlock />
           </div>
-          <div className=" bg-cyan-500 z-10 bg-gradient-to-b dark:from-slate-800 dark:to-zinc-900 relative">
+          <div className=" bg-cyan-300 z-10 bg-gradient-to-b dark:from-slate-800 dark:to-zinc-900 relative">
             <ProjectsBlock />
           </div>
           <div className="dark:bg-zinc-900 bg-white relative">
             <ContactBlock />
           </div>
         </div>
-        {/* <div id="about" className="relative pt-24 z-20">
-          <AboutSection  />
-        </div>
-
-        <div id="projects" className="z-20">
-          <ProjectSection  />
-        </div>
-
-        <div id="contact" className="pt-24 z-20">
-          <ContactSection  />
-        </div> */}
       </main>
     </>
   );

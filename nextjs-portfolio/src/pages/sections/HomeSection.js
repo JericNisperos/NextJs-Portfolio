@@ -4,10 +4,10 @@ import StarBg from "../components/StarBg";
 
 function HomeSection() {
   return (
-    <div>
+    <div className="min-h-screen">
       <div>
         <StarBg />
-        <div className="flex justify-center md:pt-48 relative">
+        <div className="flex justify-center md:pt-48 relative ">
           {/* <FrontSection /> */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl px-8 mt-12 z-20">
             <motion.img

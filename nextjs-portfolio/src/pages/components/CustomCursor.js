@@ -11,7 +11,11 @@ const CustomCursor = () => {
         animate={{ x: cursorPos.x, y: cursorPos.y }}
         transition={{ duration: 0 }}
       >
-        <div className="circle " />
+        <motion.div 
+        animate={{rotate: 360}}
+        transition={{duration: 0, repeat: Infinity}}
+        
+        className="circle bg-gradient-to-bl from-orange-600 via-purple-600 to-blue-600 duration-0" />
       </motion.div>
     );
   };
