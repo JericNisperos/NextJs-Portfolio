@@ -82,7 +82,7 @@ const StarBg = () => {
           <motion.img src="/images/nebula_1.png" className={`relative sm:-left-[525px] dark:invert-0 invert`} style={{ top: topPosition }} />
         )}
         {stars}
-        {stars2}
+        {/* {stars2} */}
       </div>
     </>
   );
