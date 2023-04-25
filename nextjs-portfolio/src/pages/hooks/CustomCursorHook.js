@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-export const useCursor = () => {
-    const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
+function useCursor() {
+    const [cursorPos, setCursorPos] = useState([-100, -100 ]);
   
     useEffect(() => {
       const onMouseMove = (e) => {
-        setCursorPos({ x: e.clientX, y: e.clientY });
+        setCursorPos([ e.clientX, e.clientY ]);
       };
       window.addEventListener('mousemove', onMouseMove);
   
@@ -14,3 +14,5 @@ export const useCursor = () => {
   
     return cursorPos;
   };
+
+export default useCursor;

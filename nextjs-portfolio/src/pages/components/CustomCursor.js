@@ -1,14 +1,13 @@
-const { useCursor } = require("../hooks/CustomCursorHook");
 import { motion } from "framer-motion";
+import useCursor from "../hooks/CustomCursorHook";
 
 const CustomCursor = () => {
     const cursorPos = useCursor();
-    console.log(cursorPos);
   
     return (
       <motion.div
         className="cursor"
-        animate={{ x: cursorPos.x, y: cursorPos.y }}
+        animate={{ x: cursorPos[0], y: cursorPos[1] }}
         transition={{ duration: 0 }}
       >
         <motion.div 
