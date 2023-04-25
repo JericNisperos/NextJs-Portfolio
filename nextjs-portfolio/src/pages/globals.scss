@@ -92,29 +92,29 @@ body {
 }
 
 button {
-  @apply cursor-none;
+  @apply cursor-default md:cursor-none;
 }
 
 a {
-  @apply cursor-none;
+  @apply cursor-default md:cursor-none;
 }
 
 span {
-  @apply cursor-none;
+  @apply cursor-default md:cursor-none;
 }
 
 div {
-  @apply cursor-none;
+  @apply cursor-default md:cursor-none;
 }
 
 input {
-  @apply cursor-none;
+  @apply cursor-default md:cursor-none;
 }
 
 form {
-  @apply cursor-none;
+  @apply cursor-default md:cursor-none;
 }
 
 textarea {
-  @apply cursor-none;
+  @apply cursor-default md:cursor-none;
 }

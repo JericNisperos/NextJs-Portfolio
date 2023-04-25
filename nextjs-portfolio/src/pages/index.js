@@ -48,7 +48,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <main className="cursor-none scroll-smooth	">
+      <main className="cursor-default md:cursor-none scroll-smooth	">
         <div id="background-layer" className={`transition-colors duration-1000 ease-in-out`}>
           <HomeSection />
           <div className=" bg-white z-10 bg-gradient-to-b dark:from-zinc-900 dark:to-slate-800 relative duration-1000 ease-in-out">

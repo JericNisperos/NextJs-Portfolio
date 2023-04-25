@@ -14,7 +14,7 @@ const CustomCursor = () => {
         animate={{rotate: 360}}
         transition={{duration: 5, repeat: Infinity}}
         
-        className="md:circle bg-gradient-to-bl from-orange-600 via-purple-600 to-blue-600" />
+        className="circle hidden md:block bg-gradient-to-bl from-orange-600 via-purple-600 to-blue-600" />
       </motion.div>
     );
   };
