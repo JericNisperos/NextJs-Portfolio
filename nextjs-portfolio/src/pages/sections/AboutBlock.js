@@ -124,14 +124,14 @@ function AboutBlock() {
                         <BrandItems icon={<SiBootstrap className="icon-brands" />} title="Bootstrap" />
                         <BrandItems icon={<SiTailwindcss className="icon-brands" />} title="Tailwind" />
                         <BrandItems icon={<FaReact className="icon-brands" />} title="ReactJs" />
-                        <BrandItems icon={<TbBrandReactNative className="icon-brands" />} title="React-Native" />
+                        {/* <BrandItems icon={<TbBrandReactNative className="icon-brands" />} title="React-Native" /> */}
                         <BrandItems icon={<SiNextdotjs className="icon-brands" />} title="NextJs" />
                         <BrandItems icon={<FaAngular className="icon-brands" />} title="AngularJs" />
                         <BrandItems icon={<FaNodeJs className="icon-brands" />} title="NodeJs" />
-                        <BrandItems icon={<SiExpress className="icon-brands" />} title="ExpressJs" />
+                        {/* <BrandItems icon={<SiExpress className="icon-brands" />} title="ExpressJs" /> */}
                         <BrandItems icon={<SiFirebase className="icon-brands" />} title="Firebase" />
                         <BrandItems icon={<DiMysql className="icon-brands" />} title="MySQL" />
-                        <BrandItems icon={<SiMongodb className="icon-brands" />} title="MongoDb" />
+                        {/* <BrandItems icon={<SiMongodb className="icon-brands" />} title="MongoDb" /> */}
                         <BrandItems icon={<SiCsharp className="icon-brands" />} title="CSharp" />
                       </div>
                     </div>

@@ -9,7 +9,7 @@ function HomeSection() {
         <StarBg />
         <div className="flex justify-center md:pt-48 relative ">
           {/* <FrontSection /> */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl px-8 mt-12 z-20">
+          <div className="grid grid-cols-1 md:grid-cols-4 md:gap-4 max-w-5xl px-8 mt-12 z-20">
             <motion.img
               src="https://media.licdn.com/dms/image/C4D03AQFSw5IUBtJMFQ/profile-displayphoto-shrink_800_800/0/1656220254047?e=1686182400&v=beta&t=J5XvkLlyzNwC7DBRnjh0ny925D_VO0prFlRVq0MufZA" // Replace with your actual image source
               alt="Profile"

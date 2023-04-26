@@ -3,7 +3,7 @@ import { IoPlanet } from "react-icons/io5";
 
 const Star = ({ size, x, y, duration, top, color }) => (
   <motion.div
-    className={`absolute  rounded-full dark:invert-0 invert`} //dark:bg-white bg-black
+    className={`absolute rounded-full dark:invert-0 invert`} //dark:bg-white bg-black
     style={{
       width: size,
       height: size,
@@ -12,7 +12,6 @@ const Star = ({ size, x, y, duration, top, color }) => (
       y: top,
       background: color,
     }}
-    drag
     animate={{ opacity: [0, 1, 0] }}
     transition={{ duration, repeat: Infinity, repeatType: "loop" }}
   />
