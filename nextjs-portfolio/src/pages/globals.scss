@@ -22,7 +22,7 @@ body {
 
 .icon-brands {
   // font-size: 50px;
-  @apply text-center justify-center mx-auto dark:text-white text-zinc-900 text-5xl md:text-6xl ;
+  @apply text-center justify-center mx-auto dark:text-white text-zinc-900 text-4xl lg:text-6xl ;
 }
 
 .icon-brands-smaller {
@@ -66,6 +66,7 @@ body {
 .has-tooltip:hover .tooltip {
   @apply visible;
 }
+
 
 .cursor {
   position: fixed;

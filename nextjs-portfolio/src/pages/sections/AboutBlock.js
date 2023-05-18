@@ -34,7 +34,7 @@ function AboutBlock() {
     return (
       <motion.span whileHover={{ scale: 0.9 }} className="has-tooltip text-transparent hover:dark:text-cyan-300 hover:text-zinc-900">
         {icon}
-        <p className="text-lg text-center justify-center ">{title}</p>
+        <p className="text-lg text-center justify-center">{title}</p>
       </motion.span>
     );
   }
@@ -43,7 +43,7 @@ function AboutBlock() {
     <div>
       <div className=" h-full w-full z-10 relative mt-24 pb-12">
         <div id="about" className="dark:text-white text-zinc-800 gap-4 duration-0 lg:px-48 md:px-16 flex  text-base md:text-3xl py-4 justify-center grid-cols-4 ">
-          <motion.button
+          {/* <motion.button
             href="#about"
             onClick={(e) => {
               setActiveAbout("Introduction");
@@ -53,8 +53,8 @@ function AboutBlock() {
             <motion.p whileHover={{ scale: 0.9 }} className=" px-4 py-0 cursor-none">
               Introduction
             </motion.p>
-          </motion.button>
-          <button
+          </motion.button> */}
+          {/* <button
             onClick={(e) => {
               setActiveAbout("TechSkills");
             }}
@@ -63,8 +63,8 @@ function AboutBlock() {
             <motion.p whileHover={{ scale: 0.9 }} className=" px-4 py-2 cursor-none">
               Skills
             </motion.p>
-          </button>
-          <button
+          </button> */}
+          {/* <button
             onClick={(e) => {
               setActiveAbout("Experiences");
             }}
@@ -73,34 +73,157 @@ function AboutBlock() {
             <motion.p whileHover={{ scale: 0.9 }} className=" px-4 py-2 cursor-none">
               Experiences
             </motion.p>
-          </button>
+          </button> */}
         </div>
         <div>
           {activeAbout === "Introduction" ? (
             <div className="md:text-xl text-lg dark:text-white text-zinc-800 lg:px-64 md:px-24 px-6 md:mt-12 cursor-none ">
               <span className="flex-none">
-                <motion.ul initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }} className=" dark:text-white text-zinc-800 md:text-2xl text-justify">
-                  <li className="">
-                    &nbsp;&nbsp;&nbsp;&nbsp; Hi there! My name is <span className="text-cyan-500">Jeric</span>, and I am a self-motivated individual who has the ability to work both independently and as part of a team. I am currently
-                    seeking a stable and challenging role that can utilize my existing skills and experience while providing opportunities for personal and professional growth.{" "}
-                  </li>
-                  <li className="pt-8">
-                    &nbsp;&nbsp;&nbsp;&nbsp;Apart from my professional life, I am also passionate about hobbies like playing the piano and video games. These hobbies have taught me important skills such as patience, attention to detail, and
-                    the ability to work under pressure. I have also developed a strong sense of creativity and imagination that I believe can be useful in any work environment.{" "}
-                  </li>
+                <div className="grid lg:grid-cols-3 grid-cols-1">
+                <div className="col-span-1 items-center justify-center text-center px-12 py-12 my-auto">
+                    <motion.img
+                      src="https://media.licdn.com/dms/image/C4D03AQFSw5IUBtJMFQ/profile-displayphoto-shrink_800_800/0/1656220254047?e=1686182400&v=beta&t=J5XvkLlyzNwC7DBRnjh0ny925D_VO0prFlRVq0MufZA" // Replace with your actual image source
+                      alt="Profile"
+                      className="col-span-1 w-full h-auto rounded-full shadow-md items-center justify-center"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 1 }}
+                    />
+                  </div>
 
-                  <li className="pt-8">
-                    &nbsp;&nbsp;&nbsp;&nbsp;One of my biggest achievements is continuously developing and managing one of the largest Minecraft Game Networks in the Philippines. The network has grown to consist of over 2800 members, and as
-                    the Head of Development, I have effectively added new features, improved existing ones, and resolved bugs to ensure seamless gameplay for our players. This experience has allowed me to further develop my technical and
-                    interpersonal skills, making me a valuable asset to any team.{" "}
-                  </li>
-                  {/* <li className="pt-8">
+                  <div className="col-span-2">
+                    <motion.ul initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }} className=" dark:text-white text-zinc-800 md:text-2xl text-justify">
+                      <li className="">
+                        &nbsp;&nbsp;&nbsp;&nbsp; Hi there! My name is <span className="text-cyan-500">Jeric</span>, and I am a self-motivated individual who has the ability to work both independently and as part of a team. I am currently
+                        seeking a stable and challenging role that can utilize my existing skills and experience while providing opportunities for personal and professional growth.{" "}
+                      </li>
+                      <li className="pt-8">
+                        &nbsp;&nbsp;&nbsp;&nbsp;Apart from my professional life, I am also passionate about hobbies like playing the piano and video games. These hobbies have taught me important skills such as patience, attention to detail,
+                        and the ability to work under pressure. I have also developed a strong sense of creativity and imagination that I believe can be useful in any work environment.{" "}
+                      </li>
+
+                      <li className="pt-8">
+                        &nbsp;&nbsp;&nbsp;&nbsp;One of my biggest achievements is continuously developing and managing one of the largest Minecraft Game Networks in the Philippines. The network has grown to consist of over 2800 members, and
+                        as the Head of Development, I have effectively added new features, improved existing ones, and resolved bugs to ensure seamless gameplay for our players. This experience has allowed me to further develop my technical
+                        and interpersonal skills, making me a valuable asset to any team.{" "}
+                      </li>
+                      {/* <li className="pt-8">
                     &nbsp;&nbsp;&nbsp;&nbsp;I am excited about the prospect of joining a dynamic and forward-thinking organization that can provide opportunities for growth and development. Thank you for considering my application.
                   </li> */}
-                </motion.ul>
-                <p className="text-2xl dark:text-white text-zinc-800 mt-8 flex mx-auto items-center justify-center"></p>
+                    </motion.ul>
+                    <p className="text-2xl dark:text-white text-zinc-800 mt-8 flex mx-auto items-center justify-center"></p>
+                  </div>
+                  
+                </div>
               </span>
+              <>
+              <div className="grid grid-cols-1 md:grid-cols-2 w-full min-w-full gap-x-24">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                // animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
+                exit={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                className="col-span-1 duration-0 p-6 rounded-lg text-justify"
+              >
+                <div className="text-xl dark:text-white text-zinc-800">
+                  <span className="flex-none">
+                    <div className="flex justify-center">
+                      <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold text-center ">Stacks</span>
+                    </div>
+                    <div className="mt-4 list-none md:text-base text-4xl text-center justify-center items-center">
+                      <div className=" grid grid-cols-4 md:grid-cols-6 gap-y-4 gap-x-2 ">
+                        <BrandItems icon={<FaHtml5 className="icon-brands" />} title="Html5" />
+                        <BrandItems icon={<FaCss3Alt className="icon-brands" />} title="CSS" />
+                        <BrandItems icon={<FaJs className="icon-brands" />} title="Javascript" />
+                        <BrandItems icon={<SiBootstrap className="icon-brands" />} title="Bootstrap" />
+                        <BrandItems icon={<SiTailwindcss className="icon-brands" />} title="Tailwind" />
+                        <BrandItems icon={<FaReact className="icon-brands" />} title="ReactJs" />
+                        {/* <BrandItems icon={<TbBrandReactNative className="icon-brands" />} title="React-Native" /> */}
+                        <BrandItems icon={<SiNextdotjs className="icon-brands" />} title="NextJs" />
+                        <BrandItems icon={<FaAngular className="icon-brands" />} title="AngularJs" />
+                        <BrandItems icon={<FaNodeJs className="icon-brands" />} title="NodeJs" />
+                        {/* <BrandItems icon={<SiExpress className="icon-brands" />} title="ExpressJs" /> */}
+                        <BrandItems icon={<SiFirebase className="icon-brands" />} title="Firebase" />
+                        {/* <BrandItems icon={<DiMysql className="icon-brands" />} title="MySQL" /> */}
+                        {/* <BrandItems icon={<SiMongodb className="icon-brands" />} title="MongoDb" /> */}
+                        <BrandItems icon={<SiCsharp className="icon-brands" />} title="CSharp" />
+                      </div>
+                    </div>
+                  </span>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                // animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
+                exit={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                className="col-span-1 duration-0 p-6 rounded-lg text-justify"
+              >
+                <div className="text-xl dark:text-white text-zinc-800">
+                  <span className="flex-none">
+                    <div className="flex justify-center">
+                      <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold text-center ">Tools</span>
+                    </div>
+                    <div className="mt-4 list-none md:text-base text-4xl text-center justify-center items-center">
+                      <div className=" grid grid-cols-4 md:grid-cols-5 gap-y-4 gap-x-2 ">
+                      <BrandItems icon={<FaGithub className="icon-brands" />} title="Github" />
+                        <BrandItems icon={<SiAzuredevops className="icon-brands" />} title="Azure" />
+                        <BrandItems icon={<SiMicrosoftsqlserver className="icon-brands" />} title="MsSQL" />
+                        <BrandItems icon={<SiSwagger className="icon-brands" />} title="Swagger" />
+                        <BrandItems icon={<SiPostman className="icon-brands" />} title="Postman" />
+                        <BrandItems icon={<SiJira className="icon-brands" />} title="Jira" />
+                        <BrandItems icon={<SiMicrosoftoffice className="icon-brands" />} title="MsTools" />
+                        {/* <BrandItems icon={<FaFigma className="icon-brands" />} title="Figma" /> */}
+                        <BrandItems icon={<SiAdobephotoshop className="icon-brands" />} title="Photoshop" />
+                        <BrandItems icon={<SiAdobeillustrator className="icon-brands" />} title="Illustrator" />
+                        <BrandItems icon={<SiUnity className="icon-brands" />} title="Unity" />
+                      </div>
+                    </div>
+                  </span>
+                </div>
+              </motion.div>
+
+               
+              </div>
+              
+              
+              {/* <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                // animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1, duration: 0.5 }}
+                exit={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                className="md:col-span-1 col-span-2 row-span-1 lg:px-64 md:px-24 sm:px-12 duration-0 px-6 rounded-lg min-w-[300px] min-h-[200px] text-justify "
+              >
+                <div className="text-xl dark:text-white text-zinc-800 ">
+                  <span className="flex-none">
+                    <div className="flex mx-auto justify-center">
+                      <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold text-center ">Tools</span>
+                    </div>
+                    <div className="mt-4 list-none md:text-base text-4xl text-center justify-center items-center">
+                      <div className=" grid grid-cols-4 md:grid-cols-5 gap-y-4 gap-x-2 md:px-24 px-4 ">
+                        <BrandItems icon={<FaGithub className="icon-brands" />} title="Github" />
+                        <BrandItems icon={<SiAzuredevops className="icon-brands" />} title="Azure" />
+                        <BrandItems icon={<SiMicrosoftsqlserver className="icon-brands" />} title="MsSQL" />
+                        <BrandItems icon={<SiSwagger className="icon-brands" />} title="Swagger" />
+                        <BrandItems icon={<SiPostman className="icon-brands" />} title="Postman" />
+                        <BrandItems icon={<SiJira className="icon-brands" />} title="Jira" />
+                        <BrandItems icon={<SiMicrosoftoffice className="icon-brands" />} title="MsTools" />
+                        <BrandItems icon={<FaFigma className="icon-brands" />} title="Figma" />
+                        <BrandItems icon={<SiAdobephotoshop className="icon-brands" />} title="Photoshop" />
+                        <BrandItems icon={<SiAdobeillustrator className="icon-brands" />} title="Illustrator" />
+                        <BrandItems icon={<SiUnity className="icon-brands" />} title="Unity" />
+                      </div>
+                    </div>
+                  </span>
+                </div>
+              </motion.div> */}
+            </>
             </div>
+            
           ) : activeAbout === "TechSkills" ? (
             <>
               <motion.div
@@ -181,13 +304,7 @@ function AboutBlock() {
                 className=" col-span-2 row-span-4 md:mr-6 mr-0 duration-0 p-6 rounded-lg min-w-[300px] min-h-[200px] text-justify lg:px-72 md:px-16 "
               >
                 <div className="text-xl dark:text-white text-zinc-800 ">
-                  <motion.div
-                    initial={{ opacity: 0, x: 50 }}
-                    transition={{ duration: 0.5 }}
-                    exit={{ opacity: 0, x: 10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    className="flex-none"
-                  >
+                  <motion.div initial={{ opacity: 0, x: 50 }} transition={{ duration: 0.5 }} exit={{ opacity: 0, x: 10 }} whileInView={{ opacity: 1, x: 0 }} className="flex-none">
                     <div className="rounded-lg dark:bg-cyan-400 bg-cyan-600 p-4 dark:text-black text-white mt-12">
                       <div className="grid grid-cols-1 sm:grid-cols-3">
                         <span className=" md:text-4xl text-xl sm:col-span-2 font-semibold">Norima Technologies Inc.</span>
@@ -220,12 +337,7 @@ function AboutBlock() {
                   </motion.div>
 
                   {/* <div className="min-w-screen border-b-[12px] dark:border-white border-black my-4"></div> */}
-                  <motion.div 
-                  initial={{ opacity: 0, x: -50 }}
-                  transition={{ duration: 0.5 }}
-                  exit={{ opacity: 0, x: 10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  className="flex-none">
+                  <motion.div initial={{ opacity: 0, x: -50 }} transition={{ duration: 0.5 }} exit={{ opacity: 0, x: 10 }} whileInView={{ opacity: 1, x: 0 }} className="flex-none">
                     <div className="rounded-lg dark:bg-cyan-400 bg-cyan-600 p-4 dark:text-black text-white mt-12">
                       <div className="grid grid-cols-1 sm:grid-cols-3 ">
                         <span className=" md:text-4xl text-xl sm:col-span-2 font-semibold mt-">AFNI Philippines</span>
@@ -264,12 +376,7 @@ function AboutBlock() {
                   </motion.div>
                   {/* <div className="min-w-screen border-b-[12px] dark:border-white border-black my-4"></div> */}
 
-                  <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  transition={{ duration: 0.5 }}
-                  exit={{ opacity: 0, x: 10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  className="flex-none">
+                  <motion.div initial={{ opacity: 0, x: 50 }} transition={{ duration: 0.5 }} exit={{ opacity: 0, x: 10 }} whileInView={{ opacity: 1, x: 0 }} className="flex-none">
                     <div className="rounded-lg dark:bg-cyan-400 bg-cyan-600 p-4 dark:text-black text-white mt-12">
                       <div className="grid grid-cols-1 sm:grid-cols-3">
                         <span className=" md:text-4xl text-xl sm:col-span-2 font-semibold ">Alorica Teleservices</span>
@@ -303,12 +410,7 @@ function AboutBlock() {
                     </ul>
                   </motion.div>
 
-                  <motion.div 
-                  initial={{ opacity: 0, x: -50 }}
-                  transition={{ duration: 0.5 }}
-                  exit={{ opacity: 0, x: 10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  className="flex-none">
+                  <motion.div initial={{ opacity: 0, x: -50 }} transition={{ duration: 0.5 }} exit={{ opacity: 0, x: 10 }} whileInView={{ opacity: 1, x: 0 }} className="flex-none">
                     <div className="rounded-lg dark:bg-cyan-400 bg-cyan-600 p-4 dark:text-black text-white mt-12">
                       <div className="grid grid-cols-1 sm:grid-cols-3">
                         <span className=" md:text-4xl text-xl sm:col-span-2 font-semibold ">Sitel Philippines (OJT)</span>

@@ -57,7 +57,7 @@ export default function Home() {
           <div className=" bg-cyan-300 z-10 bg-gradient-to-b dark:from-slate-800 dark:to-zinc-900 relative">
             <ProjectsBlock />
           </div>
-          <div className="dark:bg-zinc-900 bg-white relative">
+          <div className="dark:bg-zinc-900 bg-white relative min-h-screen">
             <ContactBlock />
           </div>
         </div>
