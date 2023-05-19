@@ -77,7 +77,10 @@ function AboutBlock() {
         </div>
         <div>
           {activeAbout === "Introduction" ? (
-            <div className="md:text-xl text-lg dark:text-white text-zinc-800 lg:px-64 md:px-24 px-6 md:mt-12 cursor-none ">
+            <div className="md:text-xl text-lg dark:text-white text-zinc-800 lg:px-64 md:px-24 px-6  cursor-none ">
+              <motion.p className=" px-4 py-0 cursor-none text-2xl justify-center text-center underline mb-8">
+              About Me
+            </motion.p>
               <span className="flex-none">
                 <div className="grid lg:grid-cols-3 grid-cols-1">
                 <div className="col-span-1 items-center justify-center text-center px-12 py-12 my-auto">
