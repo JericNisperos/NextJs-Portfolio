@@ -14,12 +14,12 @@ function HomeSection() {
         </section> */}
         <div className="flex max-w-[1786px] mx-auto justify-center items-center py-24">
           
-          <div className="grid grid-cols-1 xl:grid-cols-4 md:gap-4  px-8 mt-12 z-20 md:ml-24">
-            <motion.span className="text-4xl md:text-8xl col-span-4 sm:flex sm:flex-col justify-center duration-500" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.2 }}>
+          <div className="grid grid-cols-1 xl:grid-cols-4 md:gap-4  px-8 mt-12 z-20 md:ml-[-24px] w-9/12">
+            <motion.span className="text-4xl md:text-7xl col-span-4 sm:flex sm:flex-col justify-center duration-500" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.2 }}>
               <h1 className=" font-semibold md:mb-4 text-center md:text-left">
-                Hi there! I'm <span className="dark:text-cyan-300 text-cyan-600 duration-50">Jeric</span>,
+                Hi there! I'm <span className="dark:text-cyan-300 text-cyan-600">Jeric</span>,
               </h1>
-              <div className="text-6xl md:text-8xl text-center md:text-left font-extrabold duration-500">
+              <div className="text-6xl md:text-8xl text-center md:text-left font-extrabold">
                 {/* <TypingAnimation /> */}
                 Aspiring <span className="dark:text-blue-300 text-cyan-600">Full Stack Developer</span>
                 {/* <Typer

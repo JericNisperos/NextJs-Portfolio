@@ -37,11 +37,11 @@ function ProjectsBlock() {
       <span className="max-w-[1226px] justify-center flex items-center mx-auto">
         <div id="projects" className=" overflow-hidden transition-colors duration-1000 ease-in-out relative py-12 px-8 ">
           <motion.h1 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="font-bold mb-4 text-center text-4xl md:text-6xl dark:text-white text-black">
-            What I'm working with
+            {/* What I'm working with */}
           </motion.h1>
           <div className="grid xl:grid-cols-4 grid-cols-1 dark:text-white text-black ">
             <div className="col-span-2 flex justify-center items-center">
-              <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ delay: 0.2 * 1, duration: 0.4 }} className="md:text-2xl text-lg grid md:grid-cols-1 gap-8 pb-8">
+              {/* <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} transition={{ delay: 0.2 * 1, duration: 0.4 }} className="md:text-2xl text-lg grid md:grid-cols-1 gap-8 pb-8">
                 <p className=" text-justify">
                   &nbsp;&nbsp;&nbsp;&nbsp; I have been working on various projects as a web developer, and my focus has been on using frameworks like <span className="dark:text-cyan-500">ReactJS</span> along with{" "}
                   <span className="dark:text-cyan-500">Tailwindcss</span>, <span className="dark:text-cyan-500">NextJs</span> and <span className="dark:text-cyan-500 ">Framer-Motion</span> to create dynamic and engaging user interfaces.
@@ -59,10 +59,10 @@ function ProjectsBlock() {
                 <motion.button whileHover={{ scale: 0.9 }} className="hidden md:flex mx-auto text-2xl rounded-lg dark:bg-cyan-500 bg-white p-4 hover:dark:bg-cyan-700 hover:bg-neutral-200">
                   Access Sandbox
                 </motion.button>
-              </motion.div>
+              </motion.div> */}
             </div>
 
-            <div className="col-span-2 flex justify-center items-center mx-8">
+            {/* <div className="col-span-2 flex justify-center items-center mx-8">
               <div className="grid md:grid-cols-1 gap-8">
                 <ProjectItems
                   src="https://media.discordapp.net/attachments/1093897626920964186/1093898295623032922/minecomm.png?width=1154&height=673"
@@ -82,7 +82,7 @@ function ProjectsBlock() {
                   num="2"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </span>
