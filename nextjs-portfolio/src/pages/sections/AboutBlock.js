@@ -41,7 +41,7 @@ function AboutBlock() {
   }
 
   return (
-    <div>
+    <div id="about">
       <div className="md:text-xl text-lg dark:text-white text-zinc-800 w-full px-8 md:px-48 cursor-none ">
         {/* <motion.p className=" cursor-none text-4xl justify-center text-center ">About Me</motion.p> */}
         <motion.span class="cursor-none text-4xl flex justify-center items-center">
@@ -68,17 +68,17 @@ function AboutBlock() {
               <motion.ul initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }} className=" dark:text-white text-zinc-800 md:text-2xl text-justify">
                 <li className="">
                   &nbsp;&nbsp;&nbsp;&nbsp; Hi there! My name is <span className="text-cyan-500">Jeric</span>, and I am a self-motivated individual who has the ability to work both independently and as part of a team. I am currently seeking
-                  a stable and challenging role that can utilize my existing skills and experience while providing opportunities for personal and professional growth.{" "}
+                  a stable and challenging role that can utilize my existing skills and experience while providing opportunities for personal and professional growth.
                 </li>
                 <li className="pt-8">
                   &nbsp;&nbsp;&nbsp;&nbsp;Apart from my professional life, I am also passionate about hobbies like playing the piano and video games. These hobbies have taught me important skills such as patience, attention to detail, and
-                  the ability to work under pressure. I have also developed a strong sense of creativity and imagination that I believe can be useful in any work environment.{" "}
+                  the ability to work under pressure. I have also developed a strong sense of creativity and imagination that I believe can be useful in any work environment.
                 </li>
 
                 <li className="pt-8">
-                  &nbsp;&nbsp;&nbsp;&nbsp;One of my biggest achievements is continuously developing and managing one of the largest Minecraft Game Networks in the Philippines. The network has grown to consist of over 2800 members, and as
-                  the Head of Development, I have effectively added new features, improved existing ones, and resolved bugs to ensure seamless gameplay for our players. This experience has allowed me to further develop my technical and
-                  interpersonal skills, making me a valuable asset to any team.{" "}
+                  &nbsp;&nbsp;&nbsp;&nbsp;One of my significant accomplishments is the continuous development and management of one of the largest Minecraft Game Networks in the Philippines. This network has expanded to encompass over 3000
+                  members, and in my capacity as the Head of Development, I have effectively introduced new features, enhanced existing ones, and resolved issues to ensure seamless gameplay for our players. Through this experience, I have
+                  further sharpened my technical expertise and interpersonal skills, positioning myself as a valuable asset to any team.{" "}
                 </li>
                 {/* <li className="pt-8">
                     &nbsp;&nbsp;&nbsp;&nbsp;I am excited about the prospect of joining a dynamic and forward-thinking organization that can provide opportunities for growth and development. Thank you for considering my application.
