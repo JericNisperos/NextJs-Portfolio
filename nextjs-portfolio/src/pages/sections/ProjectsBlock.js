@@ -35,7 +35,7 @@ function ProjectItems({ src, title, content, bg, href, num }) {
 
 function ProjectList({ src, title, content, bg, href, hrefgit, num, stacks }) {
   return (
-    <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 * num + 0.3, duration: 0.4 }} exit={{ opacity: 0, y: 10 }} className="grid md:grid-cols-3 grid-cols-1 md:gap-x-8 my-12">
+    <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 * num + 0.3, duration: 0.4 }} exit={{ opacity: 0, y: 10 }} className="dark:text-white text-black grid md:grid-cols-3 grid-cols-1 md:gap-x-8 my-12">
       <div className="col-span-2 text-center md:text-left order-2 md:order-1 mt-4">
           <h1 className="text-4xl font-extrabold">{title}</h1>
           <div class="mt-4 flex flex-wrap gap-2 mx-8 justify-center md:justify-normal">
