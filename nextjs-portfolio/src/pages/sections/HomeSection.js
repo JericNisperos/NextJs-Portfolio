@@ -15,11 +15,11 @@ function HomeSection() {
         <div className="flex max-w-[1786px] mx-auto justify-center items-center py-24">
           
           <div className="grid grid-cols-1 xl:grid-cols-4 md:gap-4  px-8 mt-12 z-20 md:ml-[-24px] w-9/12">
-            <motion.span className="text-4xl md:text-7xl col-span-4 sm:flex sm:flex-col justify-center duration-500" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.2 }}>
+            <motion.span className="text-2xl md:text-7xl col-span-4 sm:flex sm:flex-col justify-center duration-500" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.2 }}>
               <h1 className=" font-semibold md:mb-4 text-center md:text-left">
                 Hi there! I'm <span className="dark:text-cyan-300 text-cyan-600">Jeric</span>,
               </h1>
-              <div className="text-6xl md:text-8xl text-center md:text-left font-extrabold">
+              <div className="text-4xl md:text-8xl text-center md:text-left font-extrabold">
                 {/* <TypingAnimation /> */}
                 Aspiring <span className="dark:text-blue-300 text-cyan-600">Full Stack Developer</span>
                 {/* <Typer
@@ -33,7 +33,7 @@ function HomeSection() {
               /> */}
                 {/* Aspiring <span className="dark:text-cyan-300 text-cyan-600 duration-500">Full Stack Developer</span> */}
               </div>
-              <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.5 }} className=" md:text-2xl md:mt-4 text-center md:text-left">
+              <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.5 }} className="text-sm md:text-2xl md:mt-4 text-center md:text-left">
                 Building dynamic and responsive web applications.
               </motion.p>
               <span className="flex mx-auto md:mx-0 justify-center md:justify-normal ">

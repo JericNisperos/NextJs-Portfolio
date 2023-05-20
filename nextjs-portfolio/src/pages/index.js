@@ -17,7 +17,8 @@ import ProjectsBlock from "./sections/ProjectsBlock";
 import ContactBlock from "./sections/ContactBlock";
 export default function Home() {
   const [activeAbout, setActiveAbout] = useState("Introduction");
-
+  const { systemTheme, theme, setTheme } = useTheme();
+  const currentTheme = theme === "system" ? systemTheme : theme;
   const buttonVariants = {
     rest: {
       borderColor: "#fff",
@@ -49,6 +50,23 @@ export default function Home() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <main className="cursor-default md:cursor-none scroll-smooth	">
+        <section className="text-4xl text-cyan-600 font-extrabold p-12 z-20 max-w-[1226px] items-center justify-center mx-auto relative hidden md:block">
+          <div className="justify-between flex">
+            <p className="flex">JN.SPACE</p>
+
+
+            <div className="has-tooltip dark:text-white text-black px-2 hover:text-cyan-500 hover:dark:text-cyan-500 ">
+              <div className="tooltip text-xs rounded text-black dark:text-white bg-white dark:bg-gray-700 shadow-lg p-1 flex-none -mt-[-48px] -ml-4 z-60 ease-in-out">
+                <div>{currentTheme === "dark" ? "Lightmode" : "Darkmode"}</div>
+              </div>
+              <span className="flex ">
+                <motion.span whileHover={{ scale: 1.6, duration: 0.2 }} transition={{ duration: 0.5 }} whileTap={{ rotate: -1200 }} initial={{ scale: 1.0 }} className="origin-[50%_45%]">
+                  <FontAwesomeIcon icon={currentTheme === "dark" ? faSun : faMoon} id="DarkMode" onClick={(e) => setTheme(currentTheme === "dark" ? "light" : "dark")} className=" hover:text-cyan-500 hover:dark:text-cyan-500" />
+                </motion.span>
+              </span>
+            </div>
+          </div>
+        </section>
         <div id="background-layer" className={`transition-colors duration-1000 ease-in-out`}>
           <HomeSection />
           <div className=" bg-white z-10 bg-gradient-to-b dark:from-zinc-900 dark:to-slate-800 relative duration-1000 ease-in-out">

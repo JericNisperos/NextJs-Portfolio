@@ -64,7 +64,7 @@ function AboutBlock() {
               />
             </div>
 
-            <div className="col-span-2 max-w-[1226px]">
+            <div className="col-span-2 max-w-[1226px] text-sm md:text-base">
               <motion.ul initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }} className=" dark:text-white text-zinc-800 md:text-2xl text-justify">
                 <li className="">
                   &nbsp;&nbsp;&nbsp;&nbsp; Hi there! My name is <span className="text-cyan-500">Jeric</span>, and I am a self-motivated individual who has the ability to work both independently and as part of a team. I am currently seeking
