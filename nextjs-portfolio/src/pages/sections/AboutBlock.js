@@ -27,18 +27,10 @@ import { FaAngular, FaCss3Alt, FaFigma, FaGithub, FaHtml5, FaJs, FaNodeJs, FaRea
 import { faFacebookF, faGithub, faGithubAlt, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 import { DiMysql } from "react-icons/di";
+import BrandItems from "../components/BrandItems";
 
 function AboutBlock() {
   const [activeAbout, setActiveAbout] = useState("Introduction");
-
-  function BrandItems({ title, icon }) {
-    return (
-      <motion.span whileHover={{ scale: 0.9 }} className="has-tooltip text-transparent hover:dark:text-cyan-300 hover:text-zinc-900">
-        {icon}
-        <p className="text-lg text-center justify-center">{title}</p>
-      </motion.span>
-    );
-  }
 
   return (
     <div id="about">
@@ -71,8 +63,9 @@ function AboutBlock() {
                   a stable and challenging role that can utilize my existing skills and experience while providing opportunities for personal and professional growth.
                 </li>
                 <li className="pt-8">
-                  &nbsp;&nbsp;&nbsp;&nbsp;Apart from my professional life, I am also passionate about hobbies like playing the piano and video games. These hobbies have taught me important skills such as patience, attention to detail, and
-                  the ability to work under pressure. I have also developed a strong sense of creativity and imagination that I believe can be useful in any work environment.
+                  &nbsp;&nbsp;&nbsp;&nbsp;I have gained valuable skills and attributes through my roles in Customer Support for 4 years and as a Software Engineer for 1 year. These positions have provided me with a solid foundation in
+                  important qualities such as patience, attention to detail, and the ability to thrive under pressure. Moreover, they have fostered a strong sense of creativity and imagination that I believe can be advantageous in any work
+                  environment.
                 </li>
 
                 <li className="pt-8">

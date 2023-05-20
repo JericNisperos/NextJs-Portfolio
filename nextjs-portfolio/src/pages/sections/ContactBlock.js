@@ -58,7 +58,7 @@ function ContactBlock() {
       {/* <motion.h1 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="font-bold mb-4 text-center text-4xl md:text-6xl dark:text-white text-black">
         Reach me Out!
       </motion.h1> */}
-      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.2 }} exit={{ opacity: 0, y: 10 }} className="flex justify-center ">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.5 }} exit={{ opacity: 0, y: 10 }} className="flex justify-center ">
         <div className=" mx-8 mt-12 grid grid-cols-1 lg:grid-cols-3 bg-gradient-to-bl  rounded-lg">
           <div className="grid grid-cols-1 pt-4 mt-4 mb-4 ">
             <div className="flex flex-col space-y-4 mb-8 px-4 text-center ">

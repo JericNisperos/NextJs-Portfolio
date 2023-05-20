@@ -52,7 +52,7 @@ export default function Home() {
       <main className="cursor-default md:cursor-none scroll-smooth	">
         <section className="text-4xl text-cyan-600 font-extrabold p-12 z-20 max-w-[1226px] items-center justify-center mx-auto relative hidden md:block">
           <div className="justify-between flex">
-            <p className="flex">JN.SPACE</p>
+            <p className="flex text-cyan-600 dark:text-white">@jn</p>
 
 
             <div className="has-tooltip dark:text-white text-black px-2 hover:text-cyan-500 hover:dark:text-cyan-500 ">
