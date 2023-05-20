@@ -37,8 +37,8 @@ function HomeSection() {
                 Building dynamic and responsive web applications.
               </motion.p>
               <span className="flex mx-auto md:mx-0 justify-center md:justify-normal ">
-              <motion.a initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.8 }} href="#about" className=" rounded-lg bg-cyan-500 px-4 py-2 font-semibold dark:text-black text-white hover:bg-gray-300 shadow-lg mt-8 text-2xl">
-                About Me
+              <motion.a initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.8 }} href="#projects" className=" rounded-lg bg-cyan-500 px-4 py-2 font-semibold dark:text-black text-white hover:bg-gray-300 shadow-lg mt-8 text-2xl">
+                My Projects
               </motion.a>
               </span>
              
