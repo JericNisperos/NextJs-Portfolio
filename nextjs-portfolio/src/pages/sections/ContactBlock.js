@@ -54,7 +54,7 @@ function ContactBlock() {
   }
 
   return (
-    <div id="contact" className="max-w-[1226px] justify-center items-center flex mx-auto relative transition-colors duration-1000 ease-in-out pt-12 pb-24  dark:bg-zinc-900 bg-white">
+    <div id="contact" className="max-w-[1226px] justify-center items-center flex mx-auto relative transition-colors duration-0 ease-in-out pt-12 pb-24  dark:bg-zinc-900 bg-white">
       {/* <motion.h1 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="font-bold mb-4 text-center text-4xl md:text-6xl dark:text-white text-black">
         Reach me Out!
       </motion.h1> */}
@@ -65,7 +65,7 @@ function ContactBlock() {
               <p className=" dark:text-cyan-500 text-cyan-400 md:text-6xl text-3xl text-center font-semibold">Reach out to any of my Accounts!</p>
 
 
-              <p className=" dark:text-white text-zinc-800 md:text-xl text-center text-2xl mt-8">I strive to provide timely responses and typically reply within 24 to 48 hours. I appreciate your patience in the meantime.</p>
+              <p className=" dark:text-white text-zinc-800 md:text-xl text-center text-2xl mt-8">I strive to provide timely responses and typically reply within 2 to 6 hours. I appreciate your patience in the meantime.</p>
             
               <div className="text-2xl dark:text-white text-zinc-800 flex mx-auto items-center justify-center mt-8">
                 <div className="grid grid-cols-4 items-center justify-center mx-auto">
@@ -128,7 +128,7 @@ function ContactBlock() {
           {/* <p className="dark:text-cyan-300 text-cyan-500 text-4xl font-bold ">Success!</p> */}
           <p className="text-white text-xl p-4 mt-4 text-justify">
             {" "}
-            &nbsp;&nbsp;&nbsp;&nbsp;Your message has been sent. Thank you for contacting me. I strive to provide timely responses and typically reply within 24 to 48 hours. I appreciate your patience in the meantime. If you have any urgent concerns, please feel
+            &nbsp;&nbsp;&nbsp;&nbsp;Your message has been sent. Thank you for contacting me. I strive to provide timely responses and typically reply within 2 to 6 hours. I appreciate your patience in the meantime. If you have any urgent concerns, please feel
             free to reach out to me directly thru my active social media accounts. Thank you again for your message.
           </p>
         </Modal>

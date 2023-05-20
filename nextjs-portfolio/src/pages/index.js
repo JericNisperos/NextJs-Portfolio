@@ -54,7 +54,6 @@ export default function Home() {
           <div className="justify-between flex">
             <p className="flex text-cyan-600 dark:text-white">@jn</p>
 
-
             <div className="has-tooltip dark:text-white text-black px-2 hover:text-cyan-500 hover:dark:text-cyan-500 ">
               <div className="tooltip text-xs rounded text-black dark:text-white bg-white dark:bg-gray-700 shadow-lg p-1 flex-none -mt-[-48px] -ml-4 z-60 ease-in-out">
                 <div>{currentTheme === "dark" ? "Lightmode" : "Darkmode"}</div>
@@ -75,8 +74,10 @@ export default function Home() {
           <div className=" bg-cyan-300 z-10 bg-gradient-to-b dark:from-slate-800 dark:to-zinc-900 relative">
             <ProjectsBlock />
           </div>
-          <div className="dark:bg-zinc-900 bg-white relative ">
+          <div className="dark:bg-zinc-900 bg-white relative duration-0 ">
             <ContactBlock />
+
+            <div className="py-4 text-center text-black dark:text-white text-lg pb-24">Built and designed by Jeric Nisperos and not affiliated with any company. 2023</div>
           </div>
         </div>
       </main>

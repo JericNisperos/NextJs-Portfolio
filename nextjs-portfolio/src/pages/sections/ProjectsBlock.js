@@ -35,34 +35,43 @@ function ProjectItems({ src, title, content, bg, href, num }) {
 
 function ProjectList({ src, title, content, bg, href, hrefgit, num, stacks }) {
   return (
-    <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 * num + 0.3, duration: 0.4 }} exit={{ opacity: 0, y: 10 }} className="dark:text-white text-black grid md:grid-cols-3 grid-cols-1 md:gap-x-8 my-12">
+    <motion.div className="dark:text-white text-black grid md:grid-cols-3 grid-cols-1 md:gap-x-8 my-12">
       <div className="col-span-2 text-center md:text-left order-2 md:order-1 mt-4">
-          <h1 className="text-4xl font-extrabold">{title}</h1>
-          <div class="mt-4 flex flex-wrap gap-2 mx-8 justify-center md:justify-normal">
-            {stacks.map((item, index) => {
-              return (
-                <motion.p
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  transition={{ delay: 0.1 * index + 0.3, duration: 0.4 }}
-                  key={index}
-                  class=" py-2 px-3 rounded text-sm dark:border-2 dark:border-white light:border-none dark:bg-transparent bg-cyan-500"
-                >
-                  {item}
-                </motion.p>
-              );
-            })}
-          </div>
-          <p className="my-8 justify-center md:justify-normal">{content}</p>
-          <div className="gap-x-4 flex mx-auto items-center justify-center md:justify-normal my-8">
-            <motion.a className=" rounded-lg dark:bg-cyan-500 bg-white px-4 py-2 font-semibold text-black hover:bg-gray-300 shadow-lg" href={href} target="_blank">
-              Live Site <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-            </motion.a>
-            <motion.a className=" rounded-lg dark:bg-cyan-500 bg-white px-4 py-2 font-semibold text-black hover:bg-gray-300 shadow-lg" href={hrefgit} target="_blank">
-              Source Code <FontAwesomeIcon icon={faGithub} />
-            </motion.a>
-          </div>
+        <motion.h1 initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 * num + 0.3, duration: 0.4 }} exit={{ opacity: 0, y: 10 }} className="text-4xl font-extrabold">
+          {title}
+        </motion.h1>
+        <div className="mt-4 flex flex-wrap gap-2 mx-8 justify-center md:justify-normal">
+          {stacks.map((item, index) => {
+            return (
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                transition={{ delay: 0.1 * index + 0.3, duration: 0.4 }}
+                key={index}
+                className=" py-2 px-3 rounded text-sm dark:border-2 dark:border-white light:border-none dark:bg-transparent bg-cyan-500"
+              >
+                {item}
+              </motion.p>
+            );
+          })}
+        </div>
+        <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 * num + 0.3, duration: 0.4 }} exit={{ opacity: 0, y: 10 }} className="my-8 justify-center md:justify-normal text-xl">
+          {content}
+        </motion.p>
+        <motion.div 
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 * num + 0.3, duration: 0.4 }}
+        exit={{ opacity: 0, y: 10 }}
+        className="gap-x-4 flex mx-auto items-center justify-center md:justify-normal my-8">
+          <motion.a className=" rounded-lg dark:bg-cyan-500 bg-white px-4 py-2 font-semibold text-black hover:bg-gray-300 shadow-lg" href={href} target="_blank">
+            Live Site <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          </motion.a>
+          <motion.a className=" rounded-lg dark:bg-cyan-500 bg-white px-4 py-2 font-semibold text-black hover:bg-gray-300 shadow-lg" href={hrefgit} target="_blank">
+            Source Code <FontAwesomeIcon icon={faGithub} />
+          </motion.a>
+        </motion.div>
       </div>
       <motion.div initial={{ opacity: 0, x: 80 }} whileInView={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 10 }} transition={{ delay: 0.8, duration: 0.4 }} className="items-center flex mx-auto justify-center order-1">
         <img src={src} title={title} />
@@ -98,6 +107,17 @@ function ProjectsBlock() {
             stacks={["ReactJs", "Bootstrap", "Firestore", "Firebase-Auth"]}
             num="2"
           />
+
+          <ProjectList
+            src="https://media.discordapp.net/attachments/737562200318803969/1109425841441607770/image.png?width=1212&height=635"
+            title="Andromeda Blitz"
+            content="A simple game created from Unity and was ported into web."
+            href="https://jericnisperos.github.io/AndromedaBlitzV2/"
+            hrefgit="https://github.com/JericNisperos/jericnisperos.github.io/tree/master/AndromedaBlitzV2"
+            stacks={["Unity", "HTML 5"]}
+            num="3"
+          />
+          {/*  */}
 
           {/* <div className="grid xl:grid-cols-4 grid-cols-1 dark:text-white text-black ">
             <div className="col-span-2 flex justify-center items-center">
