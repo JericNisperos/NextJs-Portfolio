@@ -15,7 +15,7 @@ function HomeSection() {
         <div className="flex max-w-[1786px] mx-auto justify-center items-center py-24">
           
           <div className="grid grid-cols-1 xl:grid-cols-4 md:gap-4  px-8 mt-12 z-20 md:ml-[-24px] w-9/12">
-            <motion.span className="text-2xl md:text-7xl col-span-4 sm:flex sm:flex-col justify-center duration-500" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.2 }}>
+            <motion.span className=" dark:text-white text-black text-2xl md:text-7xl col-span-4 sm:flex sm:flex-col justify-center duration-500" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.2 }}>
               <h1 className=" font-semibold md:mb-4 text-center md:text-left">
                 Hi there! I'm <span className="dark:text-cyan-300 text-cyan-600">Jeric</span>,
               </h1>

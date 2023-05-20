@@ -5,7 +5,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import emailjs from "@emailjs/browser";
-import { faDiscord, faFacebookF, faGithub, faLinkedin, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord, faFacebookF, faGithub, faInstagram, faLinkedin, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 function ContactBlock() {
   const form = useRef();
@@ -68,10 +68,11 @@ function ContactBlock() {
               <p className=" dark:text-white text-zinc-800 md:text-xl text-center text-2xl mt-8">I strive to provide timely responses and typically reply within 24 to 48 hours. I appreciate your patience in the meantime.</p>
             
               <div className="text-2xl dark:text-white text-zinc-800 flex mx-auto items-center justify-center mt-8">
-                <div className="grid grid-cols-3 gap-y-4 gap-x-2 mt-8 md:pb-24">
+                <div className="grid grid-cols-4 items-center justify-center mx-auto">
                   <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faFacebookF} />
                   <LinkItems href="https://www.linkedin.com/in/jeric-nisperos-38055a11b/" icon={faLinkedinIn} />
                   <LinkItems href="https://github.com/JericNisperos" icon={faGithub} />
+                  <LinkItems href="https://www.instagram.com/_nisperosjeric/" icon={faInstagram} />
                   {/* <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faDiscord} /> */}
                 </div>
               </div>
