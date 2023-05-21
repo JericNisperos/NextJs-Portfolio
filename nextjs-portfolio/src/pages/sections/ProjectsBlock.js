@@ -114,7 +114,7 @@ function ProjectsBlock() {
             content="A simple game created from Unity and was ported into web."
             href="https://jericnisperos.github.io/AndromedaBlitzV2/"
             hrefgit="https://github.com/JericNisperos/jericnisperos.github.io/tree/master/AndromedaBlitzV2"
-            stacks={["Unity", "HTML 5"]}
+            stacks={["HTML 5", "Unity", "C#"]}
             num="3"
           />
           {/*  */}
