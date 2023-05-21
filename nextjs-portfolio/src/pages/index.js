@@ -50,9 +50,9 @@ export default function Home() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <main className="cursor-default md:cursor-none scroll-smooth	">
-        <section className="text-4xl text-cyan-600 font-extrabold p-12 z-20 max-w-[1226px] items-center justify-center mx-auto relative hidden md:block">
+        <section className="text-4xl text-cyan-600 font-extrabold p-12 z-20 max-w-[1626px] items-center justify-center mx-auto relative">
           <div className="justify-between flex">
-            <p className="flex text-cyan-600 dark:text-white">@jn</p>
+            <p className="flex text-cyan-600 dark:text-white text-lg md:text-2xl">jnisperos.space</p>
 
             <div className="has-tooltip dark:text-white text-black px-2 hover:text-cyan-500 hover:dark:text-cyan-500 ">
               <div className="tooltip text-xs rounded text-black dark:text-white bg-white dark:bg-gray-700 shadow-lg p-1 flex-none -mt-[-48px] -ml-4 z-60 ease-in-out">

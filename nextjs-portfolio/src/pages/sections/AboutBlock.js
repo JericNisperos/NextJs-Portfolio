@@ -36,10 +36,10 @@ function AboutBlock() {
     <div id="about">
       <div className="md:text-xl text-lg dark:text-white text-zinc-800 w-full px-8 md:px-48 cursor-none ">
         {/* <motion.p className=" cursor-none text-4xl justify-center text-center ">About Me</motion.p> */}
-        <motion.span class="cursor-none text-4xl flex justify-center items-center">
-          <span class="relative my-8">
-            <span class="absolute inset-0 border-b-4 border-blue-400"></span>
-            <span class="relative z-10 px-4">About Me</span>
+        <motion.span className="cursor-none text-4xl flex justify-center items-center">
+          <span className="relative my-8">
+            <span className="absolute inset-0 border-b-4 border-blue-400"></span>
+            <span className="relative z-10 px-4">About Me</span>
           </span>
         </motion.span>
 
