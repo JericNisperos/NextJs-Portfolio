@@ -24,10 +24,11 @@ import {
   SiUnity,
 } from "react-icons/si";
 import { FaAngular, FaCss3Alt, FaFigma, FaGithub, FaHtml5, FaJs, FaNodeJs, FaReact, faAngular } from "react-icons/fa";
-import { faFacebookF, faGithub, faGithubAlt, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF, faGithub, faGithubAlt, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 import { DiMysql } from "react-icons/di";
 import BrandItems from "../components/BrandItems";
+import LinkItems from "../components/LinkItems";
 
 function AboutBlock() {
   const [activeAbout, setActiveAbout] = useState("Introduction");
@@ -44,7 +45,7 @@ function AboutBlock() {
         </motion.span>
 
         <section className="flex-none max-w-[1226px] items-center justify-center mx-auto py-4">
-          <div className="grid lg:grid-cols-3 grid-cols-1">
+          <div className="grid xl:grid-cols-3 grid-cols-1">
             <div className="col-span-1 items-center justify-center text-center px-12 py-12 my-auto">
               <motion.img
                 src="https://media.licdn.com/dms/image/C4D03AQFSw5IUBtJMFQ/profile-displayphoto-shrink_800_800/0/1656220254047?e=1686182400&v=beta&t=J5XvkLlyzNwC7DBRnjh0ny925D_VO0prFlRVq0MufZA"
@@ -54,6 +55,12 @@ function AboutBlock() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
               />
+              <div className="flex mx-auto items-center justify-center my-8">
+              {/* <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faFacebookF} /> */}
+                  <LinkItems href="https://www.linkedin.com/in/jeric-nisperos-38055a11b/" icon={faLinkedinIn} />
+                  <LinkItems href="https://github.com/JericNisperos" icon={faGithub} />
+                  <LinkItems href="https://www.instagram.com/_nisperosjeric/" icon={faInstagram} />
+              </div>
             </div>
 
             <div className="col-span-2 max-w-[1226px] text-sm md:text-base">

@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import emailjs from "@emailjs/browser";
 import { faDiscord, faFacebookF, faGithub, faInstagram, faLinkedin, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import LinkItems from "../components/LinkItems";
 
 function ContactBlock() {
   const form = useRef();
@@ -43,15 +44,7 @@ function ContactBlock() {
     handleOpenModal();
   };
 
-  function LinkItems({ href, icon }) {
-    return (
-      <motion.span whileHover={{ scale: 1.5 }} whileTap={{ scale: 1.2 }}>
-        <Link href={href} className="mx-4 border px-4 py-2 rounded-full dark:border-white border-black hover:dark:bg-cyan-500 hover:bg-cyan-300" target="_blank">
-          <FontAwesomeIcon icon={icon} />
-        </Link>
-      </motion.span>
-    );
-  }
+
 
   return (
     <div id="contact" className="max-w-[1226px] justify-center items-center flex mx-auto relative transition-colors duration-0 ease-in-out pt-12 pb-24  dark:bg-zinc-900 bg-white">
@@ -68,8 +61,8 @@ function ContactBlock() {
               <p className=" dark:text-white text-zinc-800 md:text-xl text-center text-2xl mt-8">I strive to provide timely responses and typically reply within 2 to 6 hours. I appreciate your patience in the meantime.</p>
             
               <div className="text-2xl dark:text-white text-zinc-800 flex mx-auto items-center justify-center mt-8">
-                <div className="grid grid-cols-4 items-center justify-center mx-auto">
-                  <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faFacebookF} />
+                <div className="flex items-center justify-center mx-auto">
+                  {/* <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faFacebookF} /> */}
                   <LinkItems href="https://www.linkedin.com/in/jeric-nisperos-38055a11b/" icon={faLinkedinIn} />
                   <LinkItems href="https://github.com/JericNisperos" icon={faGithub} />
                   <LinkItems href="https://www.instagram.com/_nisperosjeric/" icon={faInstagram} />
