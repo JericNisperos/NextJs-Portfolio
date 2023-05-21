@@ -26,7 +26,6 @@ import {
 import { FaAngular, FaCss3Alt, FaFigma, FaGithub, FaHtml5, FaJs, FaNodeJs, FaReact, faAngular } from "react-icons/fa";
 import { faFacebookF, faGithub, faGithubAlt, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
-import { DiMysql } from "react-icons/di";
 import BrandItems from "../components/BrandItems";
 import LinkItems from "../components/LinkItems";
 
@@ -36,7 +35,6 @@ function AboutBlock() {
   return (
     <div id="about">
       <div className="md:text-xl text-lg dark:text-white text-zinc-800 w-full px-8 md:px-48 cursor-none ">
-        {/* <motion.p className=" cursor-none text-4xl justify-center text-center ">About Me</motion.p> */}
         <motion.span className="cursor-none text-4xl flex justify-center items-center">
           <span className="relative my-8">
             <span className="absolute inset-0 border-b-4 border-blue-400"></span>
