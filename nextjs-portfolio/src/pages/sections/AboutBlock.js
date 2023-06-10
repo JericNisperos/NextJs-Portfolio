@@ -46,7 +46,7 @@ function AboutBlock() {
           <div className="grid xl:grid-cols-3 grid-cols-1">
             <div className="col-span-1 items-center justify-center text-center px-12 py-12 my-auto">
               <motion.img
-                src="https://media.licdn.com/dms/image/C4D03AQFSw5IUBtJMFQ/profile-displayphoto-shrink_800_800/0/1656220254047?e=1686182400&v=beta&t=J5XvkLlyzNwC7DBRnjh0ny925D_VO0prFlRVq0MufZA"
+                src="profile.jpg"
                 alt="Profile"
                 className="col-span-1 w-full h-auto rounded-full shadow-md items-center justify-center p-4 border-4 border-blue-400"
                 initial={{ opacity: 0 }}
@@ -54,67 +54,36 @@ function AboutBlock() {
                 transition={{ duration: 1 }}
               />
               <div className="flex mx-auto items-center justify-center my-8">
-              {/* <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faFacebookF} /> */}
-                  <LinkItems href="https://www.linkedin.com/in/jeric-nisperos-38055a11b/" icon={faLinkedinIn} />
-                  <LinkItems href="https://github.com/JericNisperos" icon={faGithub} />
-                  <LinkItems href="https://www.instagram.com/_nisperosjeric/" icon={faInstagram} />
+                <LinkItems href="https://www.linkedin.com/in/jeric-nisperos-38055a11b/" icon={faLinkedinIn} />
+                <LinkItems href="https://github.com/JericNisperos" icon={faGithub} />
+                <LinkItems href="https://www.instagram.com/_nisperosjeric/" icon={faInstagram} />
               </div>
             </div>
 
             <div className="col-span-2 max-w-[1226px] text-sm md:text-base">
-              <motion.ul initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }} className=" dark:text-white text-zinc-800 md:text-2xl text-justify">
+              <motion.ul initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }} className=" dark:text-gray-300 text-zinc-800 md:text-2xl text-justify">
                 <li className="">
-                  &nbsp;&nbsp;&nbsp;&nbsp; Hi there! My name is <span className="text-cyan-500">Jeric</span>, and I am a self-motivated individual who has the ability to work both independently and as part of a team. I am currently seeking
-                  a stable and challenging role that can utilize my existing skills and experience while providing opportunities for personal and professional growth.
-                </li>
-                <li className="pt-8">
-                  &nbsp;&nbsp;&nbsp;&nbsp;I have gained valuable skills and attributes through my roles in Customer Support for 4 years and as a Software Engineer for 1 year. These positions have provided me with a solid foundation in
-                  important qualities such as patience, attention to detail, and the ability to thrive under pressure. Moreover, they have fostered a strong sense of creativity and imagination that I believe can be advantageous in any work
-                  environment.
+                  &nbsp;&nbsp;&nbsp;&nbsp;Experienced in <span className="text-cyan-500">Software Engineering</span> for <span className="text-cyan-500">1 year</span> and{" "}
+                  <span className="text-cyan-500">E-Commerce and Telco Customer Support</span> for <span className="text-cyan-500">4 years</span>. Specialize in <span className="text-cyan-500">Front-End/UI development</span> using HTML,
+                  CSS, JavaScript, Bootstrap, React (Next.js), and TailwindCSS. Additional skills includes C#, .Net, AngularJS, MsSQL and Swagger. Skilled in creating dynamic and responsive web applications.
                 </li>
 
                 <li className="pt-8">
-                  &nbsp;&nbsp;&nbsp;&nbsp;One of my significant accomplishments is the continuous development and management of one of the largest Minecraft Game Networks in the Philippines. This network has expanded to encompass over 3000
-                  members, and in my capacity as the Head of Development, I have effectively introduced new features, enhanced existing ones, and resolved issues to ensure seamless gameplay for our players. Through this experience, I have
-                  further sharpened my technical expertise and interpersonal skills, positioning myself as a valuable asset to any team.{" "}
+                  &nbsp;&nbsp;&nbsp;&nbsp; One of my significant accomplishments is the continuous development and management of one of the largest Minecraft Game Networks in the Philippines. This network has expanded to encompass over{" "}
+                  <span className="text-cyan-500">3000 members</span> for nearly 4 years, and in my capacity as the <span className="text-cyan-500">Senior Development Manager</span>, I have effectively added new and unique features, fixed
+                  bugs, managed a team, and handled day-to-day concerns from players and staff team to ensure seamless gameplay. Through these experiences, I have further sharpened my technical expertise, management skills and interpersonal
+                  skills, positioning myself as a valuable asset to any team.
                 </li>
-                {/* <li className="pt-8">
-                    &nbsp;&nbsp;&nbsp;&nbsp;I am excited about the prospect of joining a dynamic and forward-thinking organization that can provide opportunities for growth and development. Thank you for considering my application.
-                  </li> */}
               </motion.ul>
               <p className="text-2xl dark:text-white text-zinc-800 mt-8 flex mx-auto items-center justify-center"></p>
             </div>
           </div>
         </section>
 
-        {/* <section className="pt-24 pb-28 relative w-11/12 mx-auto max-w-[1226px]" id="about">
-          <img alt="" src="/images/blob1.svg" width={215} height={157} layout="absolute" className="w-96 md:w-[500px] -z-10 opacity-40 blur-3xl md:opacity-20 md:left-[200px]" loading="lazy" />
-          <h2 className="mb-16 font-extrabold font-header relative text-2xl md:text-3xl">
-            About me<span className="absolute left-0 w-[70px] -bottom-2 md:-bottom-4 h-[2px] bg-green"></span>
-          </h2>
-          <div className="mt-12 md:flex-row flex flex-col gap-10 md:gap-16 md:items-center">
-            <div className="md:w-36 md:h-36 w-32 h-32 rounded-full shrink-0 overflow-hidden outline outline-green outline-offset-8 md:order-1 aos-init aos-animate" data-aos="fade-left">
-              <img alt="profile" src="/images/profile.jpg" width={3840} height={3840} layout="responsive" className="object-cover h-full w-full" quality={75} decoding="async" loading="lazy" />
-            </div>
-            <p className="text-light-slate md:max-w-[520px] mx-auto md:text-base md:text-start md:mx-0">
-              Hello, my name is Loyd Cose and I'm from the Philippines. Before I started college, I worked as a graphic designer. I enjoyed the creative process of designing graphics, but ultimately decided to pursue a career in technology.
-              <br />
-              <br />I am a fullstack developer with a background in graphic design, My strong foundation in UI/UX design, paired with my technical skills, allow me to create dynamic and user-friendly web applications.
-            </p>
-          </div>
-        </section> */}
-
         <>
           <span className="items-center justify-center mx-auto flex">
             <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center max-w-[1226px]">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                // animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-                exit={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                className="col-span-1 duration-0 p-6 rounded-lg text-justify"
-              >
+              <motion.div initial={{ opacity: 0, x: -50 }} transition={{ delay: 0.4, duration: 0.5 }} exit={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, x: 0 }} className="col-span-1 duration-0 p-6 rounded-lg text-justify">
                 <div className="text-xl dark:text-white text-zinc-800">
                   <span className="flex-none">
                     <div className="flex justify-center">

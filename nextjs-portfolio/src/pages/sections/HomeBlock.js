@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import StarBg from "../components/StarBg";
 import Typewriter from "typewriter-effect";
 
-function HomeSection() {
+function HomeBlock() {
   console.log("TYper should be working");
   return (
     <div className="md:max-h-[800px]">

@@ -3,7 +3,7 @@ import { useTheme } from "next-themes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolder, faHome, faHouseCircleCheck, faMoon, faPaperPlane, faPerson, faSun, faUser, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
-import HomeSection from "./sections/HomeSection";
+import HomeBlock from "./sections/HomeBlock";
 import { useState } from "react";
 import AboutBlock from "./sections/AboutBlock";
 import ProjectsBlock from "./sections/ProjectsBlock";
@@ -60,7 +60,7 @@ export default function Home() {
           </div>
         </section>
         <div id="background-layer" className={`transition-colors duration-1000 ease-in-out`}>
-          <HomeSection />
+          <HomeBlock />
           <div className=" bg-white z-10 bg-gradient-to-b dark:from-zinc-900 dark:to-slate-800 relative duration-1000 ease-in-out">
             <AboutBlock />
           </div>

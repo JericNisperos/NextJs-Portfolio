@@ -55,7 +55,7 @@ function ContactBlock() {
         <div className=" mx-8 mt-12 grid grid-cols-1 lg:grid-cols-3 bg-gradient-to-bl  rounded-lg">
           <div className="grid grid-cols-1 pt-4 mt-4 mb-4 ">
             <div className="flex flex-col space-y-4 mb-8 px-4 text-center ">
-              <p className=" dark:text-cyan-500 text-cyan-400 md:text-6xl text-3xl text-center font-semibold">Reach out to any of my Accounts!</p>
+              <p className=" dark:text-cyan-500 text-cyan-400 md:text-6xl text-3xl text-center font-semibold mt-8">Lets Connect!</p>
 
 
               <p className=" dark:text-white text-zinc-800 md:text-xl text-center text-2xl mt-8">I strive to provide timely responses and typically reply within 2 to 6 hours. I appreciate your patience in the meantime.</p>
@@ -115,13 +115,13 @@ function ContactBlock() {
           </div>
         </div>
       </motion.div>
-      {/* <button onClick={handleOpenModal}>open</button> */}
       {isModalOpen && (
         <Modal onClose={handleCloseModal}>
           {/* <p className="dark:text-cyan-300 text-cyan-500 text-4xl font-bold ">Success!</p> */}
+          <h1 className="text-4xl text-cyan-500 mt-8 mx-8 font-bold">Message has been Sent!</h1>
           <p className="text-white text-xl p-4 mt-4 text-justify">
             {" "}
-            &nbsp;&nbsp;&nbsp;&nbsp;Your message has been sent. Thank you for contacting me. I strive to provide timely responses and typically reply within 2 to 6 hours. I appreciate your patience in the meantime. If you have any urgent concerns, please feel
+            &nbsp;&nbsp;&nbsp;&nbsp;Thank you for contacting me. I strive to provide timely responses and typically reply within 2 to 6 hours. I appreciate your patience in the meantime. If you have any urgent concerns, please feel
             free to reach out to me directly thru my active social media accounts. Thank you again for your message.
           </p>
         </Modal>
