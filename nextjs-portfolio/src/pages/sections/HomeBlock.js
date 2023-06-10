@@ -48,4 +48,4 @@ function HomeBlock() {
   );
 }
 
-export default HomeSection;
+export default HomeBlock;
