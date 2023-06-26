@@ -19,7 +19,7 @@ function HomeBlock() {
                 <span className="dark:text-blue-300 text-cyan-600">
                   <Typewriter
                     options={{
-                      strings: ["React Developer", "Full Stack Developer.", "Software Engineer.", "Frontend Developer.", "UX/UI Designer."],
+                      strings: ["Software Engineer.", "Support Engineer.", "Full Stack Developer.", "React Developer.", "Frontend Developer." ],
                       autoStart: true,
                       loop: true, 
                     }}
