@@ -29,7 +29,7 @@ function HomeBlock() {
               <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.5 }} className="text-sm md:text-2xl md:mt-4 text-center md:text-left">
                 Building dynamic and responsive web applications.
               </motion.p>
-              <span className="flex mx-auto md:mx-0 justify-center md:justify-normal ">
+              <span className="flex mx-auto md:mx-0 justify-center md:justify-normal gap-x-4">
                 <motion.a
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -38,6 +38,15 @@ function HomeBlock() {
                   className=" rounded-lg bg-cyan-500 px-4 py-2 font-semibold dark:text-black text-white hover:bg-gray-300 shadow-lg mt-8 text-2xl"
                 >
                   My Projects
+                </motion.a>
+                <motion.a
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 1.8 }}
+                  href="/profile"
+                  className=" rounded-lg bg-cyan-500 px-4 py-2 font-semibold dark:text-black text-white hover:bg-gray-300 shadow-lg mt-8 text-2xl"
+                >
+                  Download my CV
                 </motion.a>
               </span>
             </motion.span>

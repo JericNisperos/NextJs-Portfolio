@@ -2,18 +2,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Modal = ({ children, onClose }) => {
+const Modal = ({ children, onClose, closeButton = true }) => {
   return (
     <div className="z-50 fixed inset-0 flex items-center justify-center mx-auto text-center">
       <motion.div
-        className="dark:bg-slate-600 z-[100] bg-slate-600 p-4 rounded-lg shadow-lg w-[450px] "
+        className="dark:bg-slate-600 z-[100] bg-slate-600 p-4 rounded-lg shadow-lg w-[650px] "
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{delay: 0.2}}
         exit={{ scale: 0 }}
       >
         {children}
+        {closeButton ? (
         <button className="mt-8 rounded-lg px-4 py-2 bg-cyan-500 text-white font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-300 hover:bg-cyan-700 cursor-pointer" onClick={onClose}>Close</button>
+
+        ) : (
+          <button></button>
+        )}
 
       </motion.div>
       <motion.div

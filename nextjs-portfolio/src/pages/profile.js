@@ -32,10 +32,12 @@ import { faFacebookF, faGithub, faGithubAlt, faLinkedinIn } from "@fortawesome/f
 import { DiMysql } from "react-icons/di";
 import { useTheme } from "next-themes";
 import { faDownload, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import Modal from "./components/Modal";
 function Profile() {
   const [activeAbout, setActiveAbout] = useState("Introduction");
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
+
   const buttonVariants = {
     rest: {
       borderColor: "#fff",
@@ -58,6 +60,17 @@ function Profile() {
       },
     },
   };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   function LinkItems({ href, icon }) {
     return (
       <motion.span whileHover={{ scale: 1.5 }} whileTap={{ scale: 1.2 }}>
@@ -78,11 +91,12 @@ function Profile() {
   }
 
   return (
-    <>
-      <div className="dark:bg-zinc-900 bg-zinc-100 min-h-screen transition-colors duration-1000 ease-in-out pb-24 cursor-default">
+    <div className="dark:bg-zinc-900 bg-zinc-100 transition-colors duration-1000 ease-in-out">
+    <div className="max-w-[1626px] items-center justify-center mx-auto">
+      <div className="pb-24 cursor-default ">
         <section className="text-4xl text-cyan-600 font-extrabold p-12 z-20 max-w-[1626px] items-center justify-center mx-auto relative">
           <div className="justify-between flex">
-            <p className="flex text-cyan-600 dark:text-white text-lg md:text-2xl">jnisperos.space</p>
+            <a className="flex text-cyan-600 dark:text-white text-lg md:text-2xl" href="/">jnisperos.space</a>
 
             <div className="has-tooltip dark:text-white text-black px-2 hover:text-cyan-500 hover:dark:text-cyan-500 ">
               <div className="tooltip text-xs rounded text-black dark:text-white bg-white dark:bg-gray-700 shadow-lg p-1 flex-none -mt-[-48px] -ml-4 z-60 ease-in-out">
@@ -97,7 +111,7 @@ function Profile() {
           </div>
         </section>
         <h1 className="flex text-center mx-auto justify-center text-4xl md:text-8xl">About Me</h1>
-        <div className={`lg:mx-48 md:mx-16 flex justify-center `}>
+        <div className={`flex justify-center `}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 mx-8 grid-flow-row-dense">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -108,7 +122,7 @@ function Profile() {
               className="col-span-2 p-6 rounded-lg min-w-[300px] min-h-[200px] duration-0 text-center items-center justify-center sm:mt-24"
             >
               <h3 className="text-6xl font-semibold mb-2 dark:text-cyan-300 text-cyan-600 text-center justify-center mx-auto flex">JERIC NISPEROS</h3>
-              <p className=" dark:text-white text-zinc-800 text-2xl">Software / Support Engineer / React Developer / Full Stack Developer</p>
+              <p className=" dark:text-white text-zinc-800 text-2xl">Software Engineer / Support Engineer / React Developer</p>
               <p className="text-2xl dark:text-white text-zinc-800 mt-8 flex mx-auto items-center justify-center"></p>
             </motion.div>
 
@@ -128,13 +142,13 @@ function Profile() {
                   </div>
                   <p className=" dark:text-white text-zinc-800 md:text-lg text-base text-center">
                     Experienced in <span className="dark:text-cyan-500 text-cyan-700 font-bold">Software Engineering</span> for <span className="dark:text-cyan-500 text-cyan-700 font-bold">1 year</span> and{" "}
-                    <span className="dark:text-cyan-500 text-cyan-700 font-bold">E-Commerce and Telco Customer Support</span> for <span className="dark:text-cyan-500 text-cyan-700 font-bold">4 years</span>.
-                     I am passionate about leveraging my skills and experiences to develop intuitive and user-friendly software and applications.
+                    <span className="dark:text-cyan-500 text-cyan-700 font-bold">E-Commerce and Telco Customer Support</span> for <span className="dark:text-cyan-500 text-cyan-700 font-bold">4 years</span>. I am passionate about leveraging
+                    my skills and experiences to develop intuitive and user-friendly software and applications.
                     {/* Self-motivated individual with the ability to work independently or as a member of a team, seeking a stable and challenging role that utilizes my existing skills and experience while providing opportunities for personal
                     and professional growth. */}
                   </p>
                   <p className="text-2xl dark:text-white text-zinc-800 mt-8 flex mx-auto items-center justify-center">
-                  <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 1.0 }} className="border border-cyan-500 px-4 py-2 rounded-lg bg-cyan-500 dark:text-gray-800 font-semibold hover:bg-cyan-300"><FontAwesomeIcon icon={faDownload} /> Download Resumé </motion.button>
+                    <motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 1.0 }} onClick={(e) => handleOpenModal()} href="/Jeric_Nisperos-CV.pdf" download className="border border-cyan-500 px-4 py-2 rounded-lg bg-cyan-500 dark:text-gray-800 font-semibold hover:bg-cyan-300"><FontAwesomeIcon icon={faDownload} /> Download CV </motion.a>
                   </p>
                   {/* <p className="text-2xl dark:text-white text-zinc-800 mt-8 flex mx-auto items-center justify-center">
                     <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faFacebookF} />
@@ -357,25 +371,40 @@ function Profile() {
               <div className="text-xl dark:text-white text-zinc-800 ">
                 <span className="flex-none">
                   <div className="grid grid-cols-1 sm:grid-cols-3">
-                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 flex-none font-semibold underline">Statistics</span>
+                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 flex-none font-semibold underline">Current Project:</span>
                   </div>
-                  <div className="grid grid-cols-2 text-center">
-                    <div className="text-6xl dark:text-cyan-300 text-cyan-900 font-bold">
-                      5+
-                      <div className=" text-xl font-bold text-center dark:text-white text-zinc-900"> Years of Experience</div>
-                    </div>
-                    <div className="text-6xl dark:text-cyan-300 text-cyan-900 font-bold">
-                      25+
+                  <div className="grid grid-cols-1 text-center">
+                    <motion.a className="text-3xl dark:text-cyan-300 text-cyan-900 font-bold hover:underline" href="https://minecommunity.vercel.app" target="_blank">
+                      MineCommunity
+                    
+                    </motion.a>
+                    <div className=" text-xl font-bold text-center dark:text-white text-zinc-900"> Minecraft server packed with RPG and Role-playing features!</div>
+                    {/* <div className="text-6xl dark:text-cyan-300 text-cyan-900 font-bold">
+                      10+
                       <div className=" text-xl font-bold text-center dark:text-white text-zinc-900"> Projects Done</div>
-                    </div>
+                    </div> */}
                   </div>
                 </span>
               </div>
             </motion.div>
           </div>
         </div>
+        {isModalOpen && (
+          <Modal onClose={handleCloseModal} closeButton={true}>
+            {/* <p className="dark:text-cyan-300 text-cyan-500 text-4xl font-bold ">Success!</p> */}
+            <h1 className="text-4xl text-cyan-500 mt-8 mx-8 font-bold">Thank you!</h1>
+            <p className="text-white text-xl p-4 mt-4 text-justify">
+              &nbsp;&nbsp;&nbsp;&nbsp;Thank you for taking the time to check my profile! By downloading my details, you agree that my information will only be used for job application and ensure it will never be used for personal gain or any illegal activities. Your understanding and compliance with these conditions are appreciated.
+            
+            
+            </p>
+            {/* <button className="mt-8 rounded-lg px-4 py-2 bg-cyan-500 text-white font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-300 hover:bg-cyan-700 cursor-pointer mr-8">Download</button> */}
+
+          </Modal>
+        )}
       </div>
-    </>
+    </div>
+    </div>
   );
 }
 
