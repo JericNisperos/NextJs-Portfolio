@@ -171,7 +171,7 @@ function Profile() {
               <div className="text-xl dark:text-white text-zinc-800 ">
                 <span className="flex-none">
                   <div className="grid grid-cols-1 sm:grid-cols-3">
-                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold underline">Tech Skills</span>
+                    <span className="dark:text-cyan-300 text-cyan-900 md:text-4xl sm:text-lg sm:col-span-2 font-semibold underline">Tech Skills</span>
                   </div>
                   <div className="mt-4 list-none md:text-base text-4xl text-center justify-center items-center">
                     <div className=" grid grid-cols-4 md:grid-cols-5 gap-y-4 gap-x-2">
@@ -208,7 +208,7 @@ function Profile() {
               <div className="text-xl dark:text-white text-zinc-800 ">
                 <span className="flex-none">
                   <div className="grid grid-cols-1 sm:grid-cols-3">
-                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold underline">Tech Tools</span>
+                    <span className="dark:text-cyan-300 text-cyan-900 md:text-4xl sm:text-lg sm:col-span-2 font-semibold underline">Tech Tools</span>
                   </div>
                   <div className="mt-4 list-none md:text-base text-4xl text-center justify-center items-center">
                     <div className=" grid grid-cols-4 md:grid-cols-5 gap-y-4 gap-x-2">
@@ -241,7 +241,7 @@ function Profile() {
               <div className="text-xl dark:text-white text-zinc-800 ">
                 <span className="flex-none">
                   <div className="grid grid-cols-1 sm:grid-cols-3">
-                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold underline">Work Experiences</span>
+                    <span className="dark:text-cyan-300 text-cyan-900 md:text-4xl sm:text-lg sm:col-span-2 font-semibold underline">Work Experiences</span>
                     <span className="dark:text-cyan-300 text-cyan-900 md:text-4xl text-xl sm:col-span-2 font-semibold">Norima Technologies Inc. </span>
                     <span className="sm:text-right dark:text-white text-cyan-900 text-sm">Jan 2022 - March 2023</span>
                   </div>
@@ -346,7 +346,7 @@ function Profile() {
               <div className="text-xl dark:text-white text-zinc-800 ">
                 <span className="flex-none">
                   <div className="grid grid-cols-1 sm:grid-cols-3">
-                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 flex-none font-semibold underline">Education</span>
+                    <span className="dark:text-cyan-300 text-cyan-900 md:text-4xl sm:text-lg sm:col-span-2 flex-none font-semibold underline">Education</span>
                   </div>
                   <div className="italic md:text-lg text-sm">Don Mariano Marcos Memorial State University</div>
                   <ul className="mt-4  ml-4 space-y-4 text-sm md:text-base">
@@ -371,14 +371,14 @@ function Profile() {
               <div className="text-xl dark:text-white text-zinc-800 ">
                 <span className="flex-none">
                   <div className="grid grid-cols-1 sm:grid-cols-3">
-                    <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 flex-none font-semibold underline">Current Project:</span>
+                    <span className="dark:text-cyan-300 text-cyan-900 md:text-4xl sm:text-lg sm:col-span-2 flex-none font-semibold underline">Active Project:</span>
                   </div>
-                  <div className="grid grid-cols-1 text-center">
+                  <div className="grid grid-cols-1 text-center mt-4">
                     <motion.a className="text-3xl dark:text-cyan-300 text-cyan-900 font-bold hover:underline" href="https://minecommunity.vercel.app" target="_blank">
                       MineCommunity
                     
                     </motion.a>
-                    <div className=" text-xl font-bold text-center dark:text-white text-zinc-900"> Minecraft server packed with RPG and Role-playing features!</div>
+                    <div className=" md:text-xl text-sm font-bold text-center dark:text-white text-zinc-900"> Minecraft server packed with RPG and Role-playing features!</div>
                     {/* <div className="text-6xl dark:text-cyan-300 text-cyan-900 font-bold">
                       10+
                       <div className=" text-xl font-bold text-center dark:text-white text-zinc-900"> Projects Done</div>
