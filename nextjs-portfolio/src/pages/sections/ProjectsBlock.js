@@ -10,9 +10,6 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 function ProjectItems({ src, title, content, bg, href, num }) {
   return (
     <motion.div
-      onClick={(e) => {
-        console.log("Testtt");
-      }}
       className={`overflow-hidden ${bg}  border-2 md:border-4 dark:border-transparent border-transparent hover:border-cyan-600 hover:dark:border-cyan-300 rounded-md relative md:mx-auto`}
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}

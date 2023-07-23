@@ -242,10 +242,10 @@ function Profile() {
                 <span className="flex-none">
                   <div className="grid grid-cols-1 sm:grid-cols-3">
                     <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold underline">Work Experiences</span>
-                    <span className="dark:text-cyan-300 text-cyan-900 md:text-4xl text-xl sm:col-span-2 font-semibold">Norima Technologies Inc.</span>
+                    <span className="dark:text-cyan-300 text-cyan-900 md:text-4xl text-xl sm:col-span-2 font-semibold">Norima Technologies Inc. </span>
                     <span className="sm:text-right dark:text-white text-cyan-900 text-sm">Jan 2022 - March 2023</span>
                   </div>
-                  <div className="italic md:text-lg text-sm">Software Engineer / Consultant</div>
+                  <div className="italic md:text-lg text-sm">Software Engineer / Consultant (Client: FiDx)</div>
                   <ul className="mt-4 list-disc ml-4 md:ml-8 space-y-4 text-sm md:text-base">
                     <li>
                       Proficient in a variety of tools and programming languages including: <span className="dark:text-cyan-300 text-cyan-900 font-bold">.Net | C# | Jira | Angular | Swagger | MSSQL | Azure</span>
@@ -270,10 +270,10 @@ function Profile() {
 
                 <span className="flex-none">
                   <div className="grid grid-cols-1 sm:grid-cols-3 mt-12 ">
-                    <span className="dark:text-cyan-300 text-cyan-900 md:text-4xl text-xl sm:col-span-2 font-semibold mt-">AFNI Philippines</span>
+                    <span className="dark:text-cyan-300 text-cyan-900 md:text-4xl text-xl sm:col-span-2 font-semibold mt-">AFNI Philippines </span>
                     <span className="sm:text-right dark:text-white text-cyan-900 text-sm">Oct 2019 - Nov 2022</span>
                   </div>
-                  <div className="italic md:text-lg text-sm">Chat Support Professional</div>
+                  <div className="italic md:text-lg text-sm">Chat Support Professional (Client: Verizon)</div>
                   <ul className="mt-4 list-disc  ml-4 md:ml-8 space-y-4 text-sm md:text-base">
                     <li>
                       Handling customer inquiries and providing prompt and <span className="dark:text-cyan-300 text-cyan-900 font-bold">professional support via chat</span> for a{" "}
@@ -304,10 +304,10 @@ function Profile() {
 
                 <span className="flex-none">
                   <div className="grid grid-cols-1 sm:grid-cols-3 mt-12">
-                    <span className="dark:text-cyan-300 text-cyan-900 md:text-4xl text-xl sm:col-span-2 font-semibold mt-">Alorica Teleservices</span>
+                    <span className="dark:text-cyan-300 text-cyan-900 md:text-4xl text-xl sm:col-span-2 font-semibold mt-">Alorica Teleservices </span>
                     <span className="sm:text-right dark:text-white text-cyan-900 text-sm">Sept 2017 - Oct 2019</span>
                   </div>
-                  <div className="italic md:text-lg text-sm">Customer Multi-support Specialist</div>
+                  <div className="italic md:text-lg text-sm">Customer Multi-support Specialist (Client: Amazon)</div>
                   <ul className="mt-4 list-disc ml-4 md:ml-8 space-y-4 text-sm md:text-base">
                     <li>
                       Trained in providing <span className="dark:text-cyan-300 text-cyan-900 font-bold">phone, email,</span> and <span className="dark:text-cyan-300 text-cyan-900 font-bold">chat support</span> for customers in the{" "}
