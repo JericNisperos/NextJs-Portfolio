@@ -69,8 +69,8 @@ function AboutBlock() {
                 </li>
 
                 <li className="pt-8">
-                  &nbsp;&nbsp;&nbsp;&nbsp; One of my significant accomplishments is the continuous development and management of one of the largest Minecraft Game Networks in the Philippines. This network has expanded to encompass over{" "}
-                  <span className="text-cyan-500">3000 members</span> for nearly 4 years, and in my capacity as the <span className="text-cyan-500">Senior Development Manager</span>, I have effectively added new and unique features, fixed
+                  &nbsp;&nbsp;&nbsp;&nbsp; One of my significant accomplishment is the continuous development and management of one of the largest Minecraft Game Networks in the Philippines. This network has expanded to encompass over{" "}
+                  <span className="text-cyan-500">3000 members</span> for nearly 4 years, and in my capacity as the <span className="text-cyan-500">Senior Development Manager</span> and a part of the <span className="text-cyan-500">Senior Council</span>, I have effectively added new and unique features, fixed
                   bugs, managed a team, and handled day-to-day concerns from players and staff team to ensure seamless gameplay. Through these experiences, I have further sharpened my technical expertise, management skills and interpersonal
                   skills, positioning myself as a valuable asset to any team.
                 </li>
