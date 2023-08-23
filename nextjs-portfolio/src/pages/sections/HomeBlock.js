@@ -38,15 +38,15 @@ function HomeBlock() {
                 >
                   My Projects
                 </motion.a>
-                // <motion.a
-                //   initial={{ opacity: 0 }}
-                //   animate={{ opacity: 1 }}
-                //   transition={{ duration: 1, delay: 1.8 }}
-                //   href="/profile"
-                //   className=" rounded-lg bg-cyan-500 px-4 py-2 font-semibold dark:text-black text-white hover:bg-gray-300 shadow-lg mt-8"
-                // >
-                //   Download CV
-                // </motion.a>
+                {/* <motion.a
+                   initial={{ opacity: 0 }}
+                   animate={{ opacity: 1 }}
+                   transition={{ duration: 1, delay: 1.8 }}
+                   href="/profile"
+                   className=" rounded-lg bg-cyan-500 px-4 py-2 font-semibold dark:text-black text-white hover:bg-gray-300 shadow-lg mt-8"
+                 >
+                   Download CV
+                 </motion.a> */}
               </span>
             </motion.span>
           </div>

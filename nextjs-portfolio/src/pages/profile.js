@@ -148,7 +148,7 @@ function Profile() {
                     and professional growth. */}
                   </p>
                   <p className="text-2xl dark:text-white text-zinc-800 mt-8 flex mx-auto items-center justify-center">
-                    <motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 1.0 }} onClick={(e) => handleOpenModal()} href="/Jeric_Nisperos-CV.pdf" download className="border border-cyan-500 px-4 py-2 rounded-lg bg-cyan-500 dark:text-gray-800 font-semibold hover:bg-cyan-300"><FontAwesomeIcon icon={faDownload} /> Download CV </motion.a>
+                    {/* <motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 1.0 }} onClick={(e) => handleOpenModal()} href="/Jeric_Nisperos-CV.pdf" download className="border border-cyan-500 px-4 py-2 rounded-lg bg-cyan-500 dark:text-gray-800 font-semibold hover:bg-cyan-300"><FontAwesomeIcon icon={faDownload} /> Download CV </motion.a> */}
                   </p>
                   {/* <p className="text-2xl dark:text-white text-zinc-800 mt-8 flex mx-auto items-center justify-center">
                     <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faFacebookF} />
