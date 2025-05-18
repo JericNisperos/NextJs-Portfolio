@@ -141,7 +141,10 @@ function Profile() {
                     <span className="dark:text-cyan-300 text-cyan-900 text-4xl sm:col-span-2 font-semibold"></span>
                   </div>
                   <p className=" dark:text-white text-zinc-800 md:text-lg text-base text-center">
-                    Experienced in <span className="dark:text-cyan-500 text-cyan-700 font-bold">Software Engineering</span> for <span className="dark:text-cyan-500 text-cyan-700 font-bold">1 year</span> and{" "}
+                    // Experienced in <span className="dark:text-cyan-500 text-cyan-700 font-bold">Software Engineering</span> for <span className="dark:text-cyan-500 text-cyan-700 font-bold">1 year</span> and{" "}
+                    // <span className="dark:text-cyan-500 text-cyan-700 font-bold">E-Commerce and Telco Customer Support</span> for <span className="dark:text-cyan-500 text-cyan-700 font-bold">4 years</span>. I am passionate about leveraging
+                    // my skills and experiences to develop intuitive and user-friendly software and applications.
+                    Expert as a <span className="dark:text-cyan-500 text-cyan-700 font-bold">Support Engineer</span>. Currently working as one of the <span className="dark:text-cyan-500 text-cyan-700 font-bold">Technical Support Specialist Engineer</span> from one of the biggest SaaS CRM. Experienced in <span className="dark:text-cyan-500 text-cyan-700 font-bold">Software Engineering</span> for <span className="dark:text-cyan-500 text-cyan-700 font-bold">1 year</span> and{" "}
                     <span className="dark:text-cyan-500 text-cyan-700 font-bold">E-Commerce and Telco Customer Support</span> for <span className="dark:text-cyan-500 text-cyan-700 font-bold">4 years</span>. I am passionate about leveraging
                     my skills and experiences to develop intuitive and user-friendly software and applications.
                     {/* Self-motivated individual with the ability to work independently or as a member of a team, seeking a stable and challenging role that utilizes my existing skills and experience while providing opportunities for personal
