@@ -63,14 +63,16 @@ function AboutBlock() {
             <div className="col-span-2 max-w-[1226px] text-sm md:text-base">
               <motion.ul initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }} className=" dark:text-gray-300 text-zinc-800 md:text-2xl text-justify">
                 <li className="">
-                  &nbsp;&nbsp;&nbsp;&nbsp;Experienced in <span className="text-cyan-500">Software Engineering</span> for <span className="text-cyan-500">1 year</span> and{" "}
+                  &nbsp;&nbsp;&nbsp;&nbsp; Expert as a <span className="dark:text-cyan-500 text-cyan-700 font-bold">Support Engineer</span>. Currently working as one of the <span className="dark:text-cyan-500 text-cyan-700 font-bold">Technical Support Specialist Engineer</span> from one of the biggest SaaS CRM. Experienced in <span className="dark:text-cyan-500 text-cyan-700 font-bold">Software Engineering</span> and{" "}
+                    <span className="dark:text-cyan-500 text-cyan-700 font-bold">E-Commerce and Telco Customer Support</span>. I am passionate about leveraging my skills and experiences to develop intuitive and user-friendly software and applications.
+                  {/* &nbsp;&nbsp;&nbsp;&nbsp;Experienced in <span className="text-cyan-500">Software Engineering</span> for <span className="text-cyan-500">1 year</span> and{" "}
                   <span className="text-cyan-500">E-Commerce and Telco Customer Support</span> for <span className="text-cyan-500">4 years</span>. Specialize in <span className="text-cyan-500">Front-End/UI development</span> using HTML,
-                  CSS, JavaScript, Bootstrap, React (Next.js), and TailwindCSS. Additional skills includes C#, .Net, AngularJS, MsSQL and Swagger. Skilled in creating dynamic and responsive web applications.
+                  CSS, JavaScript, Bootstrap, React (Next.js), and TailwindCSS. Additional skills includes C#, .Net, AngularJS, MsSQL and Swagger. Skilled in creating dynamic and responsive web applications. */}
                 </li>
 
                 <li className="pt-8">
-                  &nbsp;&nbsp;&nbsp;&nbsp; One of my significant accomplishment is the continuous development and management of one of the largest Minecraft Game Networks in the Philippines. This network has expanded to encompass over{" "}
-                  <span className="text-cyan-500">3000 members</span> for nearly 4 years, and in my capacity as the <span className="text-cyan-500">Senior Development Manager</span> and a part of the <span className="text-cyan-500">Senior Council</span>, I have effectively added new and unique features, fixed
+                  &nbsp;&nbsp;&nbsp;&nbsp; One of my significant accomplishment is the continuous development and management of one of the best Minecraft Game Networks in the Philippines. This network has expanded to encompass over{" "}
+                  <span className="text-cyan-500">thousand of unique members joined</span>, and in my capacity as the <span className="text-cyan-500">Owner</span>, I have effectively added new and unique features, fixed
                   bugs, managed a team, and handled day-to-day concerns from players and staff team to ensure seamless gameplay. Through these experiences, I have further sharpened my technical expertise, management skills and interpersonal
                   skills, positioning myself as a valuable asset to any team.
                 </li>

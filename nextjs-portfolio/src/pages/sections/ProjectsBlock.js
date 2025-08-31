@@ -38,7 +38,7 @@ function ProjectList({ src, title, content, bg, href, hrefgit, num, stacks }) {
           {title}
         </motion.h1>
         <div className="mt-4 flex flex-wrap gap-2 mx-8 justify-center md:justify-normal">
-          {stacks.map((item, index) => {
+          {stacks && stacks.map((item, index) => {
             return (
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
@@ -56,18 +56,19 @@ function ProjectList({ src, title, content, bg, href, hrefgit, num, stacks }) {
         <motion.p initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 * num + 0.3, duration: 0.4 }} exit={{ opacity: 0, y: 10 }} className="my-8 justify-center md:justify-normal text-xl">
           {content}
         </motion.p>
-        <motion.div 
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 * num + 0.3, duration: 0.4 }}
-        exit={{ opacity: 0, y: 10 }}
-        className="gap-x-4 flex mx-auto items-center justify-center md:justify-normal my-8">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 * num + 0.3, duration: 0.4 }}
+          exit={{ opacity: 0, y: 10 }}
+          className="gap-x-4 flex mx-auto items-center justify-center md:justify-normal my-8"
+        >
           <motion.a className=" rounded-lg dark:bg-cyan-500 bg-white px-4 py-2 font-semibold text-black hover:bg-gray-300 shadow-lg" href={href} target="_blank">
             Live Site <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </motion.a>
-          <motion.a className=" rounded-lg dark:bg-cyan-500 bg-white px-4 py-2 font-semibold text-black hover:bg-gray-300 shadow-lg" href={hrefgit} target="_blank">
+          {/* <motion.a className=" rounded-lg dark:bg-cyan-500 bg-white px-4 py-2 font-semibold text-black hover:bg-gray-300 shadow-lg" href={hrefgit} target="_blank">
             Source Code <FontAwesomeIcon icon={faGithub} />
-          </motion.a>
+          </motion.a> */}
         </motion.div>
       </div>
       <motion.div initial={{ opacity: 0, x: 80 }} whileInView={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 10 }} transition={{ delay: 0.8, duration: 0.4 }} className="items-center flex mx-auto justify-center order-1">
@@ -86,34 +87,61 @@ function ProjectsBlock() {
           </motion.h1>
 
           <ProjectList
-            src="https://media.discordapp.net/attachments/1093897626920964186/1093898295623032922/minecomm.png?width=1154&height=673"
-            title="MineCommunity"
-            content="A production community website packed with server details and has the option to search player data with ease."
-            href="https://minecommunity.jnisperos.space"
-            hrefgit="https://github.com/JericNisperos/Next-13-Experimental/tree/main/minecommunity"
-            stacks={["NextJs", "TailwindCSS", "Rest API", "Framer-Motion"]}
+            src="/images/assets/quizharbor.PNG"
+            title="QuizHarbor"
+            content="A webapp for students and teachers that creates learning materials from notes or files, or allows users to immediately take a quiz. No database connected and doesn't store any data. No logins required - perfect for users who want a simple app that solves their learning needs."
+            href="https://quizharbor.jnisperos.space"
+            // stacks={["NextJS", "TailwindCSS", "REST API", "Express"]}
             num="1"
           />
 
+          {/* <ProjectList
+            src="/images/assets/cyanbytes.png"
+            title="Cyan Bytes"
+            content="An ongoing project that aims to provide a platform for users to save and share their AI prompts. Has the option to test the prompt on various AI models."
+            href="https://cyanbytes.vercel.app/"
+            // hrefgit="https://github.com/JericNisperos/jericnisperos.github.io/tree/master/AndromedaBlitzV2"
+            // stacks={["HTML 5", "Unity", "C#"]}
+            num="3"
+          /> */}
+
           <ProjectList
-            src="https://cdn.discordapp.com/attachments/1093897626920964186/1093988969429082203/cypherchats.png"
-            title="CypherChats"
-            content="A simple Chat app focused in efficiency, accuracy and easy to use."
-            href="https://cypherchats.jnisperos.space"
-            hrefgit="https://github.com/JericNisperos/CypherChats"
-            stacks={["ReactJs", "Bootstrap", "Firestore", "Firebase-Auth"]}
+            src="/images/assets/cyanrealms.png"
+            title="Cyan Realms Official Website"
+            content="A production community website packed with server details and has the option to search player data with ease. Contains Store, Leaderboards, Text formatter and more."
+            href="https://www.cyanrealms.com"
+            // stacks={["NextJS", "TailwindCSS", "REST API", "Framer-Motion"]}
             num="2"
           />
 
           <ProjectList
-            src="https://media.discordapp.net/attachments/737562200318803969/1109425841441607770/image.png?width=1212&height=635"
+            src="/images/assets/mecyanrealms.png"
+            title="Gaming Portfolio"
+            content="My personal gaming portfolio showcasing my gaming achievements, stats, and highlights from various projects. Features a clean design to display projects related to gaming and has a minigame called Keyboard warrior."
+            href="https://me.cyanrealms.com"
+            // stacks={["NextJS", "TailwindCSS", "Framer-Motion"]}
+            num="3"
+          />
+
+          {/* <ProjectList
+            src="https://cdn.discordapp.com/attachments/1093897626920964186/1093988969429082203/cypherchats.png"
+            title="CypherChats"
+            content="A simple Chat app focused in efficiency, accuracy and easy to use."
+            href="https://cypherchats.jnisperos.space"
+            // hrefgit="https://github.com/JericNisperos/CypherChats"
+            stacks={["ReactJs", "Bootstrap", "Firestore", "Firebase-Auth"]}
+            num="2"
+          /> */}
+
+          {/* <ProjectList
+            src="/images/assets/andromeda.png"
             title="Andromeda Blitz"
             content="A simple game created from Unity and was ported into web."
             href="https://jericnisperos.github.io/AndromedaBlitzV2/"
             hrefgit="https://github.com/JericNisperos/jericnisperos.github.io/tree/master/AndromedaBlitzV2"
             stacks={["HTML 5", "Unity", "C#"]}
             num="3"
-          />
+          /> */}
         </div>
       </span>
     </AnimatePresence>

@@ -70,7 +70,7 @@ export default function Home() {
           <div className="dark:bg-zinc-900 bg-white relative duration-0 ">
             <ContactBlock />
 
-            <div className="py-4 text-center text-black dark:text-white text-lg pb-24">Built and designed by Jeric Nisperos and not affiliated with any company. 2023</div>
+            <div className="py-4 text-center text-black dark:text-white text-lg pb-24">Built and designed by Jeric Nisperos. 2025</div>
           </div>
         </div>
       </main>
