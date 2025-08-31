@@ -65,7 +65,7 @@ function ContactBlock() {
                   {/* <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faFacebookF} /> */}
                   <LinkItems href="https://www.linkedin.com/in/jeric-nisperos-38055a11b/" icon={faLinkedinIn} />
                   <LinkItems href="https://github.com/JericNisperos" icon={faGithub} />
-                  <LinkItems href="https://www.instagram.com/_nisperosjeric/" icon={faInstagram} />
+                  {/* <LinkItems href="https://www.instagram.com/_nisperosjeric/" icon={faInstagram} /> */}
                   {/* <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faDiscord} /> */}
                 </div>
               </div>
