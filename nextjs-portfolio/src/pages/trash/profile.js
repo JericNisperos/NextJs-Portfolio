@@ -32,7 +32,7 @@ import { faFacebookF, faGithub, faGithubAlt, faLinkedinIn } from "@fortawesome/f
 import { DiMysql } from "react-icons/di";
 import { useTheme } from "next-themes";
 import { faDownload, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
-import Modal from "./components/Modal";
+import Modal from "../components/Modal";
 function Profile() {
   const [activeAbout, setActiveAbout] = useState("Introduction");
   const { systemTheme, theme, setTheme } = useTheme();
