@@ -4,6 +4,7 @@ import StarBg from "../components/StarBg";
 import Typewriter from "typewriter-effect";
 
 function HomeBlock() {
+  
   return (
     <div className="md:max-h-[800px]">
       <div>
