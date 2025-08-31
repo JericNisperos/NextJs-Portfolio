@@ -115,7 +115,7 @@ function ProjectsBlock() {
           />
 
           <ProjectList
-            src="/images/assets/mecyanrealms.png"
+            src="/images/assets/mecyanrealms.PNG"
             title="Gaming Portfolio"
             content="My personal gaming portfolio showcasing my gaming achievements, stats, and highlights from various projects. Features a clean design to display projects related to gaming and has a minigame called Keyboard warrior."
             href="https://me.cyanrealms.com"
