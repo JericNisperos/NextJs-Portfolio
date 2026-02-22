@@ -27,7 +27,7 @@ function HomeBlock() {
                 </span>
               </div>
               <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 1.5 }} className="text-sm md:text-2xl md:mt-4 text-center md:text-left">
-                Building dynamic and responsive web applications.
+                🎮Game Dev by passion,👷‍♂️Support Engineer by necessity, and 🕸️Web Dev by selection. Crafting digital worlds, solving digital dilemmas, and weaving web wonders.
               </motion.p>
               <span className="flex mx-auto md:mx-0 justify-center md:justify-normal gap-x-4 md:text-2xl text-sm text-center">
                 <motion.a
