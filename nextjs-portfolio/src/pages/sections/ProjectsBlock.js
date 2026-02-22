@@ -115,12 +115,21 @@ function ProjectsBlock() {
           />
 
           <ProjectList
+            src="/images/assets/cyanbot.PNG"
+            title="Cyan Librarian"
+            content="An AI powered Chatbot made exclusively for Cyan Realms Community. Uses RAG embedding with BM25 and utilizes Groq and Llama models."
+            href="https://chatbot.cyanrealms.com"
+            // stacks={["NextJS", "TailwindCSS", "REST API", "Express"]}
+            num="3"
+          />
+          
+          <ProjectList
             src="/images/assets/mecyanrealms.PNG"
             title="Gaming Portfolio"
             content="My personal gaming portfolio showcasing my gaming achievements, stats, and highlights from various projects. Features a clean design to display projects related to gaming and has a minigame called Keyboard warrior."
             href="https://me.cyanrealms.com"
             // stacks={["NextJS", "TailwindCSS", "Framer-Motion"]}
-            num="3"
+            num="4"
           />
 
           {/* <ProjectList
