@@ -115,7 +115,7 @@ function ProjectsBlock() {
           />
 
           <ProjectList
-            src="/images/assets/cyanbot.PNG"
+            src="/images/assets/cyanbot.png"
             title="Cyan Librarian"
             content="An AI powered Chatbot made exclusively for Cyan Realms Community. Uses RAG embedding with BM25 and utilizes Groq and Llama models."
             href="https://chatbot.cyanrealms.com"
