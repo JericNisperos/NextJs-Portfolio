@@ -86,14 +86,7 @@ function ProjectsBlock() {
             What I'm working with
           </motion.h1>
 
-          <ProjectList
-            src="/images/assets/quizharbor.PNG"
-            title="QuizHarbor"
-            content="A webapp for students and teachers that creates learning materials from notes or files, or allows users to immediately take a quiz. No database connected and doesn't store any data. No logins required - perfect for users who want a simple app that solves their learning needs."
-            href="https://quizharbor.jnisperos.space"
-            // stacks={["NextJS", "TailwindCSS", "REST API", "Express"]}
-            num="1"
-          />
+          
 
           {/* <ProjectList
             src="/images/assets/cyanbytes.png"
@@ -111,16 +104,16 @@ function ProjectsBlock() {
             content="A production community website packed with server details and has the option to search player data with ease. Contains Store, Leaderboards, Text formatter and more."
             href="https://www.cyanrealms.com"
             // stacks={["NextJS", "TailwindCSS", "REST API", "Framer-Motion"]}
-            num="2"
+            num="1"
           />
 
           <ProjectList
             src="/images/assets/cyanbot.png"
             title="Cyan Librarian"
-            content="An AI powered Chatbot made exclusively for Cyan Realms Community. Uses RAG embedding with BM25 and utilizes Groq and Llama models."
-            href="https://chatbot.cyanrealms.com"
+            content="An AI powered Discord bot made exclusively for Cyan Realms Community. Highly utilize AI as main feature. Uses RAG embedding with BM25 and utilizes Groq and Llama models. Also has it's own Ticket system"
+            href="https://librarian.cyanrealms.com"
             // stacks={["NextJS", "TailwindCSS", "REST API", "Express"]}
-            num="3"
+            num="2"
           />
           
           <ProjectList
@@ -129,6 +122,15 @@ function ProjectsBlock() {
             content="My personal gaming portfolio showcasing my gaming achievements, stats, and highlights from various projects. Features a clean design to display projects related to gaming and has a minigame called Keyboard warrior."
             href="https://me.cyanrealms.com"
             // stacks={["NextJS", "TailwindCSS", "Framer-Motion"]}
+            num="3"
+          />
+
+          <ProjectList
+            src="/images/assets/quizharbor.PNG"
+            title="QuizHarbor"
+            content="A webapp for students and teachers that creates learning materials from notes or files, or allows users to immediately take a quiz. No database connected and doesn't store any data. No logins required - perfect for users who want a simple app that solves their learning needs."
+            href="https://quizharbor.jnisperos.space"
+            // stacks={["NextJS", "TailwindCSS", "REST API", "Express"]}
             num="4"
           />
 
