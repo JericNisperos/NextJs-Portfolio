@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import { PiArrowUpRight } from "react-icons/pi";
 import SectionHeading from "../components/SectionHeading";
 
-// Two-column index; each item links to the live site. Keep an even count so rows stay full.
+// Two-column index; each item links to the live site.
+// `featured: true` spans both columns and gets the highlight. Keep regular items in pairs
+// around it (an even number before and after) so no row has a gap.
 // "AI Agent" tags get the cyan accent (the About section points here for them).
 const PROJECTS = [
   {
@@ -18,23 +20,25 @@ const PROJECTS = [
     tags: ["AI Agent", "Discord bot", "Tickets & moderation"],
   },
   {
+    title: "Cyan Realms Website",
+    href: "https://www.cyanrealms.com",
+    pitch: "Official hub of the Cyan Realms gaming community, from news to events.",
+    tags: ["Community", "News & events", "Server", "API"],
+    featured: true,
+  },
+  {
     title: "ForTable",
     href: "https://fortable.app",
     pitch: "Drop in a CSV, Excel, JSON, or XML file and AI builds an interactive dashboard you can question in plain English and share as a live link.",
     tags: ["AI Agent", "Data dashboards", "Spreadsheets"],
   },
-  {
-    title: "Detail with Jaycee",
-    href: "https://www.detailwithjaycee.com",
-    pitch: "Online booking platform for car detailing services.",
-    tags: ["Booking", "Packages & pricing"],
-  },
-  {
-    title: "Cyan Realms Website",
-    href: "https://www.cyanrealms.com",
-    pitch: "Official hub of the Cyan Realms gaming community, from news to events.",
-    tags: ["Community", "News & events", "Server", "API"],
-  },
+  // Hidden for now.
+  // {
+  //   title: "Detail with Jaycee",
+  //   href: "https://www.detailwithjaycee.com",
+  //   pitch: "Online booking platform for car detailing services.",
+  //   tags: ["Booking", "Packages & pricing"],
+  // },
   {
     title: "Gaming Portfolio",
     href: "https://me.cyanrealms.com",
@@ -64,23 +68,27 @@ function ProjectsBlock() {
       <SectionHeading>Projects</SectionHeading>
 
       <ul className="mx-auto grid max-w-6xl border-b border-zinc-200 md:grid-cols-2 md:gap-x-12 dark:border-zinc-700">
-        {PROJECTS.map(({ title, href, pitch, tags }, i) => (
+        {PROJECTS.map(({ title, href, pitch, tags, featured }, i) => (
           <motion.li
             key={title}
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.6, delay: (i % 2) * 0.08, ease: [0.16, 1, 0.3, 1] }}
-            className="border-t border-zinc-200 dark:border-zinc-700"
+            transition={{ duration: 0.6, delay: featured ? 0 : (i % 2) * 0.08, ease: [0.16, 1, 0.3, 1] }}
+            className={featured ? "my-6 rounded-xl border-2 border-cyan-500/60 bg-cyan-500/5 md:col-span-2 dark:bg-cyan-400/5" : "border-t border-zinc-200 dark:border-zinc-700"}
           >
             <a
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex h-full flex-col px-2 py-8 transition-colors hover:bg-cyan-500/5 focus-visible:outline-2 focus-visible:outline-cyan-500 md:px-6"
+              className={`group flex h-full flex-col transition-colors hover:bg-cyan-500/5 focus-visible:outline-2 focus-visible:outline-cyan-500 ${featured ? "rounded-xl px-6 py-10 md:px-10" : "px-2 py-8 md:px-6"}`}
             >
-              <h3 className="text-2xl font-bold tracking-tight text-zinc-900 transition-colors group-hover:text-cyan-700 md:text-3xl dark:text-white dark:group-hover:text-cyan-400">{title}</h3>
-              <p className="mt-2 leading-relaxed text-zinc-700 md:text-lg dark:text-zinc-300">{pitch}</p>
+              <h3
+                className={`font-bold tracking-tight text-zinc-900 transition-colors group-hover:text-cyan-700 dark:text-white dark:group-hover:text-cyan-400 ${featured ? "text-3xl md:text-5xl" : "text-2xl md:text-3xl"}`}
+              >
+                {title}
+              </h3>
+              <p className={`max-w-prose leading-relaxed text-zinc-700 dark:text-zinc-300 ${featured ? "mt-3 text-lg md:text-xl" : "mt-2 md:text-lg"}`}>{pitch}</p>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {tags.map((t) => (
                   <Tag key={t}>{t}</Tag>
