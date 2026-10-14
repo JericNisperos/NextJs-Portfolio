@@ -1,42 +1,26 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { TbBrandReactNative } from "react-icons/tb";
-import {
-  SiAdobedreamweaver,
-  SiAdobeillustrator,
-  SiAdobephotoshop,
-  SiAzuredevops,
-  SiBootstrap,
-  SiCsharp,
-  SiExpress,
-  SiFirebase,
-  SiJira,
-  SiMicrosoftoffice,
-  SiMicrosoftsqlserver,
-  SiMongodb,
-  SiMysql,
-  SiNativescript,
-  SiNextdotjs,
-  SiPostman,
-  SiSwagger,
-  SiTailwindcss,
-  SiUnity,
-} from "react-icons/si";
-import { BsDownload } from "react-icons/bs";
+import { SiBootstrap, SiExpress, SiFirebase, SiJira, SiMongodb, SiNextdotjs, SiPostman, SiSwagger, SiTailwindcss, SiUnity } from "react-icons/si";
+import { FaAngular, FaCss3Alt, FaFacebookF, FaFigma, FaGithub, FaHtml5, FaJs, FaLinkedinIn, FaMoon, FaNodeJs, FaReact, FaSun } from "react-icons/fa6";
 
-import { FaAngular, FaCss3Alt, FaFigma, FaGithub, FaHtml5, FaJs, FaNodeJs, FaReact, faAngular } from "react-icons/fa";
-import { faFacebookF, faGithub, faGithubAlt, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-
-import { DiMysql } from "react-icons/di";
+// react-icons v5 dropped these from the Si (simple-icons) set — sourced from other packs
+import { TbBrandAdobeIllustrator, TbBrandAdobePhotoshop, TbBrandCSharp } from "react-icons/tb";
+import { VscAzureDevops } from "react-icons/vsc";
+import { DiMsqlServer, DiMysql } from "react-icons/di";
+import { BsDownload, BsMicrosoft } from "react-icons/bs";
 import { useTheme } from "next-themes";
-import { faDownload, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
-import Modal from "../components/Modal";
+import Modal from "../src/components/Modal";
 function Profile() {
   const [activeAbout, setActiveAbout] = useState("Introduction");
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === "system" ? systemTheme : theme;
+
+  // The theme lives in localStorage, so the server can't know it — render the
+  // theme-dependent bits only after mount or the markup won't match.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   const buttonVariants = {
     rest: {
@@ -75,7 +59,7 @@ function Profile() {
     return (
       <motion.span whileHover={{ scale: 1.5 }} whileTap={{ scale: 1.2 }}>
         <Link href={href} className="mx-4 border px-4 py-2 rounded-full dark:border-white border-black hover:dark:bg-cyan-700 hover:bg-cyan-400" target="_blank">
-          <FontAwesomeIcon icon={icon} />
+          {icon}
         </Link>
       </motion.span>
     );
@@ -100,11 +84,13 @@ function Profile() {
 
             <div className="has-tooltip dark:text-white text-black px-2 hover:text-cyan-500 hover:dark:text-cyan-500 ">
               <div className="tooltip text-xs rounded text-black dark:text-white bg-white dark:bg-gray-700 shadow-lg p-1 flex-none -mt-[-48px] -ml-4 z-60 ease-in-out">
-                <div>{currentTheme === "dark" ? "Lightmode" : "Darkmode"}</div>
+                <div>{mounted && (currentTheme === "dark" ? "Lightmode" : "Darkmode")}</div>
               </div>
               <span className="flex ">
                 <motion.span whileHover={{ scale: 1.6, duration: 0.2 }} transition={{ duration: 0.5 }} whileTap={{ rotate: -1200 }} initial={{ scale: 1.0 }} className="origin-[50%_45%]">
-                  <FontAwesomeIcon icon={currentTheme === "dark" ? faSun : faMoon} id="DarkMode" onClick={(e) => setTheme(currentTheme === "dark" ? "light" : "dark")} className=" hover:text-cyan-500 hover:dark:text-cyan-500" />
+                  <span id="DarkMode" onClick={(e) => setTheme(currentTheme === "dark" ? "light" : "dark")} className=" hover:text-cyan-500 hover:dark:text-cyan-500">
+                    {mounted && (currentTheme === "dark" ? <FaSun /> : <FaMoon />)}
+                  </span>
                 </motion.span>
               </span>
             </div>
@@ -153,9 +139,9 @@ function Profile() {
                     {/* <motion.a whileHover={{ scale: 1.1 }} whileTap={{ scale: 1.0 }} onClick={(e) => handleOpenModal()} href="/Jeric_Nisperos-CV.pdf" download className="border border-cyan-500 px-4 py-2 rounded-lg bg-cyan-500 dark:text-gray-800 font-semibold hover:bg-cyan-300"><FontAwesomeIcon icon={faDownload} /> Download CV </motion.a> */}
                   </p>
                   {/* <p className="text-2xl dark:text-white text-zinc-800 mt-8 flex mx-auto items-center justify-center">
-                    <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faFacebookF} />
-                    <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faLinkedinIn} />
-                    <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faGithub} />
+                    <LinkItems href="https://www.facebook.com/NisperosJeric" icon={<FaFacebookF />} />
+                    <LinkItems href="https://www.facebook.com/NisperosJeric" icon={<FaLinkedinIn />} />
+                    <LinkItems href="https://www.facebook.com/NisperosJeric" icon={<FaGithub />} />
                   </p> */}
                 </span>
               </div>
@@ -191,7 +177,7 @@ function Profile() {
                       <BrandItems icon={<SiFirebase className="icon-brands" />} title="Firebase" />
                       <BrandItems icon={<DiMysql className="icon-brands" />} title="MySQL" />
                       <BrandItems icon={<SiMongodb className="icon-brands" />} title="MongoDb" />
-                      <BrandItems icon={<SiCsharp className="icon-brands" />} title="CSharp" />
+                      <BrandItems icon={<TbBrandCSharp className="icon-brands" />} title="CSharp" />
                     </div>
                   </div>
                 </span>
@@ -215,15 +201,15 @@ function Profile() {
                   <div className="mt-4 list-none md:text-base text-4xl text-center justify-center items-center">
                     <div className=" grid grid-cols-4 md:grid-cols-5 gap-y-4 gap-x-2">
                       <BrandItems icon={<FaGithub className="icon-brands" />} title="Github" />
-                      <BrandItems icon={<SiAzuredevops className="icon-brands" />} title="Azure" />
-                      <BrandItems icon={<SiMicrosoftsqlserver className="icon-brands" />} title="MsSQL" />
+                      <BrandItems icon={<VscAzureDevops className="icon-brands" />} title="Azure" />
+                      <BrandItems icon={<DiMsqlServer className="icon-brands" />} title="MsSQL" />
                       <BrandItems icon={<SiSwagger className="icon-brands" />} title="Swagger" />
                       <BrandItems icon={<SiPostman className="icon-brands" />} title="Postman" />
                       <BrandItems icon={<SiJira className="icon-brands" />} title="Jira" />
-                      <BrandItems icon={<SiMicrosoftoffice className="icon-brands" />} title="MsTools" />
+                      <BrandItems icon={<BsMicrosoft className="icon-brands" />} title="MsTools" />
                       {/* <BrandItems icon={<FaFigma className="icon-brands" />} title="Figma" /> */}
-                      <BrandItems icon={<SiAdobephotoshop className="icon-brands" />} title="Photoshop" />
-                      <BrandItems icon={<SiAdobeillustrator className="icon-brands" />} title="Illustrator" />
+                      <BrandItems icon={<TbBrandAdobePhotoshop className="icon-brands" />} title="Photoshop" />
+                      <BrandItems icon={<TbBrandAdobeIllustrator className="icon-brands" />} title="Illustrator" />
                       <BrandItems icon={<SiUnity className="icon-brands" />} title="Unity" />
                     </div>
                   </div>

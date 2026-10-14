@@ -1,39 +1,21 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { TbBrandReactNative } from "react-icons/tb";
-import {
-  SiAdobedreamweaver,
-  SiAdobeillustrator,
-  SiAdobephotoshop,
-  SiAzuredevops,
-  SiBootstrap,
-  SiCsharp,
-  SiExpress,
-  SiFirebase,
-  SiJira,
-  SiMicrosoftoffice,
-  SiMicrosoftsqlserver,
-  SiMongodb,
-  SiMysql,
-  SiNativescript,
-  SiNextdotjs,
-  SiPostman,
-  SiSwagger,
-  SiTailwindcss,
-  SiUnity,
-} from "react-icons/si";
-import { FaAngular, FaCss3Alt, FaFigma, FaGithub, FaHtml5, FaJs, FaNodeJs, FaReact, faAngular } from "react-icons/fa";
-import { faFacebookF, faGithub, faGithubAlt, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { SiBootstrap, SiExpress, SiFirebase, SiJira, SiMongodb, SiNextdotjs, SiPostman, SiSwagger, SiTailwindcss, SiUnity } from "react-icons/si";
+import { FaAngular, FaCss3Alt, FaFacebookF, FaFigma, FaGithub, FaHtml5, FaJs, FaLinkedinIn, FaNodeJs, FaReact } from "react-icons/fa6";
 
-import { DiMysql } from "react-icons/di";
+// react-icons v5 dropped these from the Si (simple-icons) set — sourced from other packs
+import { TbBrandAdobeIllustrator, TbBrandAdobePhotoshop, TbBrandCSharp } from "react-icons/tb";
+import { VscAzureDevops } from "react-icons/vsc";
+import { DiMsqlServer, DiMysql } from "react-icons/di";
+import { BsMicrosoft } from "react-icons/bs";
 function About() {
   function LinkItems({ href, icon }) {
     return (
       <motion.span whileHover={{ scale: 1.5 }} whileTap={{ scale: 1.2 }}>
         <Link href={href} className="mx-4 border px-4 py-2 rounded-full dark:border-white border-black hover:dark:bg-cyan-700 hover:bg-cyan-400" target="_blank">
-          <FontAwesomeIcon icon={icon} />
+          {icon}
         </Link>
       </motion.span>
     );
@@ -86,9 +68,9 @@ function About() {
                     and professional growth.
                   </p>
                   <p className="text-2xl dark:text-white text-zinc-800 mt-8 flex mx-auto items-center justify-center">
-                    <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faFacebookF} />
-                    <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faLinkedinIn} />
-                    <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faGithub} />
+                    <LinkItems href="https://www.facebook.com/NisperosJeric" icon={<FaFacebookF />} />
+                    <LinkItems href="https://www.facebook.com/NisperosJeric" icon={<FaLinkedinIn />} />
+                    <LinkItems href="https://www.facebook.com/NisperosJeric" icon={<FaGithub />} />
                   </p>
                 </span>
               </div>
@@ -124,7 +106,7 @@ function About() {
                       <BrandItems icon={<SiFirebase className="icon-brands" />} title="Firebase" />
                       <BrandItems icon={<DiMysql className="icon-brands" />} title="MySQL" />
                       <BrandItems icon={<SiMongodb className="icon-brands" />} title="MongoDb" />
-                      <BrandItems icon={<SiCsharp className="icon-brands" />} title="CSharp" />
+                      <BrandItems icon={<TbBrandCSharp className="icon-brands" />} title="CSharp" />
                     </div>
                   </div>
                 </span>
@@ -148,15 +130,15 @@ function About() {
                   <div className="mt-4 list-none md:text-base text-4xl text-center justify-center items-center">
                     <div className=" grid grid-cols-4 md:grid-cols-5 gap-y-4 gap-x-2">
                       <BrandItems icon={<FaGithub className="icon-brands" />} title="Github" />
-                      <BrandItems icon={<SiAzuredevops className="icon-brands" />} title="Azure" />
-                      <BrandItems icon={<SiMicrosoftsqlserver className="icon-brands" />} title="MsSQL" />
+                      <BrandItems icon={<VscAzureDevops className="icon-brands" />} title="Azure" />
+                      <BrandItems icon={<DiMsqlServer className="icon-brands" />} title="MsSQL" />
                       <BrandItems icon={<SiSwagger className="icon-brands" />} title="Swagger" />
                       <BrandItems icon={<SiPostman className="icon-brands" />} title="Postman" />
                       <BrandItems icon={<SiJira className="icon-brands" />} title="Jira" />
-                      <BrandItems icon={<SiMicrosoftoffice className="icon-brands" />} title="MsTools" />
+                      <BrandItems icon={<BsMicrosoft className="icon-brands" />} title="MsTools" />
                       {/* <BrandItems icon={<FaFigma className="icon-brands" />} title="Figma" /> */}
-                      <BrandItems icon={<SiAdobephotoshop className="icon-brands" />} title="Photoshop" />
-                      <BrandItems icon={<SiAdobeillustrator className="icon-brands" />} title="Illustrator" />
+                      <BrandItems icon={<TbBrandAdobePhotoshop className="icon-brands" />} title="Photoshop" />
+                      <BrandItems icon={<TbBrandAdobeIllustrator className="icon-brands" />} title="Illustrator" />
                       <BrandItems icon={<SiUnity className="icon-brands" />} title="Unity" />
                     </div>
                   </div>

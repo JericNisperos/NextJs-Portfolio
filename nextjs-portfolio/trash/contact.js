@@ -1,11 +1,9 @@
 import Link from "next/link";
 import React, { useRef, useState } from "react";
-import Modal from "../components/Modal";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import Modal from "../src/components/Modal";
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import emailjs from "@emailjs/browser";
-import { faDiscord, faFacebookF, faGithub, faLinkedin, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa6";
 
 function contact() {
   const form = useRef();
@@ -28,7 +26,7 @@ function contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm("service_jericnisperos", "template_0644tgj", form.current, "RGSv6lmfsbIbL5NsQ").then(
+    emailjs.sendForm("service_jericnisperos", "template_0644tgj", form.current, { publicKey: "RGSv6lmfsbIbL5NsQ" }).then(
       (result) => {
         console.log(result.text);
       },
@@ -47,7 +45,7 @@ function contact() {
     return (
       <motion.span whileHover={{ scale: 1.5 }} whileTap={{ scale: 1.2 }}>
         <Link href={href} className="mx-4 border px-4 py-2 rounded-full dark:border-white border-black hover:dark:bg-cyan-500 hover:bg-cyan-300" target="_blank">
-          <FontAwesomeIcon icon={icon} />
+          {icon}
         </Link>
       </motion.span>
     );
@@ -65,9 +63,9 @@ function contact() {
               <p className=" dark:text-white text-zinc-800 md:text-xl text-base text-center">Reach out to any of my Accounts!</p>
               <div className="text-2xl dark:text-white text-zinc-800 flex mx-auto items-center justify-center mt-8">
                 <div className="grid grid-cols-3 gap-y-4 gap-x-2 mt-8 md:pb-24">
-                  <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faFacebookF} />
-                  <LinkItems href="https://www.linkedin.com/in/jeric-nisperos-38055a11b/" icon={faLinkedinIn} />
-                  <LinkItems href="https://github.com/JericNisperos" icon={faGithub} />
+                  <LinkItems href="https://www.facebook.com/NisperosJeric" icon={<FaFacebookF />} />
+                  <LinkItems href="https://www.linkedin.com/in/jeric-nisperos-38055a11b/" icon={<FaLinkedinIn />} />
+                  <LinkItems href="https://github.com/JericNisperos" icon={<FaGithub />} />
                   {/* <LinkItems href="https://www.facebook.com/NisperosJeric" icon={faDiscord} /> */}
                 </div>
               </div>

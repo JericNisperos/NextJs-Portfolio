@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 function ProjectItems({ src, title, content, bg, href, num }) {
   return (
@@ -18,7 +17,7 @@ function ProjectItems({ src, title, content, bg, href, num }) {
           <p className="font-bold text-4xl text-cyan-300 ">{title}</p>
           <p className="dark:text-white text-zinc-900 mb-4 text-justify">{content}</p>
           <motion.a className="rounded-lg bg-cyan-500 px-4 py-2 font-semibold dark:text-black text-whit hover:bg-gray-300 shadow-lg" href={href} target="_blank">
-            Live Site <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+            Live Site <FaArrowUpRightFromSquare className="inline" />
           </motion.a>
         </motion.span>
       </div>

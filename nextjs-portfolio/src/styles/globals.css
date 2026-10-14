@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/* next-themes toggles a .dark class on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+  Design rules (keep these consistent across sections):
+  - Accent: cyan only. Text: cyan-700 (light) / cyan-400 (dark). Buttons: bg-cyan-700 / dark:bg-cyan-400.
+  - Radius: controls (buttons, inputs) rounded-lg, media rounded-xl, icon buttons rounded-full.
+  - Surfaces: white / slate-50 in light, zinc-900 / slate-800 in dark.
+*/
+
+/* inline: --font-geist is set by next/font on the app wrapper, not on :root */
+@theme inline {
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-cyan-700) transparent;
+}
+
+.dark {
+  scrollbar-color: var(--color-cyan-400) transparent;
+  color-scheme: dark;
+}
+
+body {
+  @apply overflow-x-hidden bg-white text-zinc-800 antialiased dark:bg-zinc-900 dark:text-zinc-100;
+}
+
+/* Tailwind v4 dropped the pointer cursor on buttons; bring it back */
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+/* Native <dialog> backdrop for the contact confirmation */
+dialog::backdrop {
+  background: rgb(9 9 11 / 0.6);
+}

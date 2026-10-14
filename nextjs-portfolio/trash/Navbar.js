@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFolder, faHome, faMoon, faPaperPlane, faSun, faUser } from "@fortawesome/free-solid-svg-icons";
+import { FaFolder, FaHouse, FaMoon, FaPaperPlane, FaSun, FaUser } from "react-icons/fa6";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -91,7 +90,9 @@ const Navbar = () => {
           <motion.span whileHover={{ scale: 1.6 }} whileTap={{ scale: 0.9 }} initial={{ scale: 1.0 }}>
             <Link href={href}  > 
             {/* className={`${router.pathname === href ? "text-cyan-500" : ""}`} to detect if page is active */}
-              <FontAwesomeIcon icon={icon} id={title} onClick={clicked} className=" px-2 hover:text-cyan-500 hover:dark:text-cyan-500 " />
+              <span id={title} onClick={clicked} className=" px-2 hover:text-cyan-500 hover:dark:text-cyan-500 ">
+                {icon}
+              </span>
             </Link>
           </motion.span>
           <span className="tooltip text-xs rounded text-black dark:text-white bg-white dark:bg-gray-700 shadow-lg p-1 flex-none -mt-8 z-60 ease-in-out">
@@ -110,10 +111,10 @@ const Navbar = () => {
     >
       <div className="scale-[1.5] sm:scale-[1.2] dark:bg-white bg-zinc-900 shadow-md p-2 rounded-full ease-in-out duration-500 flex ">
         <p className="dark:text-black text-white flex">
-          <NavItems href="/" title="Home" icon={faHome} />
-          <NavItems href="#about" title="About" icon={faUser} />
-          <NavItems href="#projects" title="Projects" icon={faFolder} />
-          <NavItems href="#contact" title="Contact" icon={faPaperPlane} />
+          <NavItems href="/" title="Home" icon={<FaHouse />} />
+          <NavItems href="#about" title="About" icon={<FaUser />} />
+          <NavItems href="#projects" title="Projects" icon={<FaFolder />} />
+          <NavItems href="#contact" title="Contact" icon={<FaPaperPlane />} />
         </p>
         <p className="text-white dark:text-black">{/* │ */}</p>
 
@@ -123,7 +124,9 @@ const Navbar = () => {
           </div>
           <span className="flex ">
             <motion.span whileHover={{ scale: 1.6, duration: 0.2 }} transition={{ duration: 0.5 }} whileTap={{ rotate: -1200 }} initial={{ scale: 1.0 }} className="origin-[50%_45%]">
-              <FontAwesomeIcon icon={currentTheme === "dark" ? faSun : faMoon} id="DarkMode" onClick={(e) => setTheme(currentTheme === "dark" ? "light" : "dark")} className=" hover:text-cyan-500 hover:dark:text-cyan-500" />
+              <span id="DarkMode" onClick={(e) => setTheme(currentTheme === "dark" ? "light" : "dark")} className=" hover:text-cyan-500 hover:dark:text-cyan-500">
+                {currentTheme === "dark" ? <FaSun /> : <FaMoon />}
+              </span>
             </motion.span>
           </span>
         </div>

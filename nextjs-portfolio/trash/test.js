@@ -1,6 +1,6 @@
 import React from 'react'
-import StarBg from '../components/StarBg'
-import Parallax from '../components/Parallax'
+import StarBg from '../src/components/StarBg'
+import Parallax from '../src/components/Parallax'
 
 function test() {
   console.log("hi")
