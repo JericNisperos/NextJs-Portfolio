@@ -2,7 +2,7 @@
 
 Source for [jnisperos.space](https://jnisperos.space), the portfolio of Jeric Nisperos.
 
-Next.js 16 (Pages Router), React 19, Tailwind CSS v4, Framer Motion, EmailJS.
+Next.js 16 (Pages Router), React 19, Tailwind CSS v4, Framer Motion. The contact form posts to FormSubmit (formsubmit.co).
 
 `next` is pinned to exactly 16.3.8: 16.4.0 breaks `next dev` (Turbopack "module factory is not available"), and 16.3.7 and below carry a critical security advisory. See [NEXTJS-16.4-UPGRADE.md](NEXTJS-16.4-UPGRADE.md) before bumping it.
 
